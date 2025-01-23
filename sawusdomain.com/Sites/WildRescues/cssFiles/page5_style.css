@@ -1,0 +1,66 @@
+/* Body Styles *****************************************************************/
+body {
+
+}
+
+/* Header Section *****************************************************************/
+header {
+
+}
+
+
+/* Navbar *****************************************************************/
+nav {
+
+}
+#page5 {
+    background-color: #f6eee4;;
+    color: #2a1f14;
+}
+
+/* Main Content *****************************************************************/
+main {
+   
+}
+main #questions {
+    margin-bottom: 20px; /* Space below the questions section */
+}
+
+main #questions p {
+    background-color: #94897d; /* Dark brown background for questions */
+    color: #ffffff; /* White text color */
+    padding: 15px 20px; /* Padding inside the question items */
+    margin: 10px 0; /* Margin between questions */
+    border-radius: 5px; /* Rounded corners for questions */
+    cursor: pointer; /* Pointer cursor to indicate clickability */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+main #questions p:hover {
+    background-color: #4d3319; /* Darker brown on hover */
+}
+
+main #answer {
+    background-color: #f6eee4; /* Light tan background for the answer section */
+    padding: 20px; /* Padding inside the answer section */
+    border-radius: 5px; /* Rounded corners for the answer section */
+    border: 1px solid #2a1f14; /* Dark brown border for the answer section */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+main #answer h2 {
+    color: #2a1f14; /* Dark brown color for the answer heading */
+    margin-top: 0; /* Removes default margin from the top */
+}
+
+/* Footer *****************************************************************/
+footer {
+
+}
+
+
+
+/* Media Queries *****************************************************************/
+@media (max-width: 1000px) {
+
+}

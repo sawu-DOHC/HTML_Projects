@@ -1,0 +1,9 @@
+1. Document Structure Elements
+
+<!DOCTYPE html>: Declares the document type and version (HTML5 in this case).
+
+<html>: The root element that contains all HTML content. Typically has a lang attribute to specify the language.
+
+<head>: Contains meta-information about the document (like character encoding, title, and external file links).
+
+<body>: Contains the content of the document that is visible on the webpage.

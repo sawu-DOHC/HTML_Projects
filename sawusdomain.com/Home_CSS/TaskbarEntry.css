@@ -1,0 +1,86 @@
+#taskContainer {
+    display: flex; 
+    align-items: center; 
+    justify-content: start; 
+    flex-grow: 1; 
+    overflow: hidden; 
+    height: 100%; 
+}
+
+  
+.taskbar-entry {
+    flex: 1 1 0; 
+    display: flex;
+    align-items: center;
+
+    height: 3.5rem; 
+    
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    margin-left: 0.25rem;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+
+    overflow: hidden;
+
+    max-width: 12rem;
+    min-width: 1rem; 
+
+    background-color: #c0c0c0;
+    border: 0.25rem solid #808080;
+    border-top-color: #eaeaea;
+    border-left-color: #eaeaea;
+}
+
+.taskbar-entry img {
+
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 0.5rem;
+
+}
+
+.taskbar-entry span {
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* adds the ... at the end of an abbreviated word */
+
+}
+
+  
+.taskbar-entry:focus {
+    outline: none; 
+    background-color: #d0d0d0;
+    border-top-color: #808080;
+    border-left-color: #808080;
+    border-right-color: #eaeaea;
+    border-bottom-color: #eaeaea;
+}
+  
+  .active-taskbar-entry {
+    background-color: #d0d0d0;
+    border-top-color: #808080;
+    border-left-color: #808080;
+    border-right-color: #eaeaea;
+    border-bottom-color: #eaeaea;
+  }
+
+.taskbar-entry {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box; 
+} 
+
+.taskbar-entry:active {
+    background-color: #d0d0d0;
+    border-top-color: #808080; 
+    border-left-color: #808080;
+    border-right-color: #eaeaea;
+    border-bottom-color: #eaeaea;
+}

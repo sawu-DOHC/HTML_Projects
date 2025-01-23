@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cryptocurrency Divergence Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="title-container">
+        <h1 id="title-1">Divergence Calculator</h1>
+        <h1 id="title-1">Online Broker</h1>
+        <h1 id="title-2">Get Rich For Free App!</h1>
+    </div>
+
+    <!-- Container to group all relevant sections -->
+    <div id="main-container">
+        <select id="currency-menu">
+            <option value="" disabled selected>Select a currency</option>
+        </select>
+        <br>
+        <select id="strategy-menu" disabled>
+            <option value="" disabled selected>Select a strategy</option>
+            <option value="wolf">wolf</option>
+            <option value="normie">normie</option>
+        </select>
+
+        <div id="stats-box">
+            <div>Long-Term Average: $<span id="long-term-stat"></span></div>
+            <div>Short-Term Average: $<span id="short-term-stat"></span></div>
+        </div>
+        <div class="signal-container">
+
+            <div class="traffic-signal">
+
+                <div id="signal-green" class="signal"></div>
+                <div id="signal-yellow" class="signal"></div>
+                <div id="signal-red" class="signal"></div>
+
+            </div>
+
+
+        </div>
+        <div class="message-box">
+            <p id="message-text"></p>
+        </div>
+
+        <textarea id="text-box" readonly> </textarea>
+    </div>
+
+
+
+</body>
+</html>

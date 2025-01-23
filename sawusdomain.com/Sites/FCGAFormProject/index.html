@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Deduction/Health Savings Account Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.png" id="logo">
+        <h1>Fulton County Government Authorization for Payroll Deduction/Health Savings Account Contribution</h1>
+    </header>
+
+    <main>
+        <form id="form" action="#" method="post">
+            <table id="row-1">
+                <tr>
+                    <td>
+                        <p>
+                            This form is for you to authorize your employer to deduct money from your paychecks throughout 2025 and deposit it into your Health Savings Account (HSA) on a pretax basis. 
+                            <strong>To begin payroll deductions, you must be enrolled in the Anthem HSA Plan. If you are enrolled in the Anthem HMO Plan, the Anthem POS Plan, or the Kaiser HMO Plan, you cannot contribute to this account.</strong> 
+                            HSA payroll deductions continue through December 31, 2025. To make HSA contributions for the following plan year, you must make a new election. Money from your pay is deposited into your HSA account at MetLife after each payroll run.
+                        </p>
+                        <p>
+                            <strong>Return this form to <a href="mailto:employeebenefits@fultoncountyga.gov">employeebenefits@fultoncountyga.gov</a> by the appropriate deadline. Please keep a copy for your records.</strong> 
+                            Once your documentation is received and validated, your HSA account will be opened, and you will receive a welcome communication and debit card. Please be sure to log into your online account and activate your debit card.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        
+            <table id="row-2">
+                <tr>
+                    <td>I wish to</td>
+                    <td>
+                        <label><input type="radio" name="deduction" id="begin-deduction_Button" required> Begin a deduction</label>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="deduction" id="change-deduction_Button" required> Change my deduction</label>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="deduction" id="stop-deduction_Button" required> Stop my deduction</label>
+                    </td>
+                </tr>
+            </table>
+        
+            <table id="row-3">
+                <tr>
+                    <td>
+                        Effective date:
+                        <input type="date" id="effective-date_Field" name="effective-date" max="2025-12-31" value="2025-12-30" required>
+                        (your payroll office can confirm the effective date)
+                    </td>
+                    
+                </tr>
+            </table>
+        
+            <table id="row-4">
+                <tr>
+                    <td><h2>Section 1: Employee Information</h2></td>
+                </tr>
+            </table>
+        
+            <table id="row-5-7">
+                <tr>
+                    <td>
+                        <label for="name_Field">Name (last, first, middle initial):</label>
+                        <input type="text" id="name_Field" name="name" size="30" maxlength="50" pattern="[A-Za-z\s]+" placeholder="Enter your name" required>
+                    </td>
+                    <td>
+                        <label for="phone_Field">Phone number:</label>
+                        <input type="tel" id="phone_Field" name="phone" maxlength="12" placeholder="123-456-7890" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address_Field">Mailing address:</label>
+                        <input type="text" id="address_Field" name="address" size="30" placeholder="Enter your mailing address" style="width: 325px;" required>
+                    </td>
+                    <td>
+                        <label for="dob_Field">Date of birth:</label>
+                        <input type="date" id="dob_Field" name="dob" max="2006-10-03" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email_Field">Email address:</label>
+                        <input type="email" id="email_Field" size="30" style="width: 300px;" required>
+                    </td>
+                    <td>
+                        <label for="age_Field">Age:</label>
+                        <input type="number" id="age_Field" name="age" min="18" max="120" required>
+                    </td>
+                </tr>
+            </table>
+        
+            <table id="row-8">
+                <tr>
+                    <td>
+                        <label for="employee-id_Field">Employee ID:</label>
+                        <input type="number" id="employee-id_Field" name="employee-id" maxlength="10" placeholder="Enter your Employee ID" required>
+                    </td>
+                </tr>
+            </table>
+        
+            <table id="row-9">
+                <tr>
+                    <td><h2>Section 2: 2025 Contributions to Your HSA</h2></td>
+                </tr>
+            </table> 
+        
+            <table id="row-10-13">
+                <tr>
+                    <td></td>
+                    <td><strong>Individual HSA</strong></td>
+                    <td><strong>Family HSA</strong></td>
+                </tr>
+                <tr>
+                    <td>Employer contribution</td>
+                    <td>$750</td>
+                    <td>$1,500</td>
+                </tr>
+                <tr>
+                    <td>Maximum employee contribution*</td>
+                    <td>$4,300</td>
+                    <td>$8,550</td>
+                </tr>
+                <tr>
+                    <td>IRS maximum (employer + employee contributions)*</td>
+                    <td>$5,050</td>
+                    <td>$9,550</td>
+                </tr>
+            </table>
+        
+            <table id="row-14">
+                <tr>
+                    <td>
+                        *If you are age 55 or older in 2025, you can make an additional "catch-up" annual contribution of $1,000. For example, if you are age 55 or older, the individual annual maximum contribution would be $5,300. Your employer will contribute $750. This means you can request up to $4,550 in payroll deductions for the year.
+                    </td>
+                </tr>
+            </table>
+        
+            <table id="row-15">
+                <tr>
+                    <td><h2>Section 3: How Your Employee HSA Contribution Will Be Calculated</h2></td>
+                </tr>
+            </table>
+        
+            <table id="row-16">
+                <tr>
+                    <td>
+                        I elect to contribute $
+                        <input type="number" id="annual-contribution_Field1" step="0.01" min="0" placeholder="0.00" required> 
+                        annually to my Health Savings Account. This request replaces any previous payroll deduction requests for my HSA.
+                        <strong>[Write in the total annual contribution you want withheld from your paycheck for 2025. The per-paycheck amount will be determined by the Benefits Office by dividing the annual amount by 24 pay periods (or, for midyear enrollments, dividing by the number of pay periods remaining in the year). Please note: You risk paying IRS penalties if you exceed the allowed annual contribution. If this is a change, be sure to consider any amounts you have already contributed.]</strong>
+                    </td>
+                </tr>
+            </table>
+        
+            <table id="row-17">
+                <tr>
+                    <td><h2>Section 4: Employee's Signature (Required)</h2></td>
+                </tr>
+            </table>
+        
+            <table id="row-18">
+                <tr>
+                    <td>
+                        By signing this form, I am requesting that payroll deductions be started or changed as shown above in Section 3, and I agree to the preceding terms. I understand that, per IRS rules, there are maximum limits I can contribute to my HSA, and I may be liable for tax penalties if I exceed this amount.
+                    </td>
+                </tr>
+            </table>
+        
+            <table id="row-19">
+                <tr>
+                    <td>
+                        <label for="signature_Field">Employee's Signature:</label>
+                        <input type="text" id="signature_Field" name="signature" placeholder="Type your name here" style="width: 300px;" required>
+                    </td>
+                    <td>
+                        <label for="signature-date_Field">Date:</label>
+                        <input type="date" id="signature-date_Field" name="signature-date" required>
+                    </td>
+                </tr>
+            </table>
+        
+            <table id="row-20">
+                <tr>
+                    <td><h2>Benefits Office Use</h2></td>
+                </tr>
+            </table>
+        
+            <table id="row-21">
+                <tr>
+                    <td>
+                        Annual contribution: $<input type="number" id="annual-contribution_Field2" name="annual-contribution" min="1" max="8550" step="0.01" style="width: 90px;" required>
+                        <br>(must match amount in Section 3)
+                    </td>
+                    <td>
+                        Remaining 2025 paychecks: <input type="number" id="remaining-paychecks_Field" name="remaining-paychecks" min="1" max="24" style="width: 60px;" required>
+                    </td>
+                    <td>
+                        Per-paycheck contribution: $<input type="number" id="per-paycheck-contribution_Field" name="per-paycheck-contribution" style="width: 70px;" max="8550" step="0.01" required>
+                    </td>
+                </tr>
+            </table>
+        
+            <table id="row-22">
+                <tr>
+                    <td>HSA (09/2024)</td>
+                </tr>
+            </table>
+        
+            <table id="row-23">
+                <tr>
+                    <td>
+                        <button type="submit" id="submit-Button">Submit</button>
+                    </td>
+                </tr>
+            </table>
+
+            
+        </form>
+            
+    </main>
+
+    <script src="Scripts/PrefillScripts/prefillAge.js"></script>
+    <script src="Scripts/PrefillScripts/prefillPerPaycheckContribution.js"></script>
+    <script src="Scripts/PrefillScripts/prefillRemainingPaychecks.js"></script>
+    <script src="Scripts/PrefillScripts/prefillSignatureDate.js"></script>
+
+
+    <script src="Scripts/ValidationScripts/validateAddress.js"></script>
+    <script src="Scripts/ValidationScripts/validateAge.js"></script>
+    <script src="Scripts/ValidationScripts/validateAnnualContribution.js"></script>
+    <script src="Scripts/ValidationScripts/validateDateOfBirth.js"></script>
+    <script src="Scripts/ValidationScripts/validateDeductionSelection.js"></script>
+    <script src="Scripts/ValidationScripts/validateEffectiveDate.js"></script>
+    <script src="Scripts/ValidationScripts/validateEmail.js"></script>
+    <script src="Scripts/ValidationScripts/validateEmployeeID.js"></script>
+    <script src="Scripts/ValidationScripts/validateName.js"></script>
+    <script src="Scripts/ValidationScripts/validatePerPaycheckContribution.js"></script>
+    <script src="Scripts/ValidationScripts/validatePhone.js"></script>
+    <script src="Scripts/ValidationScripts/validateSignature.js"></script>
+    <script src="Scripts/ValidationScripts/validateSignatureDate.js"></script>
+    <script src="Scripts/ValidationScripts/validateSQLInjection.js"></script>
+    
+    <script src="Scripts/handleSubmit.js"></script>
+    
+    
+
+        
+</body>
+</html>

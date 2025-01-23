@@ -1,0 +1,108 @@
+
+.icon {
+    width: 10rem; 
+    height: 13rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    text-align: center;
+    box-sizing: border-box;
+    position: relative; 
+    overflow: visible; 
+  }
+  
+
+  .icon img {
+    max-width: 6rem;
+    cursor: pointer;
+  }
+  
+
+  .icon h2 {
+    font-size: 1.25rem;
+    color: white;
+  
+    font-weight: lighter;
+    overflow: hidden;
+    width: 10rem;
+  }
+  
+  .window-body .icon h2 {
+    color: black;
+  }
+  
+
+  .icon p {
+    position: absolute;
+  
+    bottom: 50%; 
+    left: 90%;
+  
+    visibility: hidden;
+  
+    background-color: rgb(254, 255, 218); 
+    color: #000;
+    border: 0.2rem solid black;
+    font-size: 1rem;
+    padding: 0.5rem;
+    z-index: 10;
+  
+    white-space: nowrap;
+  }
+  
+
+  .icon:hover p {
+    visibility: visible; 
+    opacity: 1;
+    z-index: 1000;
+  }
+
+
+
+.window-body .icon {
+    position: relative;
+    overflow: visible; 
+}
+
+.window-body .icon p {
+    position: absolute; 
+    bottom: 50%; 
+    left: 90%;
+
+    visibility: hidden; 
+
+    white-space: nowrap;
+}
+
+
+.window-body .icon:hover p {
+    visibility: visible; 
+    opacity: 1; 
+    z-index: 1000; 
+}
+
+
+
+
+@media (max-width: 750px) {
+    .icon {
+      width: 7em;
+      height: 14rem;
+    }
+
+    .icon img {
+      max-width: auto;
+      height: auto;
+    }
+
+    .icon h2 {
+      font-size: auto;
+      height: auto;
+      width: auto;
+    }
+
+    .icon p {
+      display: none;
+    }
+}

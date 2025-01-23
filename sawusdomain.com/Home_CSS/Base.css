@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'W95FA';
+  src: url('../Home_Assets/W95FA.otf') format('opentype'); 
+
+}
+* {
+  font-family: 'W95FA', sans-serif; 
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  overflow: hidden; 
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 128, 128); 
+}
+
+.button {
+  cursor: pointer;
+
+  background-color: #c0c0c0;
+  border: 0.25rem solid #808080;
+  border-top-color: #eaeaea;
+  border-left-color: #eaeaea;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: .125rem;
+}
+
+.button:active {
+  background-color: #d0d0d0;
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #eaeaea;
+  border-bottom-color: #eaeaea;
+}
+
+#vc {
+  color: rgb(0, 128, 128);
+  display: none;
+}
+
+#tooltip {
+  position: fixed;
+  display: none;
+  background-color: rgb(255, 251, 216);
+  border: 2px solid black;
+  padding: 8px;
+  z-index: 1000; 
+
+}
+
+
+
+@media (max-width: 750px) {
+  #tooltip {
+
+    display: none;
+
+  
+  }
+  
+
+
+}
+
+

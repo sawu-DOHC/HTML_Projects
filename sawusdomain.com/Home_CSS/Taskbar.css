@@ -1,0 +1,107 @@
+#taskbar {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+
+  background-color: #c0c0c0;
+  border: 0.25rem solid #808080; 
+  border-top-color: #eaeaea; 
+  border-left-color: #eaeaea; 
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+
+  height: 4.5rem; 
+  width: 100%; 
+  padding: 0.25rem; 
+  
+  box-sizing: border-box;
+  position: relative;
+}
+
+#taskbar {
+  height: 4.5rem; 
+  flex-shrink: 0; 
+}
+
+#start-button {
+  display: flex;
+  align-items: center;
+  font-size: 2rem; 
+
+  height: 3.5rem; 
+  box-sizing: border-box; 
+
+  padding: 1rem;
+  padding: .25rem;
+  margin-left: .125rem;
+
+  background-color: #c0c0c0;
+  border: 0.25rem solid #808080;
+  border-top-color: #eaeaea;
+  border-left-color: #eaeaea;
+
+  cursor: pointer;
+
+}
+
+#start-button:active, #start-button.clicked {
+  background-color: #d0d0d0;
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #eaeaea;
+  border-bottom-color: #eaeaea;
+}
+#start-button img {
+  width: 3rem;
+  height: auto; 
+
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+#clock {
+  display: flex;
+  align-items: center;
+
+  height: 3.5rem; 
+  box-sizing: border-box; 
+
+  padding-left: .5rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  margin-right: .125rem;
+  margin-left: .25rem;
+
+  background-color: #c0c0c0;
+  border: 0.25rem solid #808080;
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #eaeaea;
+  border-bottom-color: #eaeaea;
+}
+
+#clock span {
+
+  display: inline-block; 
+  width: 10rem; 
+  height: 2.5rem; 
+  line-height: 2.5rem;
+  overflow: hidden; 
+  font-size: 2rem; 
+
+}
+
+
+
+@media (max-width: 750px) {
+  #taskbar {
+    display: none;
+  }
+}
+
+
+
+
+
+

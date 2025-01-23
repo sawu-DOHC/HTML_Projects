@@ -1,0 +1,65 @@
+SamsJSproject13
+│
+├── CSS
+│     ├── page0_Style.css                           # Styles for the login page
+│     ├── page1_Style.css                           # Styles for the table page
+│     ├── page2_Style.css                           # Styles for the details page
+│     └── page3_Style.css                           # Styles for the insert page
+│
+├── HTML
+│     ├── page0_ViewLogin.html                      # HTML for the login page
+│     ├── page1_ViewTable.html                      # HTML for the table page
+│     ├── page2_ViewDetails.html                    # HTML for the details page
+│     └── page3_ViewInsert.html                     # HTML for the insert page
+│
+├── JS
+│     ├── Page0_Scripts
+│     │     ├── 0_Main.js                           # Main script for login page
+│     │     └── addEventListenerSubmitLogIn.js      # Event listener for login submission
+│     │
+│     ├── Page1_Scripts
+│     │     ├── 1_Main.js                           # Main script for table page
+│     │     ├── addEventListenerSelection.js        # Event listener for table selection
+│     │     ├── addEventListenerSort.js             # Event listener for sorting
+│     │     ├── fetchDataMethod.js                  # Method to fetch data
+│     │     ├── populateTableMethod.js              # Method to populate the table
+│     │     └── restrictViewMethod.js               # Method to restrict view
+│     │
+│     ├── Page2_Scripts
+│     │     ├── 2_Main.js                           # Main script for details page
+│     │     ├── addEventListenerDelete.js           # Event listener for deletion
+│     │     ├── addEventListenerSave.js             # Event listener for saving
+│     │     ├── enableFieldMethod.js                # Method to enable fields
+│     │     ├── enableGroupMethod.js                # Method to enable groups
+│     │     ├── fetchDataByIdMethod.js              # Method to fetch data by ID
+│     │     ├── populateFormMethod.js               # Method to populate form
+│     │     ├── restrictViewMethod.js               # Method to restrict view
+│     │     └── stringQueryMethod.js                # Method for string queries
+│     │
+│     ├── Page3_Scripts
+│     │     ├── 3_Main.js                           # Main script for insert page
+│     │     └── addEventListenerInsert.js           # Event listener for insertion
+│     │
+│     └── UtilityScripts
+│           ├── LogOut.js                           # Script for logging out
+│           └── UserClass.js                        # User class definition
+│
+└── PHP
+      ├── Page0_Scripts
+      │     └── QueryUsers.php                      # Query for users
+      │
+      ├── Page1_Scripts
+      │     └── QueryHiringPartnersTable.php        # Query for hiring partners table
+      │
+      ├── Page2_Scripts
+      │     ├── DeleteHiringPartner.php             # Script to delete a hiring partner
+      │     ├── QueryHiringPartner.php              # Script to query a hiring partner
+      │     └── UpdateHiringPartner.php             # Script to update a hiring partner
+      │
+      ├── Page3_Scripts
+      │     └── InsertHiringPartner.php             # Script to insert a hiring partner
+      │
+      └── UtilityScripts
+            ├── DatabaseConnection.php              # Script for database connection
+            ├── LogOut.php                          # Script for logging out
+            └── SessionControl.php                  # Script for session control

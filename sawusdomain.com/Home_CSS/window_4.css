@@ -1,0 +1,56 @@
+/* Temperature converter */
+#window-4 .window-body {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    background-color: #d0d0d0;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    border: none;
+    height: fit-content;
+    height: 100%; 
+    width: 100%; 
+    box-sizing: border-box;
+    overflow:visible;
+}
+#window-4 .toolbar{
+  display:none;
+}
+
+
+
+
+
+
+#window-4 .temperature-converter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+#window-4  .temperature-converter label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#window-4  .temperature-converter input {
+    width: 150px;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#window-4  .arrow {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+

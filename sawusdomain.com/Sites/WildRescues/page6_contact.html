@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wild Rescues is a local nonprofit organization dedicated to helping injured, neglected, or orphaned wildlife.">
+
+    <title>Wildlife Rescue | Wild Rescues</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="Images/android-chrome-192.png">
+
+    <!-- My Style Sheet -->
+    <link rel="stylesheet" href="cssFiles/base_style.css">
+    <link rel="stylesheet" href="cssFiles/page6_style.css">
+</head>
+
+<body>
+
+
+
+  <header>
+    <img src="Images/baby-hawk.jpg">
+    <h1>Wild Rescues</h1>
+    <h2>Rescue. Rehabilitate. Release.</h2>
+  </header>
+
+  <nav>
+    
+    <a id="page1" href="page1_index.html">Home</a>
+    <a id="page2" href="page2_about.html">About Us</a>
+    <a id="page3" href="page3_partnership.html">Partnership</a>
+    <a id="page4" href="page4_gallery.html">Gallery</a>
+    <a id="page5" href="page5_faq.html">FAQs</a>
+    <a id="page6" href="page6_contact.html">Contact</a>
+
+</nav>
+
+
+  <main>
+            <div id="contact">
+                <h2>You can reach us at:</h2>
+
+                <p class="tel-link round mobile">
+                    <a href="tel:(814) 555-8989">(814) 555-8989</a>
+                </p>
+
+                <p class="tab-desk">(814) 555-9228</p>
+
+                <p>
+                   Email:
+                    <a href="mailto:contact@wildrescues.net" class="link">contact@wildrescues.net</a>
+                </p>
+
+                <p>
+                   Address:
+                    <a href="https://goo.gl/maps/rPghnLHW4yk3Dfpf8" target="_blank" class="link">8989 Rescue Drive, Ocala, FL 34471</a>
+                </p>
+            </div>
+
+            <div id="form">
+                <h2>Complete the form below and we will contact you soon.</h2>
+                <!-- Start Form -->
+                <form class="form-grid">
+                    <fieldset>
+                        <legend>Contact Information</legend>
+
+                        <!-- First Name Input -->
+                        <label for="fName">First Name:</label>
+                        <input type="text" id="fName" name="fName">
+                        <!-- Last Name Input -->
+                        <label for="lName">Last Name:</label>
+                        <input type="text" id="lName" name="lName">
+                        <!-- Business Name Input -->
+                        <label for="bName">Name of Business:</label>
+                        <input type="text" id="bName" name="bName">
+                        <!-- Email Input -->
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <!-- Phone Input -->
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone">
+
+                    </fieldset>
+    
+                    <!-- Second fieldset -->
+                    <fieldset>
+                        <legend>Additional Information</legend>
+                        <!-- Add form elements for additional information -->
+                        <p>I would like more information about:</p>
+                        <!-- Volunteer radio button -->
+                        <label for="vol">
+                            <input type="radio" id="vol" name="info" value="Volunteering">
+                            Volunteering
+                        </label>
+                        <!-- Sponsorship Opportunities radio button -->
+                        <label for="sponsor">
+                            <input type="radio" id="sponsor" name="info" value="Sponsorship Opportunities">
+                            Sponsorship Opportunities
+                        </label>
+                        <!-- Wildlife radio button -->
+                        <label for="wild">
+                            <input type="radio" id="wild" name="info" value="Wildlife">
+                            Wildlife
+                        </label>
+                        <!-- Other radio button -->
+                        <label for="other">
+                            <input type="radio" id="other" name="info" value="Other">
+                            Other, please specify below.
+                        </label>
+                        <!-- Questions textarea -->
+                        <label for="questions">What questions do you have for us?</label>
+                        <textarea id="questions" name="questions" rows="5" cols="35"></textarea>
+
+
+                    </fieldset>
+
+                        <!-- Submit button -->
+                    <input type="submit" id="submit" value="Submit" class="btn">
+
+                </form>
+            </div>
+  </main>
+
+  <footer>
+
+        <p>&copy; Copyright 2021. All Rights Reserved.</p>
+
+        <p><a href="mailto:contact@wildrescues.net">contact@wildrescues.net</a></p>
+
+        <div>
+
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="Images/facebook-logo.png" alt="Facebook logo">
+            </a>
+
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="Images/twitter-logo.png" alt="Twitter logo">
+            </a>
+
+        </div>
+
+  </footer>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>

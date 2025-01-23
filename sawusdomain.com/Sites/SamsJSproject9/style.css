@@ -1,0 +1,53 @@
+
+body{
+    
+}
+
+h1 {
+    color: white;
+    text-align: center;   
+    justify-content: center; 
+    padding-top: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+h3 {
+
+}
+
+
+
+.outerBlueWrapper {
+    background-color: rgb(45, 153, 241);
+    width: 600px;
+    height: 300px;
+}
+
+.innerYellowWrapper {
+    background-color: rgb(249, 207, 69);
+    width: auto;
+    height: auto;
+}
+
+
+#shoppingForm {
+}
+
+.food-items, .text-fields {
+    padding: 10px;
+
+}
+
+/* CSS for .submit-btn */
+.submit-btn {
+    
+
+}
+.quantity-input {
+    width: 25px;
+}
+

@@ -1,0 +1,123 @@
+/*BODY STYLES ****************************************************************************************************************************************/
+body {
+
+}
+/* HEADER SECTION ****************************************************************************************************************************************/
+header{
+
+}
+/* NAVIGATION SECTION ****************************************************************************************************************************************/
+nav {
+
+}
+#contact-link {
+    background-color: #e5e9fc;
+    color: black;
+}
+
+/* MAIN SECTION ****************************************************************************************************************************************/
+main {
+    background-color: #e5e9fc;
+    padding: 20px;
+}
+
+#info {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+    text-align: center;
+}
+
+#form {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+fieldset {
+    border: 2px solid #373684;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+legend {
+    font-size: 1.5em;
+    color: #373684;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.btn {
+    grid-column: span 2;
+    padding: 10px 20px;
+    background-color: #373684;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-align: center;
+	
+}
+
+.btn:hover {
+    background-color: #4c4bb6;
+}
+
+.map {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* MOBILE DEVICE STYLING RULES ***************************************************************************************************************************/
+@media screen and (max-width: 1000px) {
+    main {
+        padding: 10px;
+    }
+
+    #info, #form {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .btn {
+        grid-column: span 1;
+    }
+}

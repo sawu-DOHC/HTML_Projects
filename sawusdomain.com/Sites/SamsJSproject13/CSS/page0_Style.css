@@ -1,0 +1,72 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #666;
+    text-align: center;
+    height: 38px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 20px; /* Adjust padding to increase clickable area */
+    display: inline-block; /* Ensures the padding applies correctly */
+}
+nav a:hover {
+    background-color: #fff;
+    color: #333;
+}
+nav a:active { /* Change color when clicked */
+    background-color: #fff;
+    color: #333;
+}
+
+form {
+    background-color: #eeede8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 400px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    text-align: center;
+}
+
+fieldset {
+    margin-bottom: 20px; /* Space below each fieldset */
+    padding: 40px; /* Add padding inside each fieldset */
+}
+
+
+
+#logout_button {
+    background-color: #f44336;
+    position: absolute; /* Position the logout button absolutely */
+    right: 20px; /* Place the logout button 20px from the right edge */
+    top: 20px;
+}
+#logout_button:hover {
+    background-color: #d32f2f;
+}
+
+
+/* Login Button Specific Styles */
+#login_button {
+    background-color: #007bff;
+}
+#login_button:hover {
+    background-color: #00458f;
+}
+
+
+/* Guest Login Button Specific Styles */
+#guest_login_button {
+    background-color: #4CAF50; /* Green background for guest login */
+}
+#guest_login_button:hover {
+    background-color: #388E3C; /* Darker green on hover */
+}

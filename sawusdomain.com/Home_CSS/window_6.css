@@ -1,0 +1,73 @@
+/* timer stopwatch */
+#window-6 .window-body {
+    background-color: #d0d0d0;
+    border: none;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow:visible;
+}
+#window-6 .toolbar {
+    display: none;
+}
+
+#window-6 {
+    
+}
+
+#window-6 #stopwatch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#window-6 #timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#window-6 #stopwatch-display {
+    font-size: 1.5rem;
+
+    margin: 0.5rem 0;
+    color: #000;
+    width: fit-content;
+}
+
+#window-6 #timer-display {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #000;
+    width: fit-content;
+}
+
+#window-6 .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#window-6 .window-body button {
+
+    width: 4rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#window-6 #timer-container input {
+    width: 6rem;
+    margin: 0.5rem;
+    padding: 0.25rem;
+    font-size: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+

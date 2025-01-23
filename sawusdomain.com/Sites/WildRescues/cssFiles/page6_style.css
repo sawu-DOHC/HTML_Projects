@@ -1,0 +1,114 @@
+/* Body Styles *****************************************************************/
+body {
+
+}
+
+/* Header Section *****************************************************************/
+header {
+
+}
+
+
+/* Navbar *****************************************************************/
+nav {
+
+}
+#page6 {
+    background-color: #f6eee4;;
+    color: #2a1f14;
+}
+
+/* Main Content *****************************************************************/
+main {
+   
+}
+main h2 {
+    color: #333; /* Dark gray color for headings for better visibility */
+    margin-bottom: 15px; /* Spacing below the heading */
+    text-align: center; /* Center-align the headings */
+}
+
+#contact p {
+    text-align: center; /* Center-align the contact information */
+    margin: 10px 0; /* Margin between paragraphs */
+}
+
+#contact a {
+    color: #2a1f14; /* Brown color for links */
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+#form {
+    margin-top: 30px; /* Adds space above the form */
+}
+
+#form fieldset {
+    border: 2px solid #2a1f14; /* Brown border for fieldsets */
+    border-radius: 10px; /* Rounded corners for fieldsets */
+    padding: 20px; /* Padding inside fieldsets */
+    margin-bottom: 20px; /* Space between fieldsets */
+    max-width: 600px; /* Sets a max-width for the fieldsets */
+    margin: 0 auto 20px auto; /* Centers the fieldsets */
+}
+
+#form legend {
+    color: #2a1f14; /* Brown color for legends */
+    font-weight: bold;
+    padding: 0 10px; /* Padding around the legend text */
+}
+
+#form label {
+    display: block; /* Makes labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+    color: #333; /* Dark gray color for labels */
+}
+
+#form input[type="text"],
+#form input[type="email"],
+#form input[type="tel"],
+#form textarea {
+    width: 100%; /* Full-width inputs and textarea */
+    padding: 10px; /* Padding inside inputs and textarea */
+    margin-bottom: 10px; /* Space below inputs and textarea */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+#form input[type="radio"] {
+    margin-right: 10px; /* Space to the right of radio buttons */
+}
+
+#form .btn {
+    background-color: #2a1f14; /* Brown background color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size */
+    display: block; /* Makes the button block level */
+    margin: 0 auto; /* Centers the button */
+}
+
+#form .btn:hover {
+    background-color: #4d3319; /* Darker brown on hover */
+}
+
+
+/* Footer *****************************************************************/
+footer {
+
+}
+
+
+
+/* Media Queries *****************************************************************/
+@media (max-width: 1000px) {
+
+}

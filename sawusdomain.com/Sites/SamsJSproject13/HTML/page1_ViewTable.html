@@ -1,0 +1,138 @@
+<?php include '../PHP/Page0_Scripts/SessionControl.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="/Sites/SamsJSproject13/CSS/page1_Style.css" rel="stylesheet">
+    <link href="/Sites/SamsJSproject13/CSS/base_Style.css" rel="stylesheet">
+    <title>View Hiring Partners</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            GTC Hiring Partners | View Hiring Partners
+        </h1>
+        <button id="logout_button" class="button">Logout</button>
+    </header>
+
+    <nav>
+        <a id="page1_link" href="/Sites/SamsJSproject13/HTML/page1_ViewTable.html">View</a>
+        <a id="page3_link" href="/Sites/SamsJSproject13/HTML/page3_ViewInsert.html" data-role="admin,editor">Add</a>
+    </nav>
+
+    <main>
+        
+        <div class="table-container">
+
+            <table id="partners-table">
+
+                <thead id="table-head">
+                    <tr>
+                        <!--
+                            The table headers have attributes for sorting and grouping. 
+                            Each <th> has a class for different groups like location, contact, benefits, welding, shifts, and notes. 
+                            These classes help with consistent styling. 
+                            The data-column attribute tells the JavaScript which database column to sort by, 
+                            and data-order sets the initial sorting order (ASC or DESC). 
+                            This setup allows the JavaScript to fetch and display sorted data when a user clicks a header making the table interactive.
+                        -->
+                        <th class="location-group sortable"     data-column="Partner_ID"            data-order="ASC" data-role="admin,editor,viewer"    >ID</th>
+                        <th class="location-group sortable"     data-column="CompanyName"           data-order="ASC" data-role="admin,editor,viewer"    >Company Name</th>
+                        <th class="location-group sortable"     data-column="CompanyPhone"          data-order="ASC" data-role="admin,editor,viewer"    >Company Phone</th>
+                        <th class="location-group sortable"     data-column="City"                  data-order="ASC" data-role="admin,editor,viewer"    >City</th>
+                        <th class="location-group sortable"     data-column="ZIPCode"               data-order="ASC" data-role="admin,editor,viewer"    >ZIP</th>
+
+                        <th class="contact-group sortable"      data-column="ContactName"           data-order="ASC" data-role="admin,editor,viewer"    >Contact Name</th>
+                        <th class="contact-group sortable"      data-column="ContactTitle"          data-order="ASC" data-role="admin,editor,viewer"    >Contact Title</th>
+                        <th class="contact-group sortable"      data-column="ContactPhone"          data-order="ASC" data-role="admin,editor,viewer"    >Contact Phone</th>
+                        <th class="contact-group sortable"      data-column="ContactEmail"          data-order="ASC" data-role="admin,editor,viewer"    >Contact Email</th>
+
+                        <th class="benefits-group sortable"     data-column="PayRate"               data-order="ASC" data-role="admin,editor,viewer"    >Pay Rate</th>
+
+                        <th class="welding-group sortable"      data-column="TIG"                   data-order="ASC" data-role="admin,editor,viewer"    >TIG</th>
+                        <th class="welding-group sortable"      data-column="SprayTransfer"         data-order="ASC" data-role="admin,editor,viewer"    >Spray</th>
+                        <th class="welding-group sortable"      data-column="ShortCircuit"          data-order="ASC" data-role="admin,editor,viewer"    >MIG</th>
+                        <th class="welding-group sortable"      data-column="FluxCore"              data-order="ASC" data-role="admin,editor,viewer"    >Flux</th>
+                        <th class="welding-group sortable"      data-column="Stick"                 data-order="ASC" data-role="admin,editor,viewer"    >Stick</th>
+                        <th class="welding-group sortable"      data-column="Other"                 data-order="ASC" data-role="admin,editor,viewer"    >Other</th>
+
+                        <th class="admin-group sortable"        data-column="LastModified"          data-order="ASC" data-role="admin"                  >Last Modified</th>
+                        <th class="admin-group sortable"        data-column="User"                  data-order="ASC" data-role="admin"                  >User</th>
+                        <th class="admin-group sortable"        data-column="IPAddress"             data-order="ASC" data-role="admin"                  >IP Address</th>
+                        
+                        
+
+ 
+
+                    </tr>
+                </thead>
+                
+                
+                <tbody id="partners-data">
+                    <tr>
+                        <td class="location-group" data-column="Partner_ID">1</td>
+                        <td class="location-group" data-column="CompanyName">Example Company</td>
+                        <td class="location-group" data-column="CompanyPhone">(123) 456-7890</td>
+                        <td class="location-group" data-column="StreetAddress">123 Example St</td>
+                        <td class="location-group" data-column="City">Example City</td>
+                        <td class="location-group" data-column="ZIPCode">12345</td>
+                
+                        <td class="contact-group" data-column="ContactName">John Doe</td>
+                        <td class="contact-group" data-column="ContactTitle">Manager</td>
+                        <td class="contact-group" data-column="ContactPhone">(123) 456-7891</td>
+                        <td class="contact-group" data-column="ContactEmail">john.doe@example.com</td>
+                
+                        <td class="benefits-group" data-column="PayRate">$50/hr</td>
+         
+                        <td class="welding-group" data-column="TIG">Yes</td>
+                        <td class="welding-group" data-column="SprayTransfer">No</td>
+                        <td class="welding-group" data-column="ShortCircuit">No</td>
+                        <td class="welding-group" data-column="FluxCore">Yes</td>
+                        <td class="welding-group" data-column="Stick">Yes</td>
+                        <td class="welding-group" data-column="Other">No</td>
+                
+                        
+                        <td class="admin-group" data-column="LastModified">2023-07-01</td>
+                        <td class="admin-group" data-column="User">admin_user</td>
+                        <td class="admin-group" data-column="IPAddress">192.168.1.1</td>
+                    </tr>
+                </tbody>
+
+
+                
+                
+
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <a href="mailto:sawudohc@gmail.com">sawudohc@gmail.com</a>
+    </footer>
+
+    <script src="/Sites/SamsJSproject13/JS/UtilityScripts/UserClass.js" defer></script>
+
+    <script src="/Sites/SamsJSproject13/JS/Page1_Scripts/1_Main.js" defer></script>
+    
+    <script src="/Sites/SamsJSproject13/JS/Page1_Scripts/fetchDataMethod.js" defer></script>
+
+    <script src="/Sites/SamsJSproject13/JS/Page1_Scripts/populateTableMethod.js" defer></script>
+
+    <script src="/Sites/SamsJSproject13/JS/Page1_Scripts/restrictViewMethod.js" defer></script>
+
+    <script src="/Sites/SamsJSproject13/JS/Page1_Scripts/addEventListenerSort.js" defer></script>
+
+    <script src="/Sites/SamsJSproject13/JS/Page1_Scripts/addEventListenerSelection.js" defer></script>
+
+    <script src="/Sites/SamsJSproject13/JS/UtilityScripts/addEventListenerLogOut.js" defer></script>
+    
+    
+
+
+</body>
+
+</html>

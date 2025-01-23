@@ -1,0 +1,32 @@
+Root Directory
+│ 
+│ 
+├── Application-My Computer                     // requires window
+├── Application-Read Me                         // requires window
+├── Application-NASA's API.exe                  // requires window
+├── Application-Temperature Converter.exe       // requires window
+├── Application-Time Converter.exe              // requires window
+│
+├── Directory-C Projects                        // requires window
+│   ├── Link-Sorting Algorithm.c
+│   ├── Link-DataStructures.c
+│   └── Link-GameEngine.c
+│
+├── Directory-Java Projects                     // requires window
+│   ├── Link-Calculator.java
+│   ├── Link-ChatApplication.java
+│   └── Link-FileParser.java
+│
+├── Link-E-Mail
+├── Link-Fulton County Payroll Deduction Form
+├── Link-Wild Rescues
+├── Link-Strike A Chord
+├── Link-Sam Welds
+├── Link-Online Order Form
+├── Link-Timed Math Quiz
+├── Link-GTC Hiring Partner Database Documentation
+├── Link-Input Validation
+├── Link-Utilizing String Query
+├── Link-GTC Hiring Partner Database
+├── Link-GTC Welding Department Inventory System
+└── Link-Digital Broker

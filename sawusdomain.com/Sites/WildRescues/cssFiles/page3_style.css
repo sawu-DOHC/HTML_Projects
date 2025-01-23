@@ -1,0 +1,90 @@
+/* Body Styles *****************************************************************/
+body {
+
+}
+
+/* Header Section *****************************************************************/
+header {
+    /* Add styles here */
+}
+
+
+/* Navbar *****************************************************************/
+nav {
+    /* Add styles here */
+}
+#page3 {
+    background-color: #f6eee4;;
+    color: #2a1f14;
+}
+
+/* Main Content *****************************************************************/
+main {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+main h2, main h3 {
+    color: #333;
+    text-align: center;
+}
+
+main p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+main #desktop-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+main #desktop-table th, main #desktop-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+main #desktop-table th {
+    background-color: #2a1f14;
+    color: white;
+}
+
+main #desktop-table caption {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+/* Default: Hide mobile table in desktop view */
+#mobile-table {
+    display: none;
+}
+
+/* Footer *****************************************************************/
+footer {
+    /* Add styles here */
+}
+
+/* Media Queries *****************************************************************/
+@media (max-width: 1000px) {
+    main {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* Hide desktop table in mobile view */
+    #desktop-table {
+        display: none;
+    }
+
+    /* Show mobile table in mobile view */
+    #mobile-table {
+        display: block;
+    }
+}
+

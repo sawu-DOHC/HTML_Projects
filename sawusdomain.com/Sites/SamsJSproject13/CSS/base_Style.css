@@ -1,0 +1,66 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #666;
+    text-align: center;
+    height: 38px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0px;
+    padding: 10px 20px; /* Adjust padding to increase clickable area */
+    display: inline-block; /* Ensures the padding applies correctly */
+}
+nav a:hover {
+    background-color: #fff;
+    color: #333;
+}
+nav a:active { /* Change color when clicked */
+    background-color: #fff;
+    color: #333;
+}
+
+main {
+    width: auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+footer a {
+    color: #fff;
+}
+
+/* Common button styles */
+.button {
+    margin: 5px;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    height: 45px;
+    width: 125px;
+}
+
+#logout_button {
+    background-color: #f44336;
+    position: absolute; /* Position the logout button absolutely */
+    right: 20px; /* Place the logout button 20px from the right edge */
+    top: 20px;
+}
+#logout_button:hover {
+    background-color: #d32f2f;
+}
+

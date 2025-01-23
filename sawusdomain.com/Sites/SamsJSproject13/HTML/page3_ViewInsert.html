@@ -1,0 +1,171 @@
+<?php include '../PHP/Page0_Scripts/SessionControl.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="/Sites/SamsJSproject13/CSS/page3_Style.css" rel="stylesheet">
+    <link href="/Sites/SamsJSproject13/CSS/base_Style.css" rel="stylesheet">
+    <title>Add Hiring Partner</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            GTC Hiring Partners | Insert Element
+        </h1>
+
+        <button id="logout_button" class="button">Logout</button>
+    </header>
+
+    <nav>
+        <a id="page1_link" href="/Sites/SamsJSproject13/HTML/page1_ViewTable.html">View</a>
+        <a id="page3_link" href="/Sites/SamsJSproject13/HTML/page3_ViewInsert.html" data-role="admin,editor">Add</a>
+    </nav>
+
+    <main>
+
+        <form id="submissionForm" class="submissionform" method="post">
+            <fieldset>
+                <legend>Company Information</legend>
+                <label for="partner_name">Company Name (required) </label>
+                <input type="text" id="partner_name" name="partner_name" required size="20">
+                <label for="company_phone">Company Phone</label>
+                <input type="tel" id="company_phone" name="company_phone" >
+                <label for="street_address">Street Address (required) </label>
+                <input type="text" id="street_address" name="street_address" required size="20">
+                <label for="city">City (required) </label>
+                <input type="text" id="city" name="city" required size="20">
+                <label for="state">State (required)</label>
+                <input type="text" id="state" name="state" style="width:35px" pattern="[A-Za-z]{2}" title="Please enter a valid 2-letter state abbreviation">
+                <label for="zip">ZIP Code (required)</label>
+                <input type="number" id="zip" name="zip" required maxlength="5" style="width: 60px" title="Please enter a valid 5-digit ZIP code">
+                <label for="product_description">Product Description</label>
+                <textarea id="product_description" name="product_description"></textarea>
+            </fieldset>
+            
+
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="contact_name">Contact Name (required)</label>
+                <input type="text" id="contact_name" name="contact_name" required>
+                <label for="contact_title">Contact Title</label>
+                <input type="text" id="contact_title" name="contact_title">
+                <label for="contact_phone">Contact Phone Number (required)</label>
+                <input type="tel" id="contact_phone" name="contact_phone" required>
+                <label for="contact_email">Contact Email</label>
+                <input type="email" id="contact_email" name="contact_email">
+            </fieldset>
+
+            <fieldset>
+                <legend>Employment Conditions</legend>
+                <label for="pay_rate">Pay Rate</label>
+                <input type="number" id="pay_rate" name="pay_rate" size="20" step="0.01" style="width: 75px">
+
+                <!-- Employment Type -->
+                <div class="checkbox-group">
+                    <label>Employment Type</label>
+                    <br>
+                    <input type="checkbox" id="fullTime" name="employmentType[]" value="fullTime">
+                    <label for="fullTime">Full-Time</label>
+                    <br>
+                    <input type="checkbox" id="partTime" name="employmentType[]" value="partTime">
+                    <label for="partTime">Part-Time</label>
+                    <br>
+                    <br>
+                </div>
+
+                <!-- Employee Benefits -->
+                <div class="checkbox-group">
+                    <label>Employee Benefits</label>
+                    <br>
+                    <input type="checkbox" id="medical" name="benefits[]" value="medical">
+                    <label for="medical">Medical</label>
+                    <br>
+                    <input type="checkbox" id="dental" name="benefits[]" value="dental">
+                    <label for="dental">Dental</label>
+                    <br>
+                    <input type="checkbox" id="retirement" name="benefits[]" value="retirement">
+                    <label for="retirement">Retirement Plan (e.g., 401k)</label>
+                    <br>
+                    <input type="checkbox" id="paidTimeOff" name="benefits[]" value="paidTimeOff">
+                    <label for="paidTimeOff">Paid Time Off</label>
+                    <br>
+                    <br>
+                </div>
+
+                <!-- Types Of Welding -->
+                <div class="checkbox-group">
+                    <label for="welding_type">Types Of Welding</label>
+                    <br>
+                    <input type="checkbox" id="tig" name="weldingType[]" value="T.I.G">
+                    <label for="tig">T.I.G</label>
+                    <br>
+                    <input type="checkbox" id="spray_transfer" name="weldingType[]" value="Spray Transfer">
+                    <label for="spray_transfer">Spray Transfer</label>
+                    <br>
+                    <input type="checkbox" id="short_circuit" name="weldingType[]" value="Short Circuit">
+                    <label for="short_circuit">Short Circuit</label>
+                    <br>
+                    <input type="checkbox" id="flux_core" name="weldingType[]" value="Flux Core">
+                    <label for="flux_core">Flux Core</label>
+                    <br>
+                    <input type="checkbox" id="stick" name="weldingType[]" value="Stick">
+                    <label for="stick">Stick</label>
+                    <br>
+                    <input type="checkbox" id="other" name="weldingType[]" value="Other">
+                    <label for="other">Other</label>
+                    <br>
+                    <br>
+                </div>
+
+                <!-- Hours Of Operation -->
+                <div class="checkbox-group">
+                    <label for="shift">Hours Of Operation</label>
+                    <br>
+                    <input type="checkbox" id="firstShift" name="shift[]" value="First Shift">
+                    <label for="firstShift">First Shift</label>
+                    <br>
+                    <input type="checkbox" id="secondShift" name="shift[]" value="Second Shift">
+                    <label for="secondShift">Second Shift</label>
+                    <br>
+                    <input type="checkbox" id="thirdShift" name="shift[]" value="Third Shift">
+                    <label for="thirdShift">Third Shift</label>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="textArea-group">
+                    <label for="weldTest_description">Weld Test Description</label>
+                    <textarea id="weldTest_description" name="weldTest_description"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <div class="textArea-group">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="button-container">
+                <button id="submitButton" type="submit">Add Partner</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <a href="mailto:sawudohc@gmail.com">sawudohc@gmail.com</a>
+    </footer>
+
+    <script src="/Sites/SamsJSproject13/JS/UtilityScripts/UserClass.js" defer></script>
+    <script src="/Sites/SamsJSproject13/JS/Page3_Scripts/addEventListenerInsert.js" defer></script>
+    <script src="/Sites/SamsJSproject13/JS/Page3_Scripts/3_Main.js" defer></script>
+    <script src="/Sites/SamsJSproject13/JS/UtilityScripts/addEventListenerLogOut.js" defer></script>
+
+</body>
+
+</html>

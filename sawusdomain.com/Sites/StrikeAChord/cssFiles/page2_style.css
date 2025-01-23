@@ -1,0 +1,117 @@
+/*BODY STYLES ****************************************************************************************************************************************/
+body {
+
+}
+/* HEADER SECTION ****************************************************************************************************************************************/
+header{
+
+}
+/* NAVIGATION SECTION ****************************************************************************************************************************************/
+nav {
+
+}
+#lessons-link {
+	background-color: #e5e9fc;
+	color:black;
+}
+
+/* MAIN SECTION ****************************************************************************************************************************************/
+main {
+    background-color: #e5e9fc;
+    padding: 20px;
+}
+
+#info {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+ul li {
+    margin-left: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.col {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px; 
+    margin-top:0px;
+    box-sizing: border-box;
+    flex: 1 1 30%; 
+    max-width: calc(33.333% - 20px); 
+    text-align: center;
+  }
+
+.col img {
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 5px solid #373684;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col h3, .col h4 {
+    color: #373684;
+    text-align: center;
+}
+
+.col p {
+    font-size: 20px;
+
+}
+
+.col audio {
+    width: 100%;
+}
+
+/* FOOTER SECTION **************************************************************************************************************************************/
+footer {
+
+}
+
+/* MOBILE DEVICE STYLING RULES ***************************************************************************************************************************/
+@media screen and (max-width: 1000px) {
+    main {
+        padding: 10px;
+    }
+
+    #info {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        width: 100%; /* Adjust the width to be larger */
+        max-width: 90%; /* Ensure the columns take up more space */
+        margin: 10px 0; /* Add some vertical margin for spacing */
+        margin-top: 0px;
+        display: flex; /* Use flexbox to center the content */
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center text inside the column */
+    }
+
+    .col img {
+        max-width: 100%; /* Ensure images take full width */
+        margin-bottom: 10px;
+    }
+
+}

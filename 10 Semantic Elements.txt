@@ -1,0 +1,9 @@
+10. Semantic Elements:
+
+<main>: Represents the main content of the document, excluding headers, footers, and sidebars.
+
+<aside>: Represents content tangentially related to the main content (like sidebars or pull quotes).
+
+<figure>: Used to group media content (like an image or diagram) with its caption.
+
+<figcaption>: Provides a caption for the <figure> element.

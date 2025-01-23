@@ -1,0 +1,28 @@
+
+#desktop {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(auto-fill, minmax(12rem, 1fr)); 
+  justify-content: start; 
+  height: calc(100vh - 4.5rem);
+  padding: .5rem;
+  background-color: rgb(0, 128, 128); 
+}
+
+
+@media (max-width: 750px) {
+
+  #desktop {
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    grid-auto-flow: row;
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    box-sizing: border-box;
+  }
+
+
+}

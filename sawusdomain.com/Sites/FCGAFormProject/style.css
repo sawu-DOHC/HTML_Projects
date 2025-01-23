@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+
+    
+    /* For 96 PPI (Screen Resolution) */
+    width: 8.5in; /* or 210mm for A4 */
+    height: 11in; /* or 297mm for A4 */
+
+    
+    /* For 300 PPI (High-Resolution Print)
+    max-width: 2550px; 
+    max-height: 3300px; */
+    
+    padding: 5rem;
+    border: 3px solid black;
+    font-size: 15px;
+
+}
+
+#logo {
+    width: 75px;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    margin: 0 0 0 0;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* General Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 2px;
+    text-align: center;
+}
+
+
+/* Row specific styling */
+#row-1 td {
+    text-align: justify;
+    border: none;
+}
+
+#row-2 {
+    border: 1px solid black; 
+    border-bottom:none;
+}
+
+#row-2 td {
+    border: none; 
+    text-align: left;
+}
+
+#row-3 td {
+    text-align: left;
+}
+
+#row-4 td {
+    background-color: #d3d3d3; 
+    font-weight: bold;
+    text-align: left;
+}
+
+#row-5-7 td {
+    text-align: left;
+}
+
+#row-8 td {
+    text-align: left;
+    border-top:none;
+}
+
+#row-9 td {
+    background-color: #d3d3d3; 
+    font-weight: bold;
+    text-align: left;
+}
+
+#row-10-13 td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#row-10-13 td:first-child {
+    text-align: left;
+}
+
+#row-14 td {
+    text-align: justify;
+    font-style: italic;
+}
+
+#row-15 td {
+    background-color: #d3d3d3; 
+    font-weight: bold;
+    text-align: left;
+}
+
+#row-16 td {
+    text-align: justify;
+    padding: 5px;
+}
+
+#row-17 td {
+    background-color: #d3d3d3; 
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+}
+
+#row-18 td {
+    text-align: justify;
+    border-bottom: none;
+}
+
+#row-19 td {
+    text-align: left;
+}
+
+#row-20 td {
+    background-color: #d3d3d3; 
+    font-weight: bold;
+    text-align: left;
+}
+
+#row-21 td {
+    background-color: #d3d3d3;
+    text-align: left;
+    vertical-align: top;
+    
+}
+
+#row-22 td {
+    border: none;
+    text-align: left;
+    font-style: italic;
+}
+
+#row-23 td {
+    border: none;
+    text-align: center;
+}
+
+#submit-Button{
+    background-color: #4CAF50; 
+    color: white;              
+    padding: 7px 24px;                      
+    border-radius: 4px;        /* Rounded corners */
+    cursor: pointer;           /* Pointer cursor on hover */
+    font-size: 16px;           /* Font size */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#submit-Button:hover {
+    background-color: green;
+}

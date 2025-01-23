@@ -1,0 +1,60 @@
+/* Body Styles *****************************************************************/
+body {
+
+}
+
+/* Header Section *****************************************************************/
+header {
+
+}
+
+
+/* Navbar *****************************************************************/
+nav {
+
+}
+#page2 {
+    background-color: #f6eee4;;
+    color: #2a1f14;
+}
+
+/* Main Content *****************************************************************/
+main {
+    background-color: #ffffff; /* Sets a clean white background for clarity */
+    padding: 20px; /* Adds padding around the content for spacing */
+    margin: 20px; /* Centers the main content on the page */
+    border-radius: 10px; /* Rounded corners for a softer look */
+}
+
+main h2 {
+    color: #333; /* Dark gray color for headings for better visibility */
+    margin-bottom: 15px; /* Spacing below the heading */
+}
+
+main p {
+    text-align: left; /* Centers the text for paragraphs */
+}
+
+main video {
+    width: 70%; /* Sets the width of the video to 70% of its container */
+    display: block; /* Makes the video a block element */
+    margin: 0 auto; /* Auto margins for horizontal centering */
+    border-radius: 10px; /* Rounded corners for the video */
+}
+
+/* Footer *****************************************************************/
+footer {
+    /* Add styles here */
+}
+
+/* Media Queries *****************************************************************/
+@media (max-width: 1000px) {
+    main {
+        padding: 10px;
+        margin: 10px; /* Adjusts margin and padding for smaller screens */
+    }
+
+    main video {
+        width: 100%; /* Makes the video full-width on smaller screens */
+    }
+}

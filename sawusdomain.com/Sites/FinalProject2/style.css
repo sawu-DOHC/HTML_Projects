@@ -1,0 +1,88 @@
+fieldset {
+    border: 0px solid #00000000; 
+    box-shadow: 
+    /* Horizontal offset */ 0 /* Vertical offset */ 0 /* Blur radius */ 20px /* Shadow color */ rgba(220, 211, 196, .9),
+    /* Horizontal offset */ 0 /* Vertical offset */ 0 /* Blur radius */ 20px /* Shadow color */ rgba(220, 211, 196, .9),
+    /* Horizontal offset */ 0 /* Vertical offset */ 0 /* Blur radius */ 20px /* Shadow color */ rgba(220, 211, 196, .9),
+    /* Horizontal offset */ 0 /* Vertical offset */ 0 /* Blur radius */ 20px /* Shadow color */ rgba(220, 211, 196, .9);
+    background-color: rgba(220, 211, 196, .94);
+
+    width: auto;
+    margin: 20px; 
+    border-radius: 15px;
+
+}
+
+form fieldset legend {
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+body {
+    background-image: url('cookieWallpaper.jpg'); 
+    background-repeat: repeat;    
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: right; 
+    margin-bottom: 10px;
+    
+}
+
+.shippingButtons {
+    text-align: left;
+}
+
+
+fieldset .orderDetails {
+    width: 375px;
+    height: 150px;
+}
+
+
+
+.priceLabel{
+    width: 50px; 
+    margin-right: 5px;
+}
+
+.priceField{
+    width: 50px;
+    text-align: left;
+}
+
+.nameLabel {
+
+}
+
+.checkBox {
+
+}
+
+.quantityLabel {
+    width: 65px;
+    text-align: center;
+}
+
+.quantityField {
+    width: 30px;
+    
+}
+
+h1 {
+    text-align: center; /* Center-align the text */
+    font-weight: bolder; /* Use a bold font */
+    font-size: 70px; /* Set the font size */
+    color: white; /* Set the text color to white */
+    text-shadow: 5px 5px 10px black; /* Apply a black shadow with offset and blur */
+}
+
+.zipCode{
+    width: 60px;
+}

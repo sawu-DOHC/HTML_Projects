@@ -1,0 +1,7 @@
+12. Styling and Presentation Elements:
+
+<style>: Used to define internal CSS styles within an HTML document.
+
+<link>: Links to an external stylesheet.
+
+<font>: Specifies font size, color, and family (now outdated in favor of CSS).

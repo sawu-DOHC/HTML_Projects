@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="/Sites/SamsJSproject13/CSS/page0_Style.css" rel="stylesheet">
+    <link href="/Sites/SamsJSproject13/CSS/base_Style.css" rel="stylesheet">
+    <title>User Login</title>
+</head>
+<body>
+    <header>
+        <h1>GTC Hiring Partners | User Login</h1>
+        <button id="logout_button" class="button">Logout</button>
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+        <form id="login_form" class="loginform" method="post">
+            <fieldset>
+                <legend>Login Information</legend>
+                <label for="username_field">Username</label>
+                <input type="text" id="username_field" name="username" size="20">
+                <br><br>
+                <label for="password_field">Password</label>
+                <input type="password" id="password_field" name="password" size="20">
+            </fieldset>
+
+            <button id="login_button" class="button" type="submit">Login</button>
+            <button id="guest_login_button" class="button" type="button">Log in as Guest</button>
+
+        </form>
+    </main>
+    <footer>
+        <a href="mailto:sawudohc@gmail.com">sawudohc@gmail.com</a>
+    </footer>
+    <script src="/Sites/SamsJSproject13/JS/UtilityScripts/UserClass.js" defer></script>
+    <script src="/Sites/SamsJSproject13/JS/Page0_Scripts/addEventListenerSubmitLogIn.js" defer></script>
+    <script src="/Sites/SamsJSproject13/JS/Page0_Scripts/addEventListenerLogInAsGuest.js" defer></script>
+    <script src="/Sites/SamsJSproject13/JS/Page0_Scripts/0_Main.js" defer></script>
+    <script src="/Sites/SamsJSproject13/JS/UtilityScripts/addEventListenerLogOut.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<a>: Defines a hyperlink.
+
+The href attribute specifies the destination of the link.
+
+Example: 
+    <a href="https://example.com">Example</a>

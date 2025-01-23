@@ -1,0 +1,117 @@
+
+/* Common button styles */
+.button {
+    margin: 5px;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    height: 45px;
+    width: 125px;
+}
+
+
+#logout_button {
+    background-color: #f44336;
+    position: absolute; /* Position the logout button absolutely */
+    right: 20px; /* Place the logout button 20px from the right edge */
+    top: 20px;
+}
+
+
+form {
+    background-color: #eeede8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 400px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.checkbox-group label { /* Style the checkboxes */
+    display: inline-block;
+}
+label { /* Style the labels */
+    display: block;
+}
+.submissionform fieldset {
+    margin: 0 auto; /* Center the fieldset */
+    width: 350px; /* Adjust the width as needed */
+    text-align: left; /* Justify text to the left */
+    margin-top: 10px;
+}
+legend { /* Style the legends */
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+#notes{
+    width:98%;
+    height: 150px;
+}
+#product_description{
+    width:98%;
+    height:50px;
+}
+#weldTest_description{
+    width:98%;
+    height:50px;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Style for text input fields */
+input[type="text"] {
+    margin-bottom: 10px;
+    width: 275px;
+}
+
+input[type="number"] {
+    margin-bottom: 10px;
+}
+
+input[type="tel"]{
+    margin-bottom: 10px;
+}
+input[type="email"]{
+    margin-bottom: 10px;
+}
+textarea {
+    margin-bottom: 10px;
+}
+
+
+
+/*----------------------------------------------------------------------------------*/
+
+
+
+
+/* Style the Add Partner button */
+#submitButton {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 20px 40px; /* Increased padding for larger buttons */
+    border: none; /* Remove borders */
+    border-radius: 25px; /* More rounded corners */
+    cursor: pointer; /* Pointer/hand icon */
+    font-weight: bold;
+    width: 200px; /* Increase width for all buttons */
+    font-size: 16px;
+}
+
+/* Change the background color on hover */
+#submitButton:hover {
+    background-color: #208125; /* Darker green */
+}
+
+#page3_link {
+    background-color: #fff;
+    color: #333;
+}

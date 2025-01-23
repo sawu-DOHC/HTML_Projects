@@ -1,0 +1,71 @@
+.table-container {
+    max-height: auto; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+#partners-table {
+    width: 100%; /* Make the table fill its container */
+}
+
+#partners-table th, #partners-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#partners-table th {
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding around the content */
+}
+
+/* Location Group */
+#partners-table th.location-group {
+    background-color: #fcecec; /* Very light pink */
+}
+
+/* Benefits Group */
+#partners-table th.benefits-group {
+    background-color: #e6fce6; /* Very light green */
+}
+
+/* Welding Group */
+#partners-table th.welding-group {
+    background-color: #e6e6fc; /* Very light blue */
+}
+
+/* Shifts Group */
+#partners-table th.shifts-group {
+    background-color: #fcfcf6; /* Very light yellow */
+}
+
+/* Weld Test Group */
+#partners-table th.weld-test-group {
+    background-color: #fcecf7; /* Very light purple */
+}
+
+#partners-table th.additional-notes-group {
+    background-color: #e5e7d6; /* Very light purple */
+}
+
+#partners-table tr {
+    cursor: pointer;
+}
+
+#partners-table td {
+    cursor: pointer;
+}
+
+.highlighted-row {
+    background-color: rgb(64, 64, 232);
+    color: white;
+}
+
+#page1_link {
+    background-color: #fff;
+    color: #333;
+}

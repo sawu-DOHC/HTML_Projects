@@ -1,0 +1,117 @@
+/* Body and Global Styles ***********************************************************************/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f6eee4;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header ***************************************************************************************/
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+header img {
+    width: 100%;
+    max-height: 225px;
+    object-fit: cover;
+    display: block;
+    object-position: 50% 20%;
+}
+
+header h1 {
+    top: 35%;
+    font-size: 2.5em;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header h2 {
+    top: 60%;
+    font-size: 1.5em;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* navigation ***********************************************************************************/
+nav {
+    background-color: #2a1f14;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f6eee4;
+    color: #2a1f14;
+}
+
+/* Main Content ********************************************************************************/
+main {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+/* Footer **************************************************************************************/
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    background-color: #2a1f14;
+    color: #f6eee4;
+    padding: 20px 0;
+}
+footer a{
+    color: rgb(160, 187, 255);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    main {
+        margin: 20px;
+    }
+
+    
+}

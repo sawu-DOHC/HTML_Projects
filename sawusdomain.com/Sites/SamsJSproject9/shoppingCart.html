@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="shoppingCart.css">
+    <title>Sam's JavaScript Project 9</title>
+</head>
+<body>
+    <div class="outerBlueWrapper">
+        <header>
+            <h1>Hands-on Project 9-1</h1>
+        </header>
+
+        <nav></nav>
+
+        <h2>Shopping Cart</h2>
+
+        <main class="innerYellowWrapper">  
+
+            <div class="message-container" id="messageContainer">
+                <h2>Greeting Message</h2>
+                <!-- dynamically populated with js -->
+            </div>
+
+        
+            <div class="receipt-container">
+
+                <table id="receipt">
+
+                    <thead>
+
+                        <tr>
+                            <th class="title">Product</th>
+                            <th class="title">Quantity</th>
+                            <th class="title">Cost</th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                        <!--dynamically populated with js -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td id="totalCost"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+        </main>
+
+        <footer></footer>
+    </div>
+    <script src="shoppingCart.js"></script> 
+</body>
+</html>

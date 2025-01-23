@@ -1,0 +1,103 @@
+/* Body Styles *****************************************************************/
+body {
+
+}
+
+/* Header Section *****************************************************************/
+header {
+
+}
+
+
+/* Navbar *****************************************************************/
+nav {
+
+}
+#page4 {
+    background-color: #f6eee4;;
+    color: #2a1f14;
+}
+
+/* Main Content *****************************************************************/
+main {
+   
+}
+main {
+    background-color: #ffffff; /* Sets a clean white background for clarity */
+    padding: 20px; /* Adds padding around the content for spacing */
+    margin: 20px; /* Centers the main content on the page */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    display: grid; /* Use grid layout */
+
+    gap: 20px; /* Gap between grid items */
+}
+
+main aside {
+    grid-column: span 3; /* Make aside span all columns */
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+main figure {
+    padding: 10px;
+    border: 4px solid #2a1f14; /* Thick brown border */
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease-in-out; /* Smooth transition for magnification */
+}
+
+main figure:hover {
+    transform: scale(1.35); /* Slightly enlarges the figure on hover */
+}
+
+main figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #2a1f14; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+main figure figcaption {
+    font-size: 1em;
+    color: #2a1f14; 
+    font-weight: bold;
+}
+
+
+/* Footer *****************************************************************/
+footer {
+
+}
+
+
+
+/* Media Queries *****************************************************************/
+@media (max-width: 1000px) {
+
+    main aside {
+        grid-column: span 1;
+    }
+    main figure {
+        max-width: 450px; 
+        margin: 0 auto; 
+    }
+    main figure img {
+        width: 100%; 
+        height: auto;
+    }
+    main figure figcaption {
+        max-width: 100%; 
+        margin: 0 auto;
+        text-align: center;
+    }
+}

@@ -1,0 +1,74 @@
+/* Body Styles *****************************************************************/
+body {
+
+}
+
+/* Header Section *****************************************************************/
+header {
+
+}
+
+
+/* Navbar *****************************************************************/
+#page1 {
+    background-color: #f6eee4;;
+    color: #2a1f14;
+}
+
+
+/* Main Content *****************************************************************/
+main {
+   
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+
+}
+
+.col {
+    margin: 10px; /* Ensures uniform spacing around each column */
+    flex: 1 1 300px; /* Flexibility in the base size but doesn’t grow beyond what’s needed */
+    padding: 20px; /* Sufficient padding within each column */
+    text-align: center; /* Center aligns the text and content within each column */
+    background-color: #fff; /* Ensures each column has a white background */
+    border-radius: 10px; /* Rounded corners for each column */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Subtle shadow for depth */
+}
+
+.col img {
+    max-width: 100%; /* Ensures image does not exceed the column width */
+    height: auto; /* Keeps the image aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.col img:hover {
+    transform: scale(1.15); /* Slightly enlarges the image on hover */
+}
+
+.col h1 {
+    margin-bottom: 15px; /* Space below the header */
+}
+
+.col p {
+    font-size: 16px; /* Standard font size for paragraph */
+    line-height: 1.5; /* Line height for better readability */
+}
+/* Footer *****************************************************************/
+footer {
+    /* Add styles here */
+}
+
+
+
+/* Media Queries *****************************************************************/
+@media (max-width: 1000px) {
+    .row {
+        flex-direction: column; /* Stacks the columns vertically on smaller screens */
+    }
+
+    .col {
+        flex: 1 1 100%; /* Each column takes full width on smaller screens */
+    }
+}
