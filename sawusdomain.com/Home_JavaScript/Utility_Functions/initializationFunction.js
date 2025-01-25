@@ -38,7 +38,8 @@ function createSrcObjects( data ) {
             item.description,
             item.image_path,
             item.url,
-            item.body_content
+            item.body_content,
+            item.css_path
 
         );
 
@@ -119,8 +120,9 @@ function createSrcObjectsLocal(data) {
     ));
 }
 
-function createSrcObjectsApi(data) {
-    return data.map(item => new SrcObj(
+function createSrcObjectsApi( data ) {
+
+    return data.map( item => new SrcObj(
         item.id,
         item.parent_id,
         item.type,
@@ -128,14 +130,16 @@ function createSrcObjectsApi(data) {
         item.description,
         item.image_path,
         item.url,
-        item.body_content
+        item.body_content,
+        item.css_path
     ));
+
 }
 
 
 
 
-const SrcObj_Array = [
+const local_array = [
 
     {
         id: 0,

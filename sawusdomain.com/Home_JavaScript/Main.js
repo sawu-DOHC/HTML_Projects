@@ -1,19 +1,16 @@
-async function Main() {
+let srcObj_Array = []; // Global array
 
-    let srcObj_Array;
+async function Main() {
 
     const useLocalData = false;
 
+    if (useLocalData == true) {
 
-    if ( useLocalData == true ) {
-
-        srcObj_Array = createSrcObjectsLocal(SrcObj_Array);
-
+        srcObj_Array = createSrcObjectsLocal(local_array);
     } 
     else {
-
         try {
-            const jsonData = await fetchJson(); // Make sure fetchJson is defined to fetch your data
+            const jsonData = await fetchJson(); // Fetch your data
             srcObj_Array = createSrcObjectsApi(jsonData);
             console.log("Fetched and processed JSON Data:", srcObj_Array);
         } 
@@ -24,12 +21,7 @@ async function Main() {
     }
 
     populateDiv(desktop, srcObj_Array, 0);
-
-
-
-    initializeBroker();
-                                                            
-
+    initializeBroker();                                                          
 }
 
 Main();

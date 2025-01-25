@@ -1,5 +1,5 @@
 /* time converter */
-#window-5 .window-body {
+#window-10 .window-body {
 
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
     overflow:visible;
   }
   
-  #window-5 #Toolbar {
+  #window-10 #Toolbar {
     display: none;
   }
   
@@ -20,20 +20,20 @@
 
 
 
-  #window-5 .input-row {
+  #window-10 .input-row {
     display: flex;
     flex-direction: column;
     align-items: center;
   
   }
   
-  #window-5 .button-container {
+  #window-10 .button-container {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
   }
   
-  #window-5 #resultDiv {
+  #window-10 #resultDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,17 +41,17 @@
     text-align: center;
   }
   
-  #window-5 #calculateButton {
+  #window-10 #calculateButton {
     padding: 1rem;
     font-size: 1rem;
   }
 
 
-  #window-5 #currentTimeContainer {
+  #window-10 #currentTimeContainer {
     text-align: center;
   }
   
-  #window-5 input {
+  #window-10 input {
     padding: 0.5rem;
     font-size: 1rem;
     text-align: center;

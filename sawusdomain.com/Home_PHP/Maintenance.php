@@ -66,6 +66,9 @@ foreach ($currencies as $currency_id) {
     else {
         echo "Error inserting data for $currency_id: " . $conn->error . "\n";
     }
+
+    // Pause for 5 seconds before the next API call
+    sleep(5); // Delay in seconds
 }
 
 // Close the database connection

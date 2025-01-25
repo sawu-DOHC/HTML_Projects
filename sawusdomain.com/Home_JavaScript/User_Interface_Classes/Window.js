@@ -3,20 +3,20 @@ class Window {
     string_divID;
     string_imgSrc;
     string_title;
+    
     element_window;
 
 
-    constructor( sourceObject, index ) {
 
-        var newsrcobj = sourceObject;
+    constructor( sourceObject, index ) {
 
         this.string_divID = `window-${index}`;
         this.string_imgSrc = sourceObject.string_img_path;
         this.string_title = sourceObject.string_name;
         
-        this.element_window = this.createWindowElement();
+        this.element_window = this.createWindowElement( sourceObject.string_css_path );
         this.element_window.style.display = "none";
-        this.setWindowBody(sourceObject.string_body_content);
+        this.setWindowBody( sourceObject.string_body_content );
 
         this.task = new Task( sourceObject, index );
         const taskbar = document.getElementById("taskContainer");
@@ -24,80 +24,93 @@ class Window {
 
     }
 
-    createWindowElement() {
-        // Create the main window div
+    createWindowElement( new_css_path ) {
+
+        if ( new_css_path != null ) {
+
+            const head_element = document.head;
+            const link_element = document.createElement('link');
+            link_element.rel = 'stylesheet';
+            link_element.href = new_css_path;
+            head_element.appendChild( link_element );
+            console.log( new_css_path );
+        }
+
+
+        // create the main window div
         const windowDiv = document.createElement("div");
         windowDiv.id = this.string_divID;
         windowDiv.className = "window";
         windowDiv.addEventListener("click", () => this.bringWindowToFront());
 
-        // Title bar
+        // title bar
         const titleBar = document.createElement("div");
         titleBar.id = "TitleBar";
         titleBar.className = "title-bar";
         
-        // Title bar icon
+        // title bar icon
         const titleBarIcon = document.createElement("img");
         titleBarIcon.id = "TitleBarIcon";
         titleBarIcon.className = "title-bar-icon";
         titleBarIcon.src = this.string_imgSrc;
         
-        // Title bar text
+        // title bar text
         const titleBarText = document.createElement("span");
         titleBarText.id = "TitleBarText";
         titleBarText.className = "title-text";
         titleBarText.textContent = this.string_title;
         
-        // Minimize button
+        // minimize button
         const minimizeButton = document.createElement("button");
         minimizeButton.id = "MinimizeButton";
         minimizeButton.className = "button minimize-button";
         minimizeButton.textContent = "_";
         minimizeButton.addEventListener("click", () => this.minimizeWindow());
         
-        // Maximize button
+        // maximize button
         const maximizeButton = document.createElement("button");
         maximizeButton.id = "MaximizeButton";
         maximizeButton.className = "button maximize-button";
         maximizeButton.textContent = "🗖";
         maximizeButton.addEventListener("click", () => this.maximizeWindow());
         
-        // Close button
+        // close button
         const closeButton = document.createElement("button");
         closeButton.id = "CloseButton";
         closeButton.className = "button close-button";
         closeButton.textContent = "X";
         closeButton.addEventListener("click", () => this.closeWindow());
         
-        // Append elements directly to the title bar
+        // append elements directly to the title bar
         titleBar.append(titleBarIcon, titleBarText, minimizeButton, maximizeButton, closeButton);
         
-        // Create the Toolbar
+        // create the Toolbar
         const toolbar = document.createElement("div");
         toolbar.id = "Toolbar";
         toolbar.className = "toolbar";
-        // Create File button
+
+        // create File button
         const fileButton = document.createElement("button");
         fileButton.id = "ToolbarFileButton";
         fileButton.className = "toolbar-button";
         fileButton.textContent = "File";
         fileButton.setAttribute("onclick", "console.log('File clicked')");
         toolbar.appendChild(fileButton);
-        // Create Edit button
+        // create Edit button
         const editButton = document.createElement("button");
         editButton.id = "ToolbarEditButton";
         editButton.className = "toolbar-button";
         editButton.textContent = "Edit";
         editButton.setAttribute("onclick", "console.log('Edit clicked')");
         toolbar.appendChild(editButton);
-        // Create View button
+        // create View button
         const viewButton = document.createElement("button");
         viewButton.id = "ToolbarViewButton";
         viewButton.className = "toolbar-button";
         viewButton.textContent = "View";
         viewButton.setAttribute("onclick", "console.log('View clicked')");
         toolbar.appendChild(viewButton);
-        // Create Help button
+        // create Help button
         const helpButton = document.createElement("button");
         helpButton.id = "ToolbarHelpButton";
         helpButton.className = "toolbar-button";
@@ -106,12 +119,12 @@ class Window {
         toolbar.appendChild(helpButton);
 
 
-        // Create the WindowBody
+        // create the WindowBody
         const windowBody = document.createElement("div");
         windowBody.id = "WindowBody";
         windowBody.className = "window-body";
 
-        // Set initial visibility based on bool_visible
+        // set initial visibility 
         windowDiv.style.display = this.string_visible;
 
         // Append all elements to the main window div

@@ -50,7 +50,7 @@ async function initializeAllDatabases() {
 
         console.log(`Initialized database for ${coinsArray[i]}. Waiting 1 minute...`);
 
-        await new Promise(resolve => setTimeout(resolve, 60000)); // Wait 60,000ms = 1 minute
+        await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 60,000ms = 1 minute
     }
 }
 
