@@ -3,6 +3,10 @@
 header_remove("X-Powered-By");
 header("Content-Type: application/json; charset=UTF-8");
 
+// Allow requests from any origin
+header("Access-Control-Allow-Origin: *");
+
+
 $servername = 'localhost';
 $dbname = 'samwu1_desktop_db';
 $username = 'samwu1_desktop_db';

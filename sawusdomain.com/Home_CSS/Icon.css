@@ -1,7 +1,6 @@
 
 .icon {
-    width: 10rem; 
-    height: 13rem; 
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,62 +32,13 @@
   }
   
 
-  .icon p {
-    position: absolute;
-  
-    bottom: 50%; 
-    left: 90%;
-  
-    visibility: hidden;
-  
-    background-color: rgb(254, 255, 218); 
-    color: #000;
-    border: 0.2rem solid black;
-    font-size: 1rem;
-    padding: 0.5rem;
-    z-index: 10;
-  
-    white-space: nowrap;
-  }
-  
-
-  .icon:hover p {
-    visibility: visible; 
-    opacity: 1;
-    z-index: 1000;
-  }
 
 
 
-.window-body .icon {
-    position: relative;
-    overflow: visible; 
-}
+@media ( max-width: 750px ) {
 
-.window-body .icon p {
-    position: absolute; 
-    bottom: 50%; 
-    left: 90%;
-
-    visibility: hidden; 
-
-    white-space: nowrap;
-}
-
-
-.window-body .icon:hover p {
-    visibility: visible; 
-    opacity: 1; 
-    z-index: 1000; 
-}
-
-
-
-
-@media (max-width: 750px) {
     .icon {
-      width: 7em;
-      height: 14rem;
+
     }
 
     .icon img {
@@ -105,4 +55,5 @@
     .icon p {
       display: none;
     }
+
 }

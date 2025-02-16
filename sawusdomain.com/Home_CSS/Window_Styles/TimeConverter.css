@@ -1,0 +1,82 @@
+/* time converter */
+#window-10 {
+
+  height: min-content;
+  width: min-content;
+}
+
+#window-10 .window-body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    background-color: #d0d0d0;
+    overflow-y: auto;
+
+
+    border: none;
+    overflow:visible;
+  }
+  
+  #window-10 #Toolbar {
+    display: none;
+  }
+  
+
+
+
+
+  #window-10 .input-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+  #window-10 .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  #window-10 #resultDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    text-align: center;
+  }
+  
+  #window-10 #calculateButton {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+
+  #window-10 #currentTimeContainer {
+    text-align: center;
+  }
+  
+  #window-10 input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 12rem;
+  }
+    @media ( max-width: 750px ) {
+    
+    #window-10{
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        resize: none;
+    
+        width: 100%;
+        height: 100%; 
+    }
+
+
+  }

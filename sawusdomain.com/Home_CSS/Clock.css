@@ -1,0 +1,33 @@
+#clock {
+    display: flex;
+    align-items: center;
+  
+    height: 3.5rem; 
+    box-sizing: border-box; 
+  
+    padding-left: .5rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    margin-right: .125rem;
+    margin-left: .25rem;
+  
+    background-color: #c0c0c0;
+    border: 0.25rem solid #808080;
+    border-top-color: #808080;
+    border-left-color: #808080;
+    border-right-color: #eaeaea;
+    border-bottom-color: #eaeaea;
+  }
+  
+  #clock span {
+  
+    display: inline-block; 
+    width: 10rem; 
+    height: 2.5rem; 
+    line-height: 2.5rem;
+    overflow: hidden; 
+    font-size: 2rem; 
+    ;
+  
+  }
+  

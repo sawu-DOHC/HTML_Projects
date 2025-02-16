@@ -50,28 +50,4 @@ body {
   display: none;
 }
 
-#tooltip {
-  position: fixed;
-  display: none;
-  background-color: rgb(255, 251, 216);
-  border: 2px solid black;
-  padding: 8px;
-  z-index: 1000; 
-
-}
-
-
-
-@media (max-width: 750px) {
-  #tooltip {
-
-    opacity: 0%;
-
-  
-  }
-  
-
-
-}
-
 

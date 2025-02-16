@@ -1,8 +1,18 @@
 <?php
 
-header('Access-Control-Allow-Origin: *'); // This allows all domains, adjust as necessary for security
-header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
+// Handle OPTIONS request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+    header('Access-Control-Allow-Headers: Content-Type, Authorization'); // Include other headers as needed
+    header('Access-Control-Max-Age: 86400'); // Cache preflight response
+    header('HTTP/1.1 204 No Content'); // Send an appropriate response for OPTIONS
+    exit;
+}
+
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
+
 
 // Database connection details
 $string_servername = "localhost";

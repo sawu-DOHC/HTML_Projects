@@ -1,56 +1,98 @@
-
-#start-menu {
-    display: none;
-    position: absolute;
-    bottom: calc(100% + .25rem); 
-    left: -.25rem;
-    background-color: #c0c0c0;
-    border: 0.25rem solid #808080;
-    border-top-color: #ffffff;
-    border-left-color: #ffffff;
-    width: 30rem;
-    z-index: 1000; 
+#banner {
+  background-color: #0b26b2;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
+
+#banner-text {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  position: absolute;
+  bottom: 150px;
+  padding-left: 0.5rem;
+}
+
+#root-menu{
+  border:none;
+}
+
+
+
+.menu {
+
+  background-color: #c0c0c0;
+  border: 0.25rem solid #808080;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
   
-#start-menu ul {
-  list-style: none;
-  width: 100%;
   padding: 0;
   margin: 0;
-}
 
-#start-menu li {
+  list-style: none;
+  z-index: 1000;
+}
+.submenu {
+
+  display: none;
+
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+
+}
+.menu ul {
+
+  list-style: none;
+  width: 100%;
+  height: auto;
+
+}
+.item {
   padding: 1rem;
   font-size: 2rem;
   cursor: pointer;
+  color: black;
 }
 
-#start-menu li:hover {
+.menu li:hover {
   background-color: #0b26b2;
-  color: #ffffff;
+  color: white;
 }
 
-#start-menu #banner {
-    background-color: #888888; 
-    width: 4rem; 
-    display: flex;
-    justify-content: center; 
-    position: relative;
-}
-
-#start-menu #banner-text {
-    color: white; 
-    font-family: Arial, Helvetica, sans-serif; 
-    font-size: 3rem; 
-    transform: rotate(-90deg); 
-    white-space: nowrap; 
-    position: absolute;
-    bottom: 150px; 
-    padding-left: 0.5rem;
+.menu li:hover > .submenu {
+  display: block;
 }
 
 
+#start-menu {
 
-@media (max-width: 750px) {
+  display: none;
+  position: absolute;
+
+  bottom: calc(100% + .25rem);
+  left: -.25rem;
+  width: 30rem;
+  height: auto;
+  
+}
+
+
+
+#programs-submenu {
+  width: 30rem;
+  top: -25.75rem; /* not dynamic enough, this needs to be changed any time a new app is added. */
+  left: 100%;
+}
+
+
+
+
+@media ( max-width: 750px ) {
 
 }

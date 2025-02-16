@@ -1,10 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Field Selection
-    const dobField = document.getElementById("dob_Field"); // Date of Birth field
-    const ageField = document.getElementById("age_Field"); // Age field
+document.addEventListener( "DOMContentLoaded", function () {
 
-    // Calculate Age Function
-    function calculateAge(dob) {
+    const dobField = document.getElementById("dob_Field"); 
+    const ageField = document.getElementById("age_Field"); 
+
+    function calculateAge( dob ) {
         const today = new Date();
         let age = today.getFullYear() - dob.getFullYear();
         const monthDiff = today.getMonth() - dob.getMonth();
@@ -14,11 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
         return age;
     }
 
-    // Validation on Blur
     function validateAndSetAge() {
         const dobValue = dobField.value;
         if (!dobValue) {
-            ageField.value = ""; // Clear the age field if DOB is empty
+            ageField.value = ""; 
             return;
         }
 
@@ -27,13 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (age < 18 || age > 120) {
             alert("Age must be between 18 and 120.");
-            dobField.value = ""; // Clear the DOB field
-            ageField.value = ""; // Clear the age field
-        } else {
-            ageField.value = age; // Set the calculated age
+            dobField.value = ""; 
+            ageField.value = ""; 
+        } 
+        else {
+            ageField.value = age; 
         }
     }
 
-    // Attach Blur Event Listener
+    // atach "Blur" event listener that gets called on text box exit
     dobField.addEventListener("blur", validateAndSetAge);
 });
