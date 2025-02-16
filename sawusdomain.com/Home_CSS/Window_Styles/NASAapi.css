@@ -2,8 +2,10 @@
 
 
 #window-8 {
-    height: min-content;
+    
     width: min-content;
+    height:min-content;
+
 }
   
 #window-8 .window-body {    
@@ -105,15 +107,14 @@
 
 
 #window-8 #nasaImage {
-    max-width: 100%;
-    padding: .25rem;
+
+
 
 }
 #window-8 #nasaVideo {
 
-    display: none; 
 
-    max-width:100%;
+
 }
 
 @media ( max-width: 750px ) {
@@ -129,6 +130,16 @@
         height: 100%; 
     }
     
+    #window-8 #nasaImage {
+        max-width: 100%;
+        height:auto;
 
+
+    }
+    #window-8 #nasaVideo {
+        max-width: 100%;
+        height:auto;
+    
+    }
 
   }

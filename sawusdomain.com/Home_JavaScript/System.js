@@ -8,46 +8,43 @@ class System {
     
 
     constructor() {
-
         this.array_srcObj = [];
-
-        this.object_pane = new Pane();
-        this.object_desktop = new Desktop();
-        this.object_taskbar = new Taskbar();
-
-        // inject https://sawusdomain.com/Home_JavaScript/Base.css
-
     }
 
     async initialize() {
+
 
         console.log("System starting");
 
         try {
             const response = await fetch('https://sawusdomain.com/Home_PHP/fetch_resources.php');
     
-            if ( response.status !== 200 ) {
-                
+            if (response.status !== 200) {
                 throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
             }
     
             const json_response = await response.json();
-
             this.json_data = json_response.data;
             
-    
         } 
-        catch ( error ) {
-
+        catch (error) {
             console.error("System.Initialize(): Error during initialization", error);
-
         }
 
-        this.object_desktop.initialize( this.json_data );
-        this.object_taskbar.initializeProgramsMenu ();
+        // Add the resources before proceeding with other initializations
+        await this.addResourcesToHead();
+
+        // Initialize the components after all resources are loaded
+        this.object_pane = new Pane();
+        this.object_desktop = new Desktop();
+        this.object_taskbar = new Taskbar();
+
+        this.object_desktop.initialize(this.json_data);
+        this.object_taskbar.initializeProgramsMenu();
 
         console.log("System ready.");
     }
+
     async fetchJson() {
         const url = 'https://sawusdomain.com/Home_PHP/fetch_resources.php';
         try {
@@ -104,14 +101,12 @@ class System {
             link.id = identifier;
             link.onload = () => {
                 resolve();
-                console.log(`${hypertextReference} has been added to the document.`);
+                //console.log(`${hypertextReference} has been added to the document.`);
             };
             link.onerror = () => reject(new Error(`Failed to load stylesheet from ${hypertextReference}`));
             document.head.appendChild(link);
         });
     }
-    
-
     async insertScript(source, identifier) {
         return new Promise((resolve, reject) => {
             const script = document.createElement('script');
@@ -120,14 +115,12 @@ class System {
             script.id = identifier;
             script.onload = () => {
                 resolve();
-                console.log(`${source} has been added to the document.`);
+                //console.log(`${source} has been added to the document.`);
             };
             script.onerror = () => reject(new Error(`Failed to load script from ${source}`));
             document.head.appendChild(script);
         });
     }
-    
-    
     openLink( element ) {
         if ( element.url ) {
 
@@ -138,6 +131,63 @@ class System {
         }
     }
 
-    
+    async addResourcesToHead() {
+
+        const cssFiles = [
+            'https://sawusdomain.com/Home_CSS/Base.css',
+            'https://sawusdomain.com/Home_CSS/Icon.css',
+            'https://sawusdomain.com/Home_CSS/Clock.css',
+            'https://sawusdomain.com/Home_CSS/Desktop.css',
+            'https://sawusdomain.com/Home_CSS/Taskbar.css',
+            'https://sawusdomain.com/Home_CSS/Window.css',
+            'https://sawusdomain.com/Home_CSS/Task.css',
+            'https://sawusdomain.com/Home_CSS/Tooltips.css',
+            'https://sawusdomain.com/Home_CSS/StartMenu.css',
+            'https://sawusdomain.com/Home_CSS/Pane.css'
+        ];
+
+        const jsFiles = [
+            'https://sawusdomain.com/Home_JavaScript/Icon.js',
+            'https://sawusdomain.com/Home_JavaScript/Clock.js',
+            'https://sawusdomain.com/Home_JavaScript/Desktop.js',
+            'https://sawusdomain.com/Home_JavaScript/Taskbar.js',
+            'https://sawusdomain.com/Home_JavaScript/Window.js',
+            'https://sawusdomain.com/Home_JavaScript/Task.js',
+            'https://sawusdomain.com/Home_JavaScript/Tooltips.js',
+            'https://sawusdomain.com/Home_JavaScript/Pane.js',
+            'https://sawusdomain.com/Home_JavaScript/ViewCounter.js'
+        ];
+
+
+        const cssPromises = cssFiles.map(file => this.loadCSS(file));
+        const jsPromises = jsFiles.map(file => this.loadJS(file));
+
+
+        await Promise.all([...cssPromises, ...jsPromises]);
+
+    }
+
+    loadCSS( file ) {
+        return new Promise((resolve, reject) => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = file;
+            link.onload = () => resolve(file);  
+            link.onerror = () => reject(new Error(`Failed to load CSS: ${file}`)); 
+            document.head.appendChild(link);
+        });
+    }
+
+    loadJS( file ) {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = file;
+            script.defer = true;
+            script.onload = () => resolve(file);  
+            script.onerror = () => reject(new Error(`Failed to load JS: ${file}`)); 
+            document.head.appendChild(script);
+        });
+    }
+
     
 }

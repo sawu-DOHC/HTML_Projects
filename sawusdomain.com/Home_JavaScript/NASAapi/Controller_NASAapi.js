@@ -23,7 +23,12 @@ async function Controller_NASAapi() {
 
                 nasaImage.src = "Home_Assets/jpegIcon.png";
                 nasaImage.style.display = "block";
+                nasaImage.style.height = "auto";
+                nasaImage.style.width = "atuo";
+
+
                 nasaVideo.style.display = "none";
+
                 imageDescription.textContent = "";
 
                 return;
@@ -37,11 +42,17 @@ async function Controller_NASAapi() {
                 nasaImage.src = data.url;
                 nasaImage.alt = data.title;
                 nasaImage.style.display = "block";
+                nasaImage.style.height = "45rem";
+                nasaImage.style.width = "60rem";
+
                 nasaVideo.style.display = "none";
             } 
             else if ( data.media_type === "video" ) {
                 nasaVideo.src = data.url;
                 nasaVideo.style.display = "block";
+                nasaVideo.style.height = "45rem";
+                nasaVideo.style.width = "60rem";
+
                 nasaImage.style.display = "none";
             }
         } 

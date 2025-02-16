@@ -16,9 +16,9 @@ header('Content-Type: application/json');
 
 // Database connection details
 $string_servername = "localhost";
-$string_username = "samwu1_broker_db";
-$string_password = "f700f700";
-$string_dbname = "samwu1_broker_db";
+$string_username = "samwu1_desktop_db";
+$string_password = "50175017Ss";
+$string_dbname = "samwu1_desktop_db";
 
 // Set the response header to indicate JSON data
 header('Content-Type: application/json');

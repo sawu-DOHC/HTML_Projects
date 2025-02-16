@@ -13,39 +13,26 @@ function Interface_NASAapi() {
         The application makes an HTTP GET request to their API endpoint with the selected date as a parameter. 
         The API responds with JSON data containing the image URL, title, and description. This data is then displayed on the page.
     `;
-    windowBody.appendChild(descriptionDiv);
-
+    
     const datePickerDiv = document.createElement('div');
     datePickerDiv.id = "date-picker";
     
-
     const dateLabel = document.createElement('label');
     dateLabel.setAttribute('for', 'dateBox');
     dateLabel.textContent = 'Select a Date:';
-    datePickerDiv.appendChild(dateLabel);
     
-
     const dateInput = document.createElement('input');
     dateInput.type = 'date';
     dateInput.id = 'dateBox';
-    datePickerDiv.appendChild(dateInput);
     
-
     const getButton = document.createElement('button');
     getButton.id = 'getButton';
     getButton.className = 'button';
     getButton.textContent = 'Get';
-    datePickerDiv.appendChild(getButton);
     
-    windowBody.appendChild(datePickerDiv);
-
     const warningDiv = document.createElement('div');
     warningDiv.id = "warning";
-    windowBody.appendChild(warningDiv);
-
-    const dataContainerDiv = document.createElement('div');
-    dataContainerDiv.id = "dataContainer";
-
+    
     const nasaImage = document.createElement('img');
     nasaImage.id = 'nasaImage';
     nasaImage.src = 'Home_Assets/jpegIcon.png';
@@ -53,14 +40,22 @@ function Interface_NASAapi() {
 
     const nasaVideo = document.createElement('iframe');
     nasaVideo.id = 'nasaVideo';
+    nasaVideo.style.display = "none";
 
     const imageDescription = document.createElement('div');
     imageDescription.id = 'imageDescription';
 
-    dataContainerDiv.appendChild(nasaImage);
-    dataContainerDiv.appendChild(nasaVideo);
-    dataContainerDiv.appendChild(imageDescription);
-    windowBody.appendChild(dataContainerDiv);
+
+    windowBody.appendChild(descriptionDiv);
+    windowBody.appendChild(datePickerDiv);
+    datePickerDiv.appendChild(dateLabel);
+    datePickerDiv.appendChild(dateInput);
+    datePickerDiv.appendChild(getButton);
+    windowBody.appendChild(warningDiv);
+    windowBody.appendChild(nasaImage);
+    windowBody.appendChild(nasaVideo);
+    windowBody.appendChild(imageDescription);
+  
 
 
 }

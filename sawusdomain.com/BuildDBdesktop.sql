@@ -245,18 +245,6 @@ VALUES
 ),
 (
     19, -- id
-    0, -- parent_id
-    'link', -- type
-    'Hiring Partner Database Documentation', -- name
-    'Link to a public Google Docs directory that contains documentation for my database application.', -- description
-    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
-    'https://drive.google.com/drive/folders/1JLMfnITujrInAelqL5r_vxwCK4yuQ8d9', -- url
-    NULL, -- css script
-    NULL, -- ui_script
-    NULL -- controller_script
-),
-(
-    20, -- id
     5, -- parent_id
     'link', -- type
     'Input validation', -- name
@@ -268,7 +256,7 @@ VALUES
     NULL -- controller_script
 ),
 (
-    21, -- id
+    20, -- id
     5, -- parent_id
     'link', -- type
     'Utilizing string query', -- name
@@ -280,19 +268,7 @@ VALUES
     NULL -- controller_script
 ),
 (
-    22, -- id
-    5, -- parent_id
-    'link', -- type
-    'Hiring Partner Database', -- name
-    'Application that uses PHP and JS to manage an SQL database. Features session tracking and user permissions.', -- description
-    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
-    'https://sawusdomain.com/Sites/SamsJSproject13/HTML/page0_ViewLogin.html', -- url
-    NULL, -- css script
-    NULL, -- ui_script
-    NULL -- controller_script
-),
-(
-    23, -- id
+    21, -- id
     5, -- parent_id
     'link', -- type
     'Inventory System', -- name
@@ -304,7 +280,7 @@ VALUES
     NULL -- controller_script
 ),
 (
-    24, -- id
+    22, -- id
     3, -- parent_id
     'link', -- type
     'School registration program', -- name
@@ -316,7 +292,7 @@ VALUES
     NULL -- controller_script
 ),
 (
-    25, -- id
+    23, -- id
     3, -- parent_id
     'link', -- type
     'Replicating the vector class', -- name
@@ -328,7 +304,7 @@ VALUES
     NULL -- controller_script
 ),
 (
-    26, -- id
+    24, -- id
     3, -- parent_id
     'link', -- type
     'Search Algorithms', -- name
@@ -340,7 +316,7 @@ VALUES
     NULL -- controller_script
 ),
 (
-    27, -- id
+    25, -- id
     3, -- parent_id
     'link', -- type
     'Sort Algorithms', -- name
@@ -352,7 +328,7 @@ VALUES
     NULL -- controller_script
 ),
 (
-    28, -- id
+    26, -- id
     4, -- parent_id
     'link', -- type
     'Lottery Game Data Management', -- name
@@ -364,7 +340,7 @@ VALUES
     NULL -- controller_script
 ),
 (
-    29, -- id
+    27, -- id
     6, -- parent_id
     'link', -- type
     'Duplicate image remover', -- name
@@ -376,7 +352,7 @@ VALUES
     NULL -- controller_script
 ),
 (   
-    30, -- id
+    28, -- id
     6, -- parent_id
     'dir', -- type
     'Nested Directory a', -- name
@@ -388,8 +364,8 @@ VALUES
     NULL -- controller_script
 ),
 (   
-    31, -- id
-    30, -- parent_id
+    29, -- id
+    28, -- parent_id
     'dir', -- type
     'Nested Directory b', -- name
     NULL, -- description
@@ -400,13 +376,49 @@ VALUES
     NULL -- controller_script
 ),
 (   
-    32, -- id
-    31, -- parent_id
+    30, -- id
+    29, -- parent_id
     'dir', -- type
     'Nested Directory c', -- name
     NULL, -- description
     'http://sawusdomain.com/Home_Assets/FileIcon.png', -- image path
     NULL, -- url
+    NULL, -- css script
+    NULL, -- ui_script
+    NULL -- controller_script
+),
+(   
+    31, -- id
+    5, -- parent_id
+    'dir', -- type
+    'Hiring Partner Database', -- name
+    'Documentation and a link to my first database application.', -- description
+    'http://sawusdomain.com/Home_Assets/FileIcon.png', -- image path
+    NULL, -- url
+    NULL, -- css script
+    NULL, -- ui_script
+    NULL -- controller_script
+),
+(
+    32, -- id
+    31, -- parent_id
+    'link', -- type
+    'Hiring Partner Database App', -- name
+    'Application that uses PHP and JS to manage an MySQL database. Features session tracking and user permissions.', -- description
+    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
+    'https://sawusdomain.com/Sites/SamsJSproject13/HTML/page0_ViewLogin.html', -- url
+    NULL, -- css script
+    NULL, -- ui_script
+    NULL -- controller_script
+),
+(
+    33, -- id
+    31, -- parent_id
+    'link', -- type
+    'Hiring Partner Database Documentation', -- name
+    'Link to a public Google Docs directory that contains documentation for my database application.', -- description
+    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
+    'https://drive.google.com/drive/folders/1JLMfnITujrInAelqL5r_vxwCK4yuQ8d9', -- url
     NULL, -- css script
     NULL, -- ui_script
     NULL -- controller_script

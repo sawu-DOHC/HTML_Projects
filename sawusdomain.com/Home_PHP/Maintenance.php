@@ -1,9 +1,11 @@
 <?php
-// Database connection details
-$servername = "localhost";
-$username = "samwu1_broker_db";
-$password = "f700f700";
-$dbname = "samwu1_broker_db";
+
+$servername = 'localhost';
+$dbname = 'samwu1_desktop_db';
+$username = 'samwu1_desktop_db';
+$password = '50175017Ss';
+
+
 
 // List of cryptocurrencies to process
 $currencies = ["bitcoin", "dogecoin", "ethereum"];
@@ -23,7 +25,8 @@ if ($conn->connect_error) {
 $query = "DELETE FROM crypto_data";
 if ($conn->query($query) === TRUE) {
     echo "Existing data deleted. Rebuilding database...\n";
-} else {
+}
+else {
     echo "Error deleting data: " . $conn->error . "\n";
     exit; // Exit if there's an error deleting the data
 }
@@ -32,7 +35,8 @@ if ($conn->query($query) === TRUE) {
 $resetAutoIncrementQuery = "ALTER TABLE crypto_data AUTO_INCREMENT = 1";
 if ($conn->query($resetAutoIncrementQuery) === TRUE) {
     echo "AUTO_INCREMENT reset to 1.\n";
-} else {
+}
+else {
     echo "Error resetting AUTO_INCREMENT: " . $conn->error . "\n";
 }
 
