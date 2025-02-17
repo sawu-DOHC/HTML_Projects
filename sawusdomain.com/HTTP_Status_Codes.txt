@@ -1,0 +1,29 @@
+
+2xx: Success
+----------------------
+200 OK: The request was successful, and the server has sent the requested data.
+201 Created: The request was successful, and a new resource was created.
+204 No Content: The request was successful, but there's no content to return.
+
+3xx: Redirection
+----------------------
+301 Moved Permanently: The requested resource has been permanently moved to a new URL.
+302 Found: The requested resource is temporarily available at a different URL.
+304 Not Modified: The resource hasn't changed since the last request.
+
+4xx: Client Errors
+----------------------
+400 Bad Request: The request was invalid or malformed.
+401 Unauthorized: The client must authenticate to access the requested resource.
+403 Forbidden: The client is authenticated but doesn’t have permission to access the requested resource.
+404 Not Found: The requested resource could not be found on the server.
+405 Method Not Allowed: The request method is not allowed for the resource.
+408 Request Timeout: The client’s request took too long to process.
+
+5xx: Server Errors
+----------------------
+500 Internal Server Error: A generic error indicating something went wrong on the server side.
+501 Not Implemented: The server doesn't support the functionality required to fulfill the request.
+502 Bad Gateway: The server received an invalid response from the upstream server.
+503 Service Unavailable: The server is temporarily unavailable.
+504 Gateway Timeout: The server didn’t get a timely response from the upstream server.
