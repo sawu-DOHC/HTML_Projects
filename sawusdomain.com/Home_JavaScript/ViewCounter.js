@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
 
-            const response = await fetch('Home_PHP/add.php'); 
+            const response = await fetch('https://sawusdomain.com/Home_PHP/add.php'); 
             const data = await response.text(); 
             console.log("view counter updated, message from server: " + data );
         } 

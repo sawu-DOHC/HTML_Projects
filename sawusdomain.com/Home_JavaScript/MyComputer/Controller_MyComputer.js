@@ -4,12 +4,14 @@ async function Controller_MyComputer() {
 
     try {
 
-        const response = await fetch('Home_PHP/get.php');
+        const response = await fetch('https://sawusdomain.com/Home_PHP/get.php');
+
         if ( response.status != 200 ) {
             throw new Error('Network response was not ok');
         }
 
         const data = await response.text();
+        console.log("Controller_MyComputer.data", data );
 
         counterDiv.textContent = data; 
         
@@ -17,6 +19,11 @@ async function Controller_MyComputer() {
     catch ( error ) {
         console.error('Controller_MyComputer(): ', error );
     }
+
+
+
+
+
 }
 
 Controller_MyComputer();

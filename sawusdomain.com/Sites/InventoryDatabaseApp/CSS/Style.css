@@ -1,8 +1,9 @@
 body {
-    background-color: #20253d;
+    background-color: #000000;
     color: #000000;
     margin: 0;
     padding: 0;
+    font-family: "Courier New", Courier, monospace;
 }
 
 nav {
@@ -17,56 +18,75 @@ nav {
 main {
     padding: 1rem;
     margin: 1rem;
-    background-color: rgb(194, 188, 161);
     margin-top: 0;
-    border-radius: 1rem;
+    background-color: #c0c0c0;
+
 }
 
 .tab {
     padding: 1rem;
+
+    padding-left:.25rem;
+    padding-right:.25rem;
+
     margin: .25rem;
-    margin-bottom: 0;
+
     cursor: pointer;
-    background-color: rgb(79, 74, 50);
-    color: #ddd;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    color: #000000;
+
     font-size: 1rem;
+    font-weight: bold;
+
+    background-color: #c0c0c0;
+    border: 0.25rem solid #808080; 
+
+    border-top-color: #eaeaea; 
+    border-left-color: #eaeaea; 
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+
+    margin-bottom: 1rem;
+
+
 }
 
 .tab:hover {
-    background-color: #444;
+    background-color: #3e6deb;
+    color: white;
 }
 
 .tab.active {
-    background-color: rgb(194, 188, 161);
-    font-weight: bold;
+    background-color: #c0c0c0;
+    font-size:1.5rem;
     color: rgb(0, 0, 0);
+
+    border-top-color: #808080;
+    border-left-color:   #808080;
+    border-right-color: #eaeaea; 
+    border-bottom-color: #eaeaea;
+
+    margin-bottom:0;
+    border-bottom: none;
+
+
+
 }
 
 .folder {
     display: none;
 }
-
 .folder.active {
     display: block;
 }
 
+
+
+
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse:collapse;
     background-color: #ffffff;
-}
-
-thead {
-    background-color: #f4f4f9;
-}
-
-th {
-    padding: 12px 15px;
-    text-align: left;
-    font-weight: bold;
-    color: #333;
+    
 }
 
 tbody tr {
@@ -81,78 +101,28 @@ tbody tr:hover {
     background-color: rgb(176, 194, 245);
 }
 
-td {
-    padding: 12px 15px;
-    justify-content: center;
-}
-
-input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-}
-
-button {
-    padding: .5rem;
-    margin-right: .5rem;
-    border: none;
-    color: white;
-    background-color: rgb(13, 71, 147);
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: rgb(25, 132, 255);
-}
-
-#edit {
-    background-color: #b79c00;
-}
-
-#edit:hover {
-    background-color: #e9af00;
-}
-
-#add-to-cart,
-#delete-item {
-    margin-top: 5px;
-}
-
-#add-to-cart {
-    background-color: #007d1d;
-}
-
-#delete-item {
-    background-color: #b20000;
-    
-}
-
-#google-item {
-    background-color: rgb(15, 116, 232);
-}
-
-#add-to-cart:hover {
-    background-color: #00c72b;
-}
-
-#delete-item:hover {
-    background-color: #ff0019;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
-th, td {
-    padding: 10px;
+th {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #a9a9a9;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+td{
+
     text-align: left;
     border: 1px solid #ddd;
+
 }
 
-th {
-    background-color: #f2f2f2;
-}
 
 th.description, td.description {
     width: 40%;
@@ -163,62 +133,17 @@ th.part-number, td.part-number {
 }
 
 th.qoh, td.qoh {
-    width: 5%;
+    width: 8%;
 }
 
 th.last-updated, td.last-updated {
-    width: 12%;
+    width: 9%;
 }
 
 th.actions, td.actions {
     width: 20%;
 }
 
-.description-input {
-    width: 100%;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.part-number-input {
-    width: 100%;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.qoh-input {
-    width: 100%;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-
-#cartContainer{
-    padding: 1rem;
-    margin: 1rem;
-    background-color: rgb(194, 188, 161);
-    margin-top: 0;
-    border-radius: 1rem;
-}
-
-#printCartButton {
-    padding: 0.75rem 1.25rem;
-    background-color: rgb(16, 147, 136);
-    color: white;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    border: none;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-#printCartButton:hover {
-    background-color: rgb(20, 212, 202);
-}
 
 
 
@@ -238,15 +163,6 @@ th.actions, td.actions {
 
 
 
-
-
-#Home {
-    padding: 1rem;
-    margin: 1rem;
-    background-color: rgb(194, 188, 161);
-    margin-top: 0;
-    border-radius: 1rem;
-}
 
 .button-container {
     display: flex;
@@ -256,16 +172,45 @@ th.actions, td.actions {
 }
 
 .home-button {
-    padding: 0.75rem 1.25rem;
-    font-size: 1rem;
+
     background-color: rgb(13, 71, 147);
     color: white;
-    border-radius: 4px;
+
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+
 }
 
 .home-button:hover {
     background-color: rgb(25, 132, 255);
 }
+
+
+@media screen and (max-width: 1000px) {
+    body { font-size:1.5rem }
+    nav { }
+    main { }
+    .tab { font-size:1rem; margin: .25rem; padding:.0625rem; padding-bottom:1rem; padding-top:1rem; }
+    .tab:hover { }
+    .tab.active { }
+    .folder { }
+    .folder.active { }
+    table { }
+    tbody tr { }
+    tbody tr:nth-child(even) { }
+    tbody tr:hover { }
+    th { }
+    td { }
+    th.description, td.description { }
+    th.part-number, td.part-number { }
+    th.qoh, td.qoh { }
+    th.last-updated, td.last-updated { }
+    th.actions, td.actions { }
+    .button-container { }
+    .home-button { }
+    .home-button:hover { }
+    .description-input { }
+    .part-number-input { }
+}
+
+  

@@ -1,10 +1,12 @@
 CREATE TABLE `Items Table` (
+
     `id` INT AUTO_INCREMENT PRIMARY KEY,
     `category` VARCHAR(100) NOT NULL,
     `description` VARCHAR(255) NOT NULL,
     `part_number` VARCHAR(100) NOT NULL,
     `quantity_on_hand` INT DEFAULT 0,
     `last_updated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
 );
 
 
@@ -102,34 +104,34 @@ INSERT INTO `Items Table` (`category`, `description`, `part_number`, `quantity_o
 ('Stick', 'Stinger Replacement', 'ARC-532', 0);
 
 INSERT INTO `Items Table` (`category`, `description`, `part_number`, `quantity_on_hand`) VALUES
-('Oxy Fuel', 'Propane Nozzle 00', '1501210', 0),
-('Oxy Fuel', 'Propane Nozzle 0', '1501220', 0),
-('Oxy Fuel', 'Propane Nozzle 1', '1501230', 0),
-('Oxy Fuel', 'Propane Nozzle 2', '1501240', 0),
-('Oxy Fuel', 'Acetylene Nozzle 00', '000-1-101', 0),
-('Oxy Fuel', 'Acetylene Nozzle 0', '00-1-101', 0),
-('Oxy Fuel', 'Acetylene Nozzle 0', '0-1-101', 0),
-('Oxy Fuel', 'Acetylene Nozzle 1', '1-1-101', 0),
-('Oxy Fuel', 'Acetylene Nozzle 2', '2-1-101', 0),
-('Oxy Fuel', 'Acetylene Track Torch 00', '6290-2/0', 0),
-('Oxy Fuel', 'Acetylene Track Torch 0', '6290-1', 0),
-('Oxy Fuel', 'Acetylene Track Torch 1', '6290-1', 0),
-('Oxy Fuel', 'Acetylene Track Torch 2', '6290-2', 0),
-('Oxy Fuel', 'Torch Assembly', '62-5F (1003451)', 0),
-('Oxy Fuel', 'Spare Hoses', '907-T254', 0),
-('Oxy Fuel', 'Protective Sleeves Tillman', '582-025', 0),
-('Oxy Fuel', 'Strikers (Lincoln)', 'KH572', 0),
-('Oxy Fuel', 'Flint Replacements', '', 0),
-('Oxy Fuel', 'Torch Tip Cleaners', '', 0),
-('Oxy Fuel', 'Regulator Oxygen', '', 0),
-('Oxy Fuel', 'Regulator Fuel', '', 0),
-('Oxy Fuel', 'Quick Connect Oxygen', '', 0),
-('Oxy Fuel', 'Quick Connect Fuel', '', 0),
-('Oxy Fuel', 'Flashback Arrestor (Oxygen) Fuel Safe Western Enterprises', 'FA-30', 0),
-('Oxy Fuel', 'Flashback Arrestor (Fuel) Fuel Safe Western Enterprises', '', 0),
-('Oxy Fuel', '2pc Acetylene torches Harris lower', '315FC+', 0),
-('Oxy Fuel', '2pc Acetylene torches Harris upper', 'CA2460+', 0),
-('Oxy Fuel', 'Fluxed Wire for brazing Harris 3/32', '015FC50', 0);
+('Oxy-Fuel', 'Propane Nozzle 00', '1501210', 0),
+('Oxy-Fuel', 'Propane Nozzle 0', '1501220', 0),
+('Oxy-Fuel', 'Propane Nozzle 1', '1501230', 0),
+('Oxy-Fuel', 'Propane Nozzle 2', '1501240', 0),
+('Oxy-Fuel', 'Acetylene Nozzle 00', '000-1-101', 0),
+('Oxy-Fuel', 'Acetylene Nozzle 0', '00-1-101', 0),
+('Oxy-Fuel', 'Acetylene Nozzle 0', '0-1-101', 0),
+('Oxy-Fuel', 'Acetylene Nozzle 1', '1-1-101', 0),
+('Oxy-Fuel', 'Acetylene Nozzle 2', '2-1-101', 0),
+('Oxy-Fuel', 'Acetylene Track Torch 00', '6290-2/0', 0),
+('Oxy-Fuel', 'Acetylene Track Torch 0', '6290-1', 0),
+('Oxy-Fuel', 'Acetylene Track Torch 1', '6290-1', 0),
+('Oxy-Fuel', 'Acetylene Track Torch 2', '6290-2', 0),
+('Oxy-Fuel', 'Torch Assembly', '62-5F (1003451)', 0),
+('Oxy-Fuel', 'Spare Hoses', '907-T254', 0),
+('Oxy-Fuel', 'Protective Sleeves Tillman', '582-025', 0),
+('Oxy-Fuel', 'Strikers (Lincoln)', 'KH572', 0),
+('Oxy-Fuel', 'Flint Replacements', '', 0),
+('Oxy-Fuel', 'Torch Tip Cleaners', '', 0),
+('Oxy-Fuel', 'Regulator Oxygen', '', 0),
+('Oxy-Fuel', 'Regulator Fuel', '', 0),
+('Oxy-Fuel', 'Quick Connect Oxygen', '', 0),
+('Oxy-Fuel', 'Quick Connect Fuel', '', 0),
+('Oxy-Fuel', 'Flashback Arrestor (Oxygen) Fuel Safe Western Enterprises', 'FA-30', 0),
+('Oxy-Fuel', 'Flashback Arrestor (Fuel) Fuel Safe Western Enterprises', '', 0),
+('Oxy-Fuel', '2pc Acetylene torches Harris lower', '315FC+', 0),
+('Oxy-Fuel', '2pc Acetylene torches Harris upper', 'CA2460+', 0),
+('Oxy-Fuel', 'Fluxed Wire for brazing Harris 3/32', '015FC50', 0);
 
 
 
@@ -145,31 +147,31 @@ INSERT INTO `Items Table` (`category`, `description`, `part_number`, `quantity_o
 
 INSERT INTO `Items Table` (`category`, `description`, `part_number`, `quantity_on_hand`) VALUES
 
-('Carbon Arc Gouging', 'Carbon Arc Electrode Round 1/4"', '', 0),
-('Carbon Arc Gouging', 'Carbon Arc Electrode Round 5/16"', 'Kp3800-5/16', 0),
-('Carbon Arc Gouging', 'Carbon Arc Electrode Round 3/8"', '', 0),
-('Carbon Arc Gouging', 'Carbon Arc Electrode Round 1/2"', '', 0),
-('Carbon Arc Gouging', 'Carbon Arc Electrode Flat 1/4"', '', 0),
-('Carbon Arc Gouging', 'Replacement Stinger', '', 0 );
+('Gouging', 'Carbon Arc Electrode Round 1/4"', '', 0),
+('Gouging', 'Carbon Arc Electrode Round 5/16"', 'Kp3800-5/16', 0),
+('Gouging', 'Carbon Arc Electrode Round 3/8"', '', 0),
+('Gouging', 'Carbon Arc Electrode Round 1/2"', '', 0),
+('Gouging', 'Carbon Arc Electrode Flat 1/4"', '', 0),
+('Gouging', 'Replacement Stinger', '', 0 );
 
 
 INSERT INTO `Items Table` (`category`, `description`, `part_number`, `quantity_on_hand`) VALUES
 
-('Raw Material', 'Mild Steel Sheet 4\' x 8\' Cold Rolled 1/16"', '', 0),
-('Raw Material', 'Mild Steel Sheet 4\' x 8\' Cold Rolled 1/8"', '', 0),
+('Raw-Material', 'Mild Steel Sheet 4\' x 8\' Cold Rolled 1/16"', '', 0),
+('Raw-Material', 'Mild Steel Sheet 4\' x 8\' Cold Rolled 1/8"', '', 0),
 
-('Raw Material', 'Mild Steel Sheet 4\' x 8\' Hot Rolled 1/16"', '', 0),
-('Raw Material', 'Mild Steel Sheet 4\' x 8\' Hot Rolled 1/8"', '', 0),
+('Raw-Material', 'Mild Steel Sheet 4\' x 8\' Hot Rolled 1/16"', '', 0),
+('Raw-Material', 'Mild Steel Sheet 4\' x 8\' Hot Rolled 1/8"', '', 0),
 
-('Raw Material', 'Stainless Sheet 4\' x 8\' 1/16"', '', 0),
-('Raw Material', 'Stainless Sheet 4\' x 8\' 1/8"', '', 0),
+('Raw-Material', 'Stainless Sheet 4\' x 8\' 1/16"', '', 0),
+('Raw-Material', 'Stainless Sheet 4\' x 8\' 1/8"', '', 0),
 
-('Raw Material', 'Aluminum Sheet 4\' x 8\' 1/16"', '', 0),
-('Raw Material', 'Aluminum Sheet 4\' x 8\' 1/8"', '', 0),
+('Raw-Material', 'Aluminum Sheet 4\' x 8\' 1/16"', '', 0),
+('Raw-Material', 'Aluminum Sheet 4\' x 8\' 1/8"', '', 0),
 
-('Raw Material', 'Merchant Bar 6\' x 20\' 1/4"', '', 0),
-('Raw Material', 'Merchant Bar 6\' x 20\' 3/8"', '', 0),
-('Raw Material', 'Merchant Bar 6\' x 20\' 1/2"', '', 0);
+('Raw-Material', 'Merchant Bar 6\' x 20\' 1/4"', '', 0),
+('Raw-Material', 'Merchant Bar 6\' x 20\' 3/8"', '', 0),
+('Raw-Material', 'Merchant Bar 6\' x 20\' 1/2"', '', 0);
 
 
 INSERT INTO `Items Table` (`category`, `description`, `part_number`, `quantity_on_hand`) VALUES

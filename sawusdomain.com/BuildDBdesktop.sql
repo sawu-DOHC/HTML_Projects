@@ -269,12 +269,12 @@ VALUES
 ),
 (
     21, -- id
-    5, -- parent_id
+    0, -- parent_id
     'link', -- type
     'Inventory System', -- name
     'Inventory database (UNDER CONSTRUCTION).', -- description
-    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
-    'https://sawusdomain.com/Sites/InventoryDatabaseApp/HTML/page1_Home.html', -- url
+    'https://sawusdomain.com/Home_Assets/ApplicationIcon.png', -- image_path
+    'https://sawusdomain.com/Sites/InventoryDatabaseApp/HTML/index.html', -- url
     NULL, -- css script
     NULL, -- ui_script
     NULL -- controller_script

@@ -6,207 +6,140 @@
         <meta charset="utf-8">
 
         <title>GTC Inventory Database</title>
-
+        <link rel="stylesheet" href="/Sites/InventoryDatabaseApp/CSS/NewItemForm.css">
+        <link rel="stylesheet" href="/Sites/InventoryDatabaseApp/CSS/Row.css">
+        <link rel="stylesheet" href="/Sites/InventoryDatabaseApp/CSS/Cart.css">
         <link rel="stylesheet" href="/Sites/InventoryDatabaseApp/CSS/Style.css">
-        <script src="/Sites/InventoryDatabaseApp/JavaScript/Row.js"></script>
-        <script src="/Sites/InventoryDatabaseApp/JavaScript/Cart.js"></script>
-        <script src="/Sites/InventoryDatabaseApp/JavaScript/Main.js"></script>
+
+        <script src="/Sites/InventoryDatabaseApp/JavaScript/Objects/Folder.js" defer></script>
+        <script src="/Sites/InventoryDatabaseApp/JavaScript/Objects/Row.js" defer></script>
+        <script src="/Sites/InventoryDatabaseApp/JavaScript/Objects/Cart.js" defer></script>
+        <script src="/Sites/InventoryDatabaseApp/JavaScript/Main.js" defer></script>
 
 
     </head>
 
+
     <body>
 
         <nav>
-            <div class="tab" onclick="showTable('Home')">Home</div>
-            <div class="tab" onclick="showTable('MIG')">MIG</div>
-            <div class="tab" onclick="showTable('TIG')">TIG</div>
-            <div class="tab" onclick="showTable('Stick')">Stick</div>
-            <div class="tab" onclick="showTable('Oxy Fuel')">Oxy Fuel</div>
-            <div class="tab" onclick="showTable('Plasma')">Plasma</div>
-            <div class="tab" onclick="showTable('Maintenance')">Maintenance</div>
-            <div class="tab" onclick="showTable('Raw Material')">Raw Material</div>
-            <div class="tab" onclick="showTable('PPE')">PPE</div>
+            <div class="tab" onclick="showFolder('Home')">Home</div>
         </nav>
+        
+
+
 
         <main>
 
-            <div class="folder" id="Home">
-                <h2>Home</h2>
-                <div class="button-container">
-                    <div class="button-item">
-                        <button class="home-button" id="takeInventoryButton">Take Inventory</button>
-                        <span class="button-description">This button will generate inventory sheets for tracking items.</span>
-                    </div>
-                    <div class="button-item">
-                        <button class="home-button" id="printInventoryButton">Print Inventory</button>
-                        <span class="button-description">This button will print the current inventory list to see the current state of things.</span>
-                    </div>
-                    <div class="button-item">
-                        <button class="home-button" id="packoutListButton">Packout List</button>
-                        <span class="button-description">List of all the things students need to buy.</span>
-                    </div>
-                    <div class="button-item">
-                        <button class="home-button" id="insertNewItemButton">Insert New Item</button>
-                        <span class="button-description">This button lets you add a new item to the inventory, wont make new categories so youd have to pick one from a dropdown</span>
-                    </div>
-                </div>
+            <div id="Home-Folder" class="folder" >
+
+                        <div class="button-container">
+                        
+                            <div class="button-item">
+                                <button class="home-button" id="takeInventoryButton">Take Inventory</button>
+                                <span class="button-description">This button will generate inventory sheets for tracking items.</span>
+                            </div>
+                        
+                            <div class="">
+                                <!-- a div for each category (8-9 divs), each div would contain  a table with description, part number, quantity on hand, AND quantity requested,    -->
+                            </div>
+                        
+                        
+                        
+                        
+                            <div class="button-item">
+                                <button class="home-button" id="printInventoryButton">Print Inventory</button>
+                                <span class="button-description">This button will print the current inventory list to see the current state of things.</span>
+                            </div>
+                        
+                            <div class="">
+                                <!-- div with each category, similar to the other script, it woudl only contain description, part number, quantity on hand, -->
+                            </div>
+                        
+                            <div class="button-item">
+                                <button class="home-button" id="packoutListButton">Packout List</button>
+                                <span class="button-description">List of all the things students need to buy.</span>
+                            </div>
+
+                            <div class="button-item">
+                                <!-- div that contains specific part numbers, the api endpoint could be a simple select statement with specific part numbers or ids defined in js-->
+                            </div>
+                        
+                            <div class="new-item-form" >
+                                <h3>New Item Entry</h3>
+                                <table>
+
+
+                                    <thead>
+                                        <tr>
+                                            <th class="description">Description</th>
+                                            <th class="part-number">Part Number</th>
+                                            <th class="qoh">Quantity</th>
+                                            <th class="category">Category</th>  <!-- New Column for Category -->
+                                            <th class="actions">Actions</th>
+                                        </tr>
+                                    </thead>
+
+
+
+                                    <tbody>
+                                        <tr data-item-id="new" id="row-new">
+                                            <td id="description-new" class="description">
+                                                <input type="text" value="" id="description" class="description-input" placeholder="Enter description">
+                                            </td>
+                                            <td id="part-number-new" class="part-number">
+                                                <input type="text" value="" id="part_number" class="part-number-input" placeholder="Enter p/n">
+                                            </td>
+                                            <td id="qoh-new" class="qoh">
+                                                <input type="number" value="" id="qoh" class="qoh-input" placeholder="Enter qty">
+                                            </td>
+                                            <td id="category-new" class="category">
+
+                                                <select id="category" class="category-input">
+                                                    <option value="MIG">MIG</option>
+                                                    <option value="TIG">TIG</option>
+                                                    <option value="Stick">Stick</option>
+                                                    <option value="Oxy-Fuel">Oxy-Fuel</option>
+                                                    <option value="Plasma">Plasma</option>
+                                                    <option value="Maintenance">Maintenance</option>
+                                                    <option value="Raw-Material">Raw-Material</option>
+                                                    <option value="PPE">PPE</option>
+                                                </select>
+                                            </td>
+                                            <td id="actions-new" class="actions">
+                                                <button id="add-to-cart">Add</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+
+
+
+
+
+
+
+                                </table>
+                            </div>
+
+    
+                        </div>
+
+            
             </div>
             
             
 
-            <div class="folder" id="MIG">
-                <table>
-                    <thead>
-                            <tr>
-                                <th class="description">Description</th>
-                                <th class="part-number">Part Number</th>
-                                <th class="qoh">QOH</th>
-                                <th class="last-updated">Last Updated</th>
-                                <th class="actions">Actions</th>
-                            </tr>
-                    </thead>
-
-                    <tbody id="migTable">
-
-                    </tbody>
 
 
-                </table>
-            </div>
 
-            <div class="folder" id="TIG">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="description">Description</th>
-                            <th class="part-number">Part Number</th>
-                            <th class="qoh">QOH</th>
-                            <th class="last-updated">Last Updated</th>
-                            <th class="actions">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tigTable">
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="folder" id="Stick">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="description">Description</th>
-                            <th class="part-number">Part Number</th>
-                            <th class="qoh">QOH</th>
-                            <th class="last-updated">Last Updated</th>
-                            <th class="actions">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="stickTable">
-                    
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="folder" id="Oxy Fuel">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="description">Description</th>
-                            <th class="part-number">Part Number</th>
-                            <th class="qoh">QOH</th>
-                            <th class="last-updated">Last Updated</th>
-                            <th class="actions">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="oxyFuelTable">
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="folder" id="Plasma">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="description">Description</th>
-                            <th class="part-number">Part Number</th>
-                            <th class="qoh">QOH</th>
-                            <th class="last-updated">Last Updated</th>
-                            <th class="actions">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="plasmaTable">
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="folder" id="Maintenance">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="description">Description</th>
-                            <th class="part-number">Part Number</th>
-                            <th class="qoh">QOH</th>
-                            <th class="last-updated">Last Updated</th>
-                            <th class="actions">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="maintenanceTable">
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="folder" id="Raw Material">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="description">Description</th>
-                            <th class="part-number">Part Number</th>
-                            <th class="qoh">QOH</th>
-                            <th class="last-updated">Last Updated</th>
-                            <th class="actions">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="rawMaterialTable">
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="folder" id="PPE">
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="description">Description</th>
-                            <th class="part-number">Part Number</th>
-                            <th class="qoh">QOH</th>
-                            <th class="last-updated">Last Updated</th>
-                            <th class="actions">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="ppeTable">
-
-                    </tbody>
-                </table>
-            </div>
 
         </main>
 
         <footer>
 
             <div id="cartContainer">
-                <h2>Order List</h2>
+                <h2>Cart</h2><button id="print" class="button">Print Cart</button>
                 <table>
                     <thead>
                         <tr>
@@ -220,7 +153,7 @@
   
                     </tbody>
                 </table>
-                <button id="printCartButton">Print Cart</button>
+                
             </div>
 
         </footer>
