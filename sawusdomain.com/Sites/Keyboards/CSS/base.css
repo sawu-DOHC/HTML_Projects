@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    /* REMOVE this because the <img> backgrounds will take over */
+    /* background-size: cover;
+       background-position: center;
+       background-attachment: fixed; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Keep this for smoother opacity effects if needed */
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+
+header {
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    display: flex;
+    justify-content: center;
+
+    margin-top:1rem;
+    margin-bottom: 1rem;
+
+}
+
+#season-selector {
+    display: flex;
+
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 2rem;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #33333385;
+    opacity: .8;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#sections-container {
+    max-width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0;
+    margin:0;
+
+    background-color: rgba(0, 0, 0, 0.279);
+    backdrop-filter: blur(8px);
+    
+}
+
+.section {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    text-align: center;
+}
+h2{
+
+}
+p {
+    max-width: 60%;
+    padding:0;
+    margin:0;
+}
+
+.active {
+    display: flex;
+}
+
+canvas {
+    max-width: 40%;    /* Ensure the canvas scales with container */
+    max-height: 40%;  /* Set a maximum height */
+
+}
+
+
+.keyboardImg {
+    max-width: 60%;
+    height: auto;
+
+}
+
+#theme-split-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: -1;
+  }
+  
+  .color-side {
+    width: 30vw;
+    height: 100%;
+    background-color: var(--season-color, #000);
+  }
+  
+  .image-side {
+    width: 70vw;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .theme-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;     /* Fill container width */
+    height: 100%;    /* Fill container height */
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  
+  .theme-bg.active {
+    opacity: 1;
+  }
+  

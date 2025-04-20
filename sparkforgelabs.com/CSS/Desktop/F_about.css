@@ -1,0 +1,38 @@
+#about .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+}
+
+#about .a {
+  flex: 0 0 300px;
+}
+
+#about .b {
+  flex: 1 1 400px;
+  max-width: 700px;
+}
+
+#about .photo-wrapper {
+  width: 100%;
+  text-align: center;
+  padding:.25rem;
+}
+
+#about .photo-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  
+}
+
+#about .photo-caption {
+  font-weight: bold;
+  color:rgb(88, 88, 88);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}

@@ -1,4 +1,6 @@
 <?php
+
+header("Access-Control-Allow-Origin: https://www.sawusdomain.com");
 include 'config.php'; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);

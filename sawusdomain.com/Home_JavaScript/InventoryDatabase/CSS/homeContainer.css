@@ -1,0 +1,141 @@
+#homeContainer {
+    background-color: #e8f5e9;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#homeContainer h2 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #c8e6c9;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+#homeContainer table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#homeContainer th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #c8e6c9;
+    background-color: #66bb6a;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#homeContainer td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #c8e6c9;
+    font-size: 1.5rem;
+}
+
+#homeContainer td input {
+    font-size: 1.25rem;  /* Reduced font size */
+    padding: 6px 10px;   /* Adjusted padding for better fitting */
+    height: 36px;        /* Reduced height for better alignment */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    width: 100%;         /* Ensure inputs fill the cell */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+#homeContainer td.description input,
+#homeContainer td.part-number input,
+#homeContainer td.qoh input {
+    font-weight: bold;
+}
+
+#homeContainer td.category select {
+    font-size: 1.25rem;  /* Reduced font size */
+    padding: 6px 10px;   /* Adjusted padding for better fitting */
+    height: 36px;        /* Reduced height */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    appearance: none;
+    cursor: pointer;
+    width: 100%;         /* Ensure select fills the cell */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+#homeContainer td.category select:focus {
+    border-color: #43A047;
+    outline: none;
+}
+
+#homeContainer tr:nth-child(odd) {
+    background-color: #f1f8e9;
+}
+
+#homeContainer tr:nth-child(even) {
+    background-color: #e8f5e9;
+}
+
+#homeContainer tr:hover {
+    background-color: #c5e1a5;
+}
+
+.home-button {
+    background-color: #43A047;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.home-button:hover {
+    background-color: #66BB6A;
+}
+
+#add-new-item-button {
+    background-color: #43A047;
+    color: white;
+    width: 4rem;
+    height: 3rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#add-new-item-button:hover {
+    background-color: #66BB6A;
+}
+
+#add-new-item-button:active {
+    background-color: #388E3C;
+}
+
+/* Sub-category specific styles */
+.sub-category {
+    overflow-x: auto;
+}
+
+.sub-category table {
+    width: 100%;
+    table-layout: auto; /* Use auto layout to allow the table to adjust to content */
+}
+
+.sub-category th, .sub-category td {
+    padding: 6px;   /* Adjust padding for a compact look */
+    font-size: 1.25rem;  /* Ensure readable but smaller font */
+}
+
+.sub-category td input, .sub-category td select {
+    font-size: 1.25rem;
+    padding: 6px 10px;   /* Reduce padding but ensure enough space */
+    height: 36px;        /* Ensure the height matches the content */
+    width: 100%;         /* Ensure inputs take up full space of the table cell */
+    box-sizing: border-box; /* Ensure the padding fits correctly inside the cell */
+}

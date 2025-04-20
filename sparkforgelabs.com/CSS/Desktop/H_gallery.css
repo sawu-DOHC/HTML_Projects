@@ -1,0 +1,65 @@
+#gallery {
+    
+  }
+  
+  #gallery .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1rem;
+    margin: 0 auto;
+  }
+  
+  #gallery .gallery-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: #000; /* optional: helps if images are smaller than cell */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #gallery .gallery-image:hover {
+    transform: scale(1.5); /* more reasonable zoom */
+    box-shadow: 0 0 1rem rgba(113, 144, 230, 0.4);
+  }
+
+
+
+  
+  @media (max-width: 850px) {
+    #gallery {
+      padding: 1rem;
+    }
+    
+    #gallery .gallery-container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 0.5rem;
+      padding: 1rem;
+      scroll-snap-type: x mandatory;
+    
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    
+    #gallery .gallery-image {
+      flex: 0 0 auto;
+      width: 20rem;
+      height: auto;
+      object-fit: cover;
+      background-color: #000;
+      scroll-snap-align: start;
+    }
+    
+    /* Optional: hide scrollbar for WebKit */
+    #gallery .gallery-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+  }
+  

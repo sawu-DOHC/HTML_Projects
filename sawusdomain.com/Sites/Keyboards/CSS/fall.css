@@ -1,0 +1,41 @@
+body.fall {
+    background-color: #ffe0b2;
+    color: #4e342e;
+    font-family: 'Palatino Linotype', serif;
+}
+
+body.fall #sections-container {
+    background-color: rgba(60, 40, 30, 0.35); /* deep brown tint */
+    color: #4e342e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+body.fall h2{
+    color: #000000;
+    text-shadow: none;
+}
+
+body.fall p {
+    color: #000000;
+    text-shadow: none;
+}
+
+body.fall button {
+    background-color: rgba(60, 40, 30, 0.35); /* deep brown tint */
+    color: #000000;
+    font-family: 'Palatino Linotype', serif;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* darker shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.fall button:hover {
+    background-color: #6d4c41;
+    color:white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.fall img {
+    filter: drop-shadow(0 0 6px rgb(0, 0, 0)); /* dark shadow */
+}

@@ -1,0 +1,42 @@
+body.spring {
+    background-color: #d1c4e9;
+    color: #6a1b9a;
+    font-family: 'Courier New', Courier, monospace; /* Changed to Arial */
+    text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.7);
+}
+
+body.spring button {
+    background-color: rgba(231, 210, 255, 0.3);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif; /* Changed to Arial */
+    border: none;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.587);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.spring button:hover {
+    background-color: #7e57c28e;
+    color:rgb(219, 255, 177);
+    box-shadow: 0 0 12px rgba(158, 130, 255, 0.8);
+}
+
+body.spring #sections-container {
+    background-color: rgba(231, 210, 255, 0.3);
+    color: #f1ff26;
+    text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+body.spring p {
+    color: #6a1b9a;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.spring h2 {
+    color: #6a1b9a;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+body.spring img {
+    filter: drop-shadow(0 0 6px rgba(158, 130, 255, 0.6));
+}

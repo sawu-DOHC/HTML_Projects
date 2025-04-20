@@ -1,7 +1,14 @@
 <?php
+// Enable error reporting for debugging
+header("Access-Control-Allow-Origin: https://www.sawusdomain.com");
+
 include 'config.php'; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    error_log("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
+}
 
 $ipAddress = $_SERVER['REMOTE_ADDR'];
 if (empty($ipAddress)) {
@@ -9,12 +16,14 @@ if (empty($ipAddress)) {
 }
 
 $sql = "INSERT INTO table1 (column1) VALUES ('$ipAddress')";
-$conn->query($sql);
+if (!$conn->query($sql)) {
+    error_log("Insert error: " . $conn->error);
+    // You can optionally output an error message here
+    die("Insert error: " . $conn->error);
+}
 
-$countQuery = "SELECT COUNT(*) AS total FROM table1";
-$result = $conn->query($countQuery);
-$row = $result->fetch_assoc();
-echo $row['total'];
+// If you want to keep this script quiet, simply remove the echo
+// echo "Success";
 
 $conn->close();
 ?>

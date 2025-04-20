@@ -1,0 +1,152 @@
+#tableContainer {
+    background-color: #e3f2fd;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+#tableContainer h2 {
+    color: #333333;
+
+    border-bottom: 1px solid #bbdefb;
+    text-align: center;
+}
+
+#tableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: .5rem;
+}
+
+#tableContainer th {
+    padding: .5rem;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #90caf9;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+#tableContainer td {
+    padding: .75rem;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1.5rem;
+    cursor:pointer;
+}
+
+#tableContainer tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+#tableContainer tr:nth-child(even) {
+    background-color: #e3f2fd;
+}
+
+#tableContainer tr:hover {
+    background-color: #bbdefb;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+
+#tableContainer .add-to-cart {
+    background-color: #4CAF50;
+}
+
+#tableContainer .add-to-cart:hover {
+    background-color: #66FF66; /* Brighter green */
+}
+
+#tableContainer .edit-item {
+    background-color: #FFC107;
+}
+
+#tableContainer .edit-item:hover {
+    background-color: #FFEA00; /* Brighter yellow */
+}
+
+/* Blue Theme for Save Button */
+#tableContainer .edit-item.save-mode {
+    background-color: #2196F3;
+    color:white;
+}
+
+#tableContainer .edit-item.save-mode:hover {
+    background-color: #64B5F6; /* Brighter blue */
+}
+
+#tableContainer .delete-item {
+    background-color: #f44336;
+}
+
+#tableContainer .delete-item:hover {
+    background-color: #FF6659; /* Brighter red */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Input fields inside table */
+#tableContainer td input.edit-field {
+    font-size: 1.5rem;
+    width:100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Individual styling for description, part number, and QOH */
+#tableContainer td input.edit-field.description {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#tableContainer td input.edit-field.part-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#tableContainer td input.edit-field.quantity {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.print-category-button {
+    background-color: #42a5f5;       /* Blue primary */
+    color: #ffffff;                  /* White text */
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.75rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    display: inline-block;
+}
+
+.print-category-button:hover {
+    background-color: #64b5f6;       /* Lighter blue on hover */
+}
+
+@media (max-width: 1000px) {
+    /* Adjustments for all table header cells */
+    #tableContainer th {
+        padding: 0.5rem;
+        font-size: 1.25rem;
+    }
+
+    /* Adjustments for all table data cells */
+    #tableContainer td {
+        padding: 0.5rem;
+        font-size: 1.25rem;
+    }
+
+}

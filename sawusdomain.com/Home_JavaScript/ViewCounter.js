@@ -1,20 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
+console.log("ViewCounter.js loaded");
 
-    async function add() {
+async function updateViewCounter() {
 
-        try {
+  const response = await fetch('https://sawusdomain.com/Home_PHP/add.php');
 
-            const response = await fetch('https://sawusdomain.com/Home_PHP/add.php'); 
-            const data = await response.text(); 
-            console.log("view counter updated, message from server: " + data );
-        } 
-        catch ( error ) {
-            console.log("view counter not bussin ")
-        }
-    }
-
-    add();
+  const text = await response.text();
+}
+updateViewCounter();
 
 
 
-});

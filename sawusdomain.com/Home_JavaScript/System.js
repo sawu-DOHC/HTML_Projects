@@ -31,10 +31,10 @@ class System {
             console.error("System.Initialize(): Error during initialization", error);
         }
 
-        // Add the resources before proceeding with other initializations
+
         await this.addResourcesToHead();
 
-        // Initialize the components after all resources are loaded
+
         this.object_pane = new Pane();
         this.object_desktop = new Desktop();
         this.object_taskbar = new Taskbar();
@@ -66,61 +66,65 @@ class System {
     }
 
     async openApplication(element) {
+        
         this.object_pane.insertWindow(element, this.json_data);  
         this.object_taskbar.insertTask(element);
     
         try {
-
             if (element.css_path) {
-                await this.insertStylesheet(element.css_path, `style-${element.id}`);
+                await this.insertStylesheet(element.css_path, `style-${element.id}`, element.id);
                 console.log(`CSS loaded from ${element.css_path}`);
             }
     
-
             if (element.ui_script) {
-                await this.insertScript(element.ui_script, `interface-${element.id}`);
+                console.log(`Loading UI script: ${element.ui_script}`);
+                await this.insertScript(element.ui_script, `interface-${element.id}`, element.id); // 🛑 Ensure UI loads first
                 console.log(`UI script loaded from ${element.ui_script}`);
             }
     
-
             if (element.controller_script) {
-                await this.insertScript(element.controller_script, `controller-${element.id}`);
+                console.log(`Waiting for UI to finish before loading controller...`);
+                await new Promise(resolve => setTimeout(resolve, 50)); // Small delay to ensure UI executes first
+    
+                console.log(`Loading Controller script: ${element.controller_script}`);
+                await this.insertScript(element.controller_script, `controller-${element.id}`, element.id); // 🚀 Now controller loads after UI
                 console.log(`Controller script loaded from ${element.controller_script}`);
             }
-    
-        } catch (error) {
-            console.error("System.openApplication: error loading scripts or something look at the scripts", error);
+        } 
+        catch (error) {
+            console.error("System.openApplication: error loading scripts", error);
         }
     }
+    
+    
 
-    async insertStylesheet(hypertextReference, identifier) {
+    async insertStylesheet(hypertextReference, identifier, src_id) {
         return new Promise((resolve, reject) => {
             const link = document.createElement('link');
             link.rel = 'stylesheet';
             link.href = hypertextReference;
             link.id = identifier;
-            link.onload = () => {
-                resolve();
-                //console.log(`${hypertextReference} has been added to the document.`);
-            };
+            link.setAttribute('src_id', src_id); // Set src_id attribute
+            link.onload = () => resolve();
             link.onerror = () => reject(new Error(`Failed to load stylesheet from ${hypertextReference}`));
             document.head.appendChild(link);
         });
     }
-    async insertScript(source, identifier) {
+    
+    async insertScript(source, identifier, src_id) {
         return new Promise((resolve, reject) => {
             const script = document.createElement('script');
             script.src = source;
-            script.defer = true; 
+            script.defer = true;
             script.id = identifier;
-            script.onload = () => {
-                resolve();
-                //console.log(`${source} has been added to the document.`);
-            };
+            script.setAttribute('src_id', src_id); // Set src_id attribute
+            script.onload = () => resolve();
             script.onerror = () => reject(new Error(`Failed to load script from ${source}`));
             document.head.appendChild(script);
         });
     }
+    
+    
     openLink( element ) {
         if ( element.url ) {
 

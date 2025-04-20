@@ -117,7 +117,7 @@
 
 }
 
-@media ( max-width: 750px ) {
+@media ( max-width:1000px) {
 
     #window-8 {
         top: 50%;

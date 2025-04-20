@@ -35,7 +35,7 @@
   box-sizing: border-box;
 
   width: 100%;
-  height: calc(100% - 4.5rem);
+  height: calc(100% - 5rem);
 
   max-height: calc( 100vh - 5.5rem );
 
@@ -60,6 +60,7 @@
   background-color: #000080;
   color: white;
   padding: 0.25rem;
+  margin-bottom: .25rem;
   box-sizing: border-box;
   
   
@@ -85,35 +86,66 @@
   cursor:grab
 }
 
-.minimize-button {
-  width: 2rem;
-  height: 2rem;
-  font-size: 1.5rem;
-  padding-bottom: 0.25rem;
-}
 
-.maximize-button {
-  width: 2rem;
-  height: 2rem;
-  font-weight: bolder;
-  font-size: 1.125rem;
-  padding-bottom: 0.125rem;
-}
 
-.close-button {
-  width: 2rem;
-  height: 2rem;
-  font-weight: bolder;
-  font-size: 1rem;
-}
 
-.title-bar-controls button:active {
-  background-color: #d0d0d0;
+
+
+
+
+
+.title-bar .button {
+  text-align: center;
+  justify-content: center;
+
+  background-color: #c0c0c0;
+  border: 0.25rem solid #808080;
+  border-top-color: #eaeaea;
+  border-left-color: #eaeaea;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  margin-left:.25rem;
+}
+.title-bar .button:active {
   border-top-color: #808080;
   border-left-color: #808080;
   border-right-color: #eaeaea;
   border-bottom-color: #eaeaea;
+  background-color: #b0b0b0; 
 }
+
+#MinimizeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    padding-bottom: 0.25rem;
+}
+
+#MaximizeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    font-weight: bolder;
+    font-size: 1.125rem;
+    padding-bottom: 0.125rem;
+}
+
+#CloseButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+
 
 .toolbar {
   display: flex;
@@ -151,7 +183,7 @@
 }
 
 
-@media ( max-width: 750px ) {
+@media ( max-width: 1000px ) {
 
   .window {
     position: absolute;

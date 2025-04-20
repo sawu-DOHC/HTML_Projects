@@ -21,9 +21,6 @@ async function Controller_MyComputer() {
     }
 
 
-
-
-
 }
 
 Controller_MyComputer();

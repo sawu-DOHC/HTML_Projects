@@ -23,7 +23,7 @@ function showTooltip( event ) {
         
         //console.log("Hovered icon with src_id:", iconId);
 
-        // Check if system.json_data is available
+
         if (!system.json_data) {
            //console.error("Error: system.json_data is not available.");
             return;

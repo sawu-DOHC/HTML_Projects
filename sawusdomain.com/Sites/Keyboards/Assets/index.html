@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seasonal Keyboards</title>
+
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/summer.css">
+    <link rel="stylesheet" href="CSS/fall.css">
+    <link rel="stylesheet" href="CSS/winter.css">
+    <link rel="stylesheet" href="CSS/spring.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="JS/Keyboard.js" defer></script>
+    <script src="JS/Switch.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="main.js" defer></script>
+
+
+
+</head>
+<body>
+    <div id="theme-split-background">
+        <div class="color-side">
+
+        </div>
+        <div class="image-side">
+          <img src="Assets/winter.jpg" class="theme-bg" id="bg-winter">
+          <img src="Assets/spring.jpg" class="theme-bg" id="bg-spring">
+          <img src="Assets/summer.jpg" class="theme-bg" id="bg-summer">
+          <img src="Assets/fall.png"   class="theme-bg" id="bg-fall">
+        </div>
+      </div>
+      
+    <header>
+        <div id="season-selector">
+            <button onclick="changeTheme('winter')">Winter</button>
+            <button onclick="changeTheme('spring')">Spring</button>
+            <button onclick="changeTheme('summer')">Summer</button>
+            <button onclick="changeTheme('fall')">Fall</button>
+        </div>
+    </header>
+
+    <!-- Main container to hold all sections -->
+    <div id="sections-container">
+        <section id="winter" class="section">
+            <h2>Winter Ebony</h2>
+            <p>
+                Heavy tactile switch.<br>
+                Feel the crisp snap of winter beneath your fingertips with the Winter Ebony experience. 
+                Each keystroke begins with a decisive, early tactile peak—like breaking gently through fresh, untouched snow. 
+                Complemented by icy-blue keycaps adorned with glacial white letters and an exquisite ebony wood spacebar, every keypress resonates with a crisp, undampened bottom-out, evoking the harsh, unforgiving chill of deep winter.
+            </p>
+            <img src="Assets/winterKey.png" class ="keyboardImg" alt="Winter Edition Keyboard">
+            <canvas id="winterChart"></canvas>
+        </section>
+        
+        <section id="spring" class="section">
+            <h2>Spring Rose</h2>
+            <p>
+                Light linear switch.<br>
+                Feel the gentle bloom of spring beneath your fingertips with the Spring Rose experience.
+                Each keystroke is smooth and steady—like nature awakening after winter’s pause, bringing the quiet promise of renewal and hope.
+                Softened by switch dampers, every keypress feels honey-smooth and controlled. Pastel keycaps paired with a warm rosewood spacebar evoke the calm ease of springtime growth.
+            </p>
+            <img src="Assets/springKey.png" class ="keyboardImg" alt="Spring Edition Keyboard">
+            <canvas id="springChart"></canvas>
+        </section>
+        
+        <section id="summer" class="section">
+            <h2>Summer Ivory</h2>
+            <p>
+                Light tactile switch.<br>
+                Feel the relaxed ease of summer beneath your fingertips with the Summer Ivory experience.
+                Each keystroke is light and effortless, marked by a subtle tactile bump—a developed refinement from spring’s undeveloped linear strokes, crafted to reduce effort during hot, lazy days.
+                Enhanced by subtle switch dampers and complemented by crisp white keycaps paired with a soft, lightly-colored wooden spacebar, typing becomes a cool, comfortable breeze amid summer’s warmth.
+            </p>
+            <img src="Assets/summerKey.png" class ="keyboardImg" alt="Summer Edition Keyboard">
+            <canvas id="summerChart"></canvas>
+        </section>
+        
+        <section id="fall" class="section">
+            <h2>Fall Walnut</h2>
+            <p>
+                Clicky Tactile switch.<br>
+                Feel the crisp crunch of autumn beneath your fingertips with the Fall Walnut experience.
+                Each keystroke delivers a distinct, audible click—a sharper, more defined tactile sensation compared to summer's soft and subtle bump, signaling the shift to tougher, colder times ahead.
+                Enhanced with switch dampers for comfortable typing, and adorned with earthy-toned keycaps complemented by a rich walnut wood spacebar, typing feels cozy yet decisive, perfectly capturing the bittersweet spirit of fall.
+            </p>
+            <img src="Assets/fallKey.png" class ="keyboardImg" alt="Fall Edition Keyboard">
+            <canvas id="fallChart"></canvas>
+        </section>
+    </div>
+</body>
+</html>

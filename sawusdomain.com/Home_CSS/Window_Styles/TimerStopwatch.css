@@ -77,7 +77,7 @@
     box-sizing: border-box;
 }
 
-@media ( max-width: 750px ) {
+@media ( max-width: 1000px ) {
 
     #window-11 {
       position: absolute;

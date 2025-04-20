@@ -1,0 +1,30 @@
+#contact {
+
+
+}
+
+#contact ul {
+  padding: .5rem;
+
+
+}
+
+#contact li {
+  list-style: none;
+}
+
+#contact p {
+  text-align: center;
+}
+
+
+#contact iframe {
+  display: block;
+  width: 90%;
+  max-width: 90rem;
+  height: 40rem;
+  padding:1rem;
+  border: none;
+  margin: 0 auto;
+}
+ 

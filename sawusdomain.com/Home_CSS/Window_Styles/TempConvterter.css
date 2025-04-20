@@ -56,7 +56,7 @@
     font-weight: bold;
     text-align: center;
 }
-@media ( max-width: 750px ) {
+@media ( max-width: 1000px) {
 
   #window-9 {
       top: 50%;

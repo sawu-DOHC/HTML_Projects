@@ -18,171 +18,90 @@ class Window {
     z_index;              
 
     constructor( element ) {
-
-        // assign values from the raw item json data element
-        this.string_div_id = `window-${element.id}`;  
+        // Assign values from the raw item JSON data
+        this.string_div_id = `window-${element.id}`;
         this.string_src_id = element.id;
-        this.string_src_parent_id = element.parent_id;  
-        this.string_name = element.name;  
-        this.string_img_path = element.image_path;  
+        this.string_src_parent_id = element.parent_id;
+        this.string_name = element.name;
+        this.string_img_path = element.image_path;
         this.string_type = element.type;
-
-        // create the window element
+    
+        // Create the window element
         this.element_window = document.createElement("div");
         this.element_window.id = this.string_div_id;
-        this.element_window.className = "window";
-
-
-        // check if the element that was clicked is an icon or inside an icon
-        // the .closest() method is useful for determining if an event is related to an element with a particular class, 
-        // even if that class is not directly on the clicked element but on one of its ancestors.
+        this.element_window.className = `window ${element.type}`;
+    
+        // Set attributes for reference
+        this.element_window.setAttribute("src_id", this.string_src_id);
+        this.element_window.setAttribute("parent_id", this.string_src_parent_id);
+        this.element_window.setAttribute("type", this.string_type);
+    
+        // Define the HTML structure
+        this.element_window.innerHTML = `
+            <div id="TitleBar" class="title-bar">
+                <img id="TitleBarIcon" class="title-bar-icon" src="${this.string_img_path}" draggable="false">
+                <span id="TitleBarText" class="title-text">${this.string_name}</span>
+                <button id="MinimizeButton" class="button minimize-button">_</button>
+                <button id="MaximizeButton" class="button maximize-button">🗖</button>
+                <button id="CloseButton" class="button close-button">X</button>
+            </div>
+            <div id="Toolbar" class="toolbar">
+                <button id="ToolbarFileButton" class="toolbar-button">File</button>
+                <button id="ToolbarEditButton" class="toolbar-button">Edit</button>
+                <button id="ToolbarViewButton" class="toolbar-button">View</button>
+                <button id="ToolbarHelpButton" class="toolbar-button">Help</button>
+            </div>
+            <div id="Window-Body-${element.id}" class="window-body"></div>
+        `;
+    
+        // Add event listeners
         this.element_window.addEventListener("click", (event) => {
-            
-            if ( event.target.closest( '.icon' ) ) {
-                //console.log('icon clicked, skipping bringWindowToFront.'); 
-                return; 
+            if (!event.target.closest(".icon")) {
+                system.object_pane.bringWindowToFront(this.element_window);
             }
-        
-            // if the click was not on an icon, bring the window to the front
-            system.object_pane.bringWindowToFront(this.element_window); 
         });
-        
-        // add identifying attributes, need to try and make it work on just one maybe
-        this.element_window.setAttribute('src_id', this.string_src_id);
-        this.element_window.setAttribute('parent_id', this.string_src_parent_id); 
-        this.element_window.setAttribute('type', this.string_type);
-
-        // used for click logic
-        if (element.type === "app") {
-            this.element_window.classList.add("app");
-        }
-        else if (element.type === "dir") {
-            this.element_window.classList.add("dir");
-        }
-
-        // create title bar with controls (minimize, maximize, close)
-        const titleBar = document.createElement("div");
-        titleBar.id = "TitleBar";
-        titleBar.className = "title-bar";
-
-        const titleBarIcon = document.createElement("img");
-        titleBarIcon.id = "TitleBarIcon";
-        titleBarIcon.className = "title-bar-icon";
-        titleBarIcon.src = this.string_img_path;
-        titleBarIcon.addEventListener('mousedown', this.startDragging.bind(this) );
-
-        const titleBarText = document.createElement("span");
-        titleBarText.id = "TitleBarText";
-        titleBarText.className = "title-text";
-        titleBarText.textContent = this.string_name;
-        titleBarText.addEventListener('mousedown', this.startDragging.bind(this));
-
-        const minimizeButton = document.createElement("button");
-        minimizeButton.id = "MinimizeButton";
-        minimizeButton.className = "button minimize-button";
-        minimizeButton.textContent = "_";
-        minimizeButton.addEventListener("click", (event) => {
-            event.stopPropagation();  // preventing the bringWindowToFront event
+    
+        this.element_window.querySelector("#TitleBarIcon").addEventListener("mousedown", this.startDragging.bind(this));
+        this.element_window.querySelector("#TitleBarText").addEventListener("mousedown", this.startDragging.bind(this));
+    
+        this.element_window.querySelector("#MinimizeButton").addEventListener("click", (event) => {
+            event.stopPropagation();
             this.minimizeWindow();
         });
-        
-        const maximizeButton = document.createElement("button");
-        maximizeButton.id = "MaximizeButton";
-        maximizeButton.className = "button maximize-button";
-        maximizeButton.textContent = "🗖";
-        maximizeButton.addEventListener("click", (event) => {
-            event.stopPropagation();  
+    
+        this.element_window.querySelector("#MaximizeButton").addEventListener("click", (event) => {
+            event.stopPropagation();
             this.maximizeWindow();
         });
-        
-        const closeButton = document.createElement("button");
-        closeButton.id = "CloseButton";
-        closeButton.className = "button close-button";
-        closeButton.textContent = "X";
-        closeButton.addEventListener("click", (event) => {
-            event.stopPropagation();  
+    
+        this.element_window.querySelector("#CloseButton").addEventListener("click", (event) => {
+            event.stopPropagation();
             this.closeWindow();
         });
-        
-
-        titleBar.append(titleBarIcon, titleBarText, minimizeButton, maximizeButton, closeButton);
-
-        // create toolbar with buttons (File, Edit, View, Help)
-        const toolbar = document.createElement("div");
-        toolbar.id = "Toolbar";
-        toolbar.className = "toolbar";
-
-        const fileButton = document.createElement("button");
-        fileButton.id = "ToolbarFileButton";
-        fileButton.className = "toolbar-button";
-        fileButton.textContent = "File";
-        toolbar.appendChild(fileButton);
-
-        const editButton = document.createElement("button");
-        editButton.id = "ToolbarEditButton";
-        editButton.className = "toolbar-button";
-        editButton.textContent = "Edit";
-        toolbar.appendChild(editButton);
-
-        const viewButton = document.createElement("button");
-        viewButton.id = "ToolbarViewButton";
-        viewButton.className = "toolbar-button";
-        viewButton.textContent = "View";
-        toolbar.appendChild(viewButton);
-
-        const helpButton = document.createElement("button");
-        helpButton.id = "ToolbarHelpButton";
-        helpButton.className = "toolbar-button";
-        helpButton.textContent = "Help";
-        toolbar.appendChild(helpButton);
-
-        // create window body where content will be added
-        const windowBody = document.createElement("div");
-        windowBody.id = `Window-Body-${element.id}`;
-        windowBody.className = "window-body";
-
-        // append all elements to the main window div
-        this.element_window.append( titleBar, toolbar, windowBody );
     }
+    
 
     closeWindow() {
-
-
         const srcID = this.element_window.getAttribute('src_id');  
-
-        
     
-        const styleElement = document.getElementById(`style-${srcID}`);
-        if (styleElement) {
-            styleElement.remove();
-
-        }
+        // Select all scripts and styles with the matching src_id in <head>
+        const elements = document.head.querySelectorAll(`[src_id="${srcID}"]`);
     
-        const controllerElement = document.getElementById(`controller-${srcID}`);
-        if (controllerElement) {
-            controllerElement.remove();
-
-        }
+        // Loop through the NodeList and remove each element
+        elements.forEach(element => {
+            element.remove();
+        });
     
-        const interfaceElement = document.getElementById(`interface-${srcID}`);
-        if (interfaceElement) {
-            interfaceElement.remove();
-
-        }
+        // Remove the task entry
+        system.object_taskbar.removeTask(srcID);
     
-        const taskElement = document.getElementById(`task-${srcID}`);
-        if (taskElement) {
-            //taskElement.remove();
-            system.object_taskbar.removeTask( srcID );
-        }
-    
-        const windowElement = document.getElementById(`window-${srcID}`);
-        if (windowElement) {
-            //windowElement.remove();
-            system.object_pane.removeWindow( srcID );
-
-        }
+        // Remove the window itself
+        system.object_pane.removeWindow(srcID);
     }
+    
+    
+    
+    
     minimizeWindow() {
 
     
@@ -237,11 +156,11 @@ class Window {
             console.log("window is already maximized. Restoring...");
     
             // Restore the window to its original size and position
-            windowElement.style.width = this.float_width;     // Restore original width
-            windowElement.style.height = this.float_height;   // Restore original height
-            windowElement.style.top = this.float_top;         // Restore original top position
-            windowElement.style.left = this.float_left;       // Restore original left position
-            windowElement.style.transform = "";               // Remove any transformations
+            windowElement.style.width = this.float_width;     
+            windowElement.style.height = this.float_height;   
+            windowElement.style.top = this.float_top;         
+            windowElement.style.left = this.float_left;       
+            windowElement.style.transform = "";               
 
             this.isMaximized = false;
     
@@ -294,8 +213,8 @@ class Window {
     
         const rect = this.element_window.getBoundingClientRect();
     
-        this.offsetX = event.clientX - rect.left;  // Mouse offset relative to the window's left
-        this.offsetY = event.clientY - rect.top;   // Mouse offset relative to the window's top
+        this.offsetX = event.clientX - rect.left;  
+        this.offsetY = event.clientY - rect.top;   
     
         this.initialTop = rect.top;
         this.initialLeft = rect.left;
@@ -310,10 +229,10 @@ class Window {
 
         if ( this.isDragging ) {
 
-            this.element_window.style.transform = "none"; // this ensures no transform interference during drag this is the key!
+            this.element_window.style.transform = "none"; 
 
-            const x = event.clientX - this.offsetX; // adjust window's left position
-            const y = event.clientY - this.offsetY; // adjust window's top position
+            const x = event.clientX - this.offsetX; 
+            const y = event.clientY - this.offsetY; 
     
             this.element_window.style.left = `${x}px`;
             this.element_window.style.top = `${y}px`;

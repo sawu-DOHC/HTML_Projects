@@ -1,0 +1,101 @@
+#services .services-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1.5rem;
+    background-color: #f5f5f500;
+    color: #111;
+  }
+  
+  #services .services-table th,
+  #services .services-table td {
+    padding: 1rem;
+    border: 2px solid #ffffff3c;
+    text-align: center;
+    color:rgb(88, 88, 88);
+  }
+  
+  #services .services-table th {
+    background-color: #ffffff3c;
+    font-weight: bold;
+
+  }
+  
+  #services .services-table tbody tr:nth-child(odd) {
+    background-color: #fafafa00;
+  }
+  
+  #services .services-table tbody tr:hover {
+    background-color:#ffffff3c;
+    transition: background-color 0.2s ease;
+  }
+  
+  #services .register-btn {
+    background-color: #f75c2d; /* Accent button */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  #services .register-btn:hover {
+    background-color: #1e2d66; /* A darker tone of your blue for hover */
+  }
+
+
+
+
+
+
+@media (max-width: 850px) {
+
+  #services .services-table {
+    width: 100%;
+    font-size: 1.1rem;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+  }
+
+  #services .services-table thead {
+    display: none;
+  }
+
+  #services .services-table tbody tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    background-color: #ffffff10;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+    padding: 1rem 1.25rem;
+  }
+
+  #services .services-table td {
+    display: block; /* Stack label + value vertically */
+    padding: 0.5rem 0;
+    border: none;
+    text-align: left;
+  }
+
+  #services .services-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  #services .register-btn {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    padding: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}

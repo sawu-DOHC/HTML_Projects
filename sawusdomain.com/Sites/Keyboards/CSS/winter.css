@@ -1,0 +1,42 @@
+body.winter {
+    background-color: #3b4a60;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+}
+
+body.winter button {
+    background-color: rgba(255, 255, 255, 0.228);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.164);
+    color: #ffffffbb;
+    font-family: sans-serif;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.winter button:hover {
+    background-color: rgba(255, 255, 255, 0.443);
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(170, 182, 254, 0.8);
+}
+
+body.winter #sections-container {
+    background-color: rgba(255, 255, 255, 0.228);
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.164);
+    
+}
+
+body.winter p {
+    color: #5e2316;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+body.winter h2 {
+    color: #5e2316;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+body.winter img {
+    filter: drop-shadow(0 0 8px rgb(0, 0, 0));
+}
