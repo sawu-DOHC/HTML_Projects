@@ -214,7 +214,7 @@ VALUES
     'Sam\'s Welds', -- name
     'Check out Sam\'s welds!', -- description
     'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
-    'https://sawusdomain.com/Sites/Weld/index.html', -- url
+    'https://weldmastergwinnett.com', -- url
     NULL, -- css script
     NULL, -- ui_script
     NULL -- controller_script

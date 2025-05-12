@@ -23,7 +23,7 @@ footer {
     transform: scale(1.1);
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
   }
-  
+
   footer img {
     height: 4rem;
     width: 4rem;
@@ -39,7 +39,7 @@ footer {
   }
 
   footer p, footer a{
-    font-size:1rem;
+    font-size:.8rem;
     color:rgba(73, 173, 255, 0.358);
     padding:0; 
     margin:0;
@@ -55,5 +55,9 @@ footer {
       height: 3em;
       width: 3rem;
       padding:.5rem;
+    }
+    footer p, footer a{
+      font-size:0.8rem;
+
     }
   }

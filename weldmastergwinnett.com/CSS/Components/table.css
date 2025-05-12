@@ -1,0 +1,143 @@
+table {
+  table-layout: fixed;
+  width: 100%;
+  max-width: 1700px;
+  margin:0 auto;
+}
+
+th{
+  font-weight: bold;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 1rem;
+
+}
+td {
+  position: relative;
+  overflow: visible;
+  width: 300px;
+  height: 300px;
+  background-color: #ffffffc7;
+      padding: 0.25rem;
+
+  
+}
+td img:hover{
+    cursor: pointer;
+}
+
+.axis-col {
+  width: 80px;
+}
+
+tbody td:first-child {
+  font-weight: bold;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+td img:not(.stacked-thumb) {
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  display: block;
+  padding: 1rem;
+}
+
+.stacked-thumb {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+
+/* First image: topmost */
+.stacked-thumb[data-index="0"] {
+  z-index: 3;
+  opacity: 1;
+  top: 0;
+  left: 0;
+}
+
+/* Second image: slightly down and left */
+.stacked-thumb[data-index="1"] {
+  z-index: 2;
+  opacity: 0.7;
+  top: 1rem;
+  left: 1rem;
+
+}
+
+/* Third image: further down and left */
+.stacked-thumb[data-index="2"] {
+  z-index: 1;
+  opacity: 0.4;
+  top: 2rem;
+  left: 2rem;
+}
+
+
+
+.weld-info {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  z-index: 4;
+  width: auto;
+}
+
+td:hover .weld-info {
+  display: block;
+}
+@media (max-width: 768px) {
+  table {
+    font-size: 0.75rem;
+    max-width: 100%;
+  }
+
+  th {
+    padding: 0.5rem;
+  }
+
+  td {
+    width: 150px;
+    height: 150px;
+
+  }
+td:hover .weld-info {
+  display: none;
+}
+  td img:not(.stacked-thumb),
+  .stacked-thumb {
+    width: 90%;
+    height: 90%;
+  }
+
+  .stacked-thumb[data-index="1"] {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .stacked-thumb[data-index="2"] {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .weld-info {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .axis-col {
+    width: 50px;
+    font-size: 0.75rem;
+  }
+}

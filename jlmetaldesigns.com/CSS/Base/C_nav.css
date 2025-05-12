@@ -1,0 +1,97 @@
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: transparent;
+  z-index: 2;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--border);
+}
+
+@media (hover: hover) {
+  nav li:hover ul {
+    display: block;
+  }
+
+  nav li ul {
+    min-width: 300px;
+  }
+}
+
+nav li ul li a {
+  padding: 0.75rem 1rem;
+  font-weight: normal;
+  color: var(--text);
+}
+
+nav li ul li a:hover {
+  background-color: var(--hover-bg);
+  color: var(--accent);
+}
+@media (max-width: 800px) {
+  nav ul {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    width: 100%;
+  }
+
+  nav ul.active {
+    max-height: 500px;
+  }
+
+  nav ul li {
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav a {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  nav li ul {
+    position: static;
+    border: none;
+    display: none;
+  }
+
+  nav li.show-submenu ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav li ul li a {
+    padding-left: 2rem;
+  }
+}

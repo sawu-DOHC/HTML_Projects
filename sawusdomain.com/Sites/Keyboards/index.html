@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Keyboards</title>
+
+    <!-- Load base layout styles -->
+    <link rel="stylesheet" href="CSS/base.css">
+
+    <!-- Load seasonal themes -->
+    <link rel="stylesheet" href="CSS/summer.css">
+    <link rel="stylesheet" href="CSS/fall.css">
+    <link rel="stylesheet" href="CSS/winter.css">
+    <link rel="stylesheet" href="CSS/spring.css">
+
+    <!-- Placeholder for optional materials/themes (you can remove if unused) -->
+    <!-- Chart.js for visualizing force curves -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Load main script logic with defer to ensure DOM is ready -->
+    <script src="JS/script.js" defer></script>
+</head>
+<body>
+    <!-- Header with season switcher buttons -->
+    <header>
+        <div id="season-selector">
+            <button onclick="changeTheme('winter')">Winter</button>
+            <button onclick="changeTheme('spring')">Spring</button>
+            <button onclick="changeTheme('summer')">Summer</button>
+            <button onclick="changeTheme('fall')">Fall</button>
+        </div>
+    </header>
+
+    <!-- Main container for all seasonal sections -->
+    <div id="sections-container">
+
+        <!-- Winter keyboard section -->
+        <section id="winter" class="section">
+            <h2>Winter Ebony</h2>
+            <p>
+                Heavy tactile switch.<br>
+                Crisp, early tactile snap. Icy-blue keycaps. Ebony spacebar. Inspired by deep winter.
+            </p>
+            <img src="Assets/winterKey.png" alt="Winter Edition Keyboard">
+            <canvas id="winterChart"></canvas>
+        </section>
+
+        <!-- Spring keyboard section -->
+        <section id="spring" class="section">
+            <h2>Spring Rose</h2>
+            <p>
+                Light linear switch.<br>
+                Smooth, dampened strokes. Pastel caps. Rosewood spacebar. Echoes springtime renewal.
+            </p>
+            <img src="Assets/springKey.png" alt="Spring Edition Keyboard">
+            <canvas id="springChart"></canvas>
+        </section>
+
+        <!-- Summer keyboard section -->
+        <section id="summer" class="section">
+            <h2>Summer Ivory</h2>
+            <p>
+                Light tactile switch.<br>
+                Effortless bump. Crisp white caps. Pale wood bar. Designed for relaxed summer typing.
+            </p>
+            <img src="Assets/summerKey.png" alt="Summer Edition Keyboard">
+            <canvas id="summerChart"></canvas>
+        </section>
+
+        <!-- Fall keyboard section -->
+        <section id="fall" class="section">
+            <h2>Fall Walnut</h2>
+            <p>
+                Clicky tactile switch.<br>
+                Audible snap. Earthy caps. Walnut spacebar. Feels like typing through crunchy leaves.
+            </p>
+            <img src="Assets/fallKey.png" alt="Fall Edition Keyboard">
+            <canvas id="fallChart"></canvas>
+        </section>
+
+    </div>
+</body>
+</html>

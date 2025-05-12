@@ -1,0 +1,106 @@
+/* =============== */
+/* BASE NAV STYLES */
+/* =============== */
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  z-index: 2;
+}
+nav ul li {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.887);
+  margin:0;
+}
+nav a {
+  display: block;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+nav a:hover{
+  color: #ff6600;
+}
+
+/* ================ */
+/* DROPDOWN STYLES  */
+/* ================ */
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.24);
+}
+@media (hover: hover) {
+  nav li:hover ul {
+    display: block;
+  }
+
+  /* make dropdown at least 300px wide */
+  nav li ul {
+    min-width: 300px;
+  }
+}
+nav li ul li a {
+  padding: 0.75rem 1rem;
+  font-weight: normal;
+  color: #000;
+}
+nav li ul li a:hover {
+  background: #f9f9f971;
+  color: #ff6600;
+}
+
+/* ================= */
+/* MOBILE RESPONSIVE */
+/* ================= */
+@media (max-width: 800px) {
+  /* always flex, but start closed */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    width: 100%;
+  }
+
+  /* when you toggle .active, it animates open */
+  nav ul.active {
+    max-height: 500px; /* big enough for all your items */
+  }
+
+  nav ul li {
+    border-bottom: 1px solid #eee;
+  }
+
+  nav a {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  /* dropdown‐style submenu toggles still work */
+  nav li ul {
+    position: static;
+    border: none;
+    display: none; /* still JS‐driven */
+  }
+  nav li.show-submenu ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav li ul li a {
+    padding-left: 2rem;
+  }
+}
+

@@ -1,0 +1,41 @@
+main {
+  margin: 0 auto;
+
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+
+article {
+  border: 3px dashed #888;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+main > section {
+  display: none;
+}
+
+main > section.visible {
+  display: block;
+}
+
+article.blink {
+  animation: blink-highlight 1s ease-in-out 2;
+}
+
+@keyframes blink-highlight {
+  0% {
+    background-color: transparent;
+    color: inherit;
+  }
+  50% {
+    background-color: rgb(61, 145, 30);
+    color: white;
+  }
+  100% {
+    background-color: transparent;
+    color: inherit;
+  }
+}

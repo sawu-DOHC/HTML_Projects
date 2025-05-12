@@ -1,5 +1,0 @@
-4. Lists:
-
-<ul>: Unordered list (bullet points).
-<ol>: Ordered list (numbered).
-<li>: List item (used within <ul> or <ol>).

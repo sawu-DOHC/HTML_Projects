@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jlmetaldesigns.com</title>
+
+  <link rel="stylesheet" href="CSS/Base/A_body.css">
+  <link rel="stylesheet" href="CSS/Base/B_header.css">
+  <link rel="stylesheet" href="CSS/Base/C_nav.css">
+  <link rel="stylesheet" href="CSS/Base/D_main.css">
+  <link rel="stylesheet" href="CSS/Base/E_footer.css">
+  <link rel="stylesheet" href="CSS/Components/home.css">
+
+  <script src="JS/Utilities/showArticle.js"></script>
+  <script src="JS/Utilities/showSection.js"></script>
+  <script src="JS/Utilities/toggleMenu.js"></script>
+  <script src="JS/main.js" defer></script>
+  <script src="JS/Utilities/theme.js" defer></script> <!-- Add this -->
+
+</head>
+<body>
+
+  <header>
+    <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+
+    <!-- Theme toggle added -->
+    <form id="theme-form">
+      <fieldset>
+        <label><input type="radio" name="theme" value="day" checked> Day</label>
+        <label><input type="radio" name="theme" value="night"> Night</label>
+      </fieldset>
+    </form>
+  </header>
+
+  <nav>
+    <ul>
+      <!-- <li><a href="#Home" onclick="showSection('Home')">Home</a></li>
+       <li><a href="#About" onclick="showSection('About')">About</a></li>
+      <li><a href="#Products" onclick="showSection('Products')">Products</a></li>
+      <li><a href="#Faq" onclick="showSection('Faq')">Faq</a></li> -->
+    </ul>
+  </nav>
+
+  <main>
+    <section id="Home">
+      <!--<h2>Home</h2>-->
+      <img src="Assets/JohnLogo.png" alt="Logo" class="logo">
+    </section>
+
+    <section id="About">
+      <h2>About</h2>
+    </section>
+
+    <section id="Products">
+      <h2>Products</h2>
+    </section>
+
+    <section id="Faq">
+      <h2>Faq</h2>
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>

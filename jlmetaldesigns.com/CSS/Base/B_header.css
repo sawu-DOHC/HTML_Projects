@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  #menu-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+  }
+}

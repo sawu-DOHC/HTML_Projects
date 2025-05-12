@@ -1,0 +1,61 @@
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  padding: 2rem;
+  overflow: visible;
+}
+.icon{
+  height: 1.75rem;
+  width: 1.75rem;
+  vertical-align: middle;
+  object-fit: contain;
+  display: inline-block;
+}
+
+article {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 0.5rem 0;
+}
+
+main > section {
+  display: none;
+}
+
+main > section.visible {
+  display: block;
+}
+
+article.blink {
+  animation: blink-highlight 1s ease-in-out 2;
+}
+
+@keyframes blink-highlight {
+  0% {
+    background-color: transparent;
+    color: inherit;
+  }
+  50% {
+    background-color: rgb(61, 145, 30); /* green blink */
+    color: white;
+  }
+  100% {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+
+
+
+@media (max-width: 800px) {
+  main{
+    padding: .25rem;
+  }
+
+  article{
+    padding:.75rem;  
+  }
+}

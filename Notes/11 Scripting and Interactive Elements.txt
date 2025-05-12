@@ -1,9 +1,0 @@
-11. Scripting and Interactive Elements:
-
-<script>: Defines client-side JavaScript code or links to external JavaScript files.
-
-<noscript>: Provides content for browsers that do not support or have disabled JavaScript.
-
-<details>: Defines a collapsible section that can be expanded or collapsed by the user.
-    
-<summary>: Defines a visible heading for a <details> element.

@@ -52,10 +52,9 @@ function Interface_InventoryDatabase() {
         loadJS( jsFiles[j] );
     }
 
-    // Clear previous content (if necessary)
     targetElement.innerHTML = '';
 
-    // Append iconContainer content
+
     targetElement.innerHTML += `
         <div id="iconContainer">
             <div id="homeIcon" class="iconButton" onclick="toggleHome()">&#127968;</div>
@@ -63,7 +62,6 @@ function Interface_InventoryDatabase() {
         </div>
     `;
 
-    // Append navContainer content
     targetElement.innerHTML += `
         <div id="navContainer">
             <!-- Navigation content goes here -->

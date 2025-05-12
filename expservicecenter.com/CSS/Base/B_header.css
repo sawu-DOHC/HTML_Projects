@@ -1,0 +1,73 @@
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  /* Logo */
+  .logo-wrapper {
+    flex: 0 0 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-wrapper img {
+    max-height: 5rem;
+    width: auto;
+    display: block;
+  }
+  
+  /* Call icon */
+  .call-wrapper {
+    flex: 0 0 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .call-wrapper img {
+    max-height: 3.5rem;
+    width: auto;
+    display: block;
+  }
+  
+  /* Hamburger button */
+  #menu-toggle {
+    display: none; /* hidden by default */
+
+  }
+  
+  /* === MOBILE HEADER === */
+  @media (max-width: 800px) {
+    header {
+      padding: .125rem;
+    }
+  
+    .logo-wrapper {
+      flex: 0 0 auto;
+      justify-content: flex-start;
+    }
+    .logo-wrapper img {
+      max-height: 3rem;
+
+    }
+    .call-wrapper {
+      display: none; /* hide call icon on mobile */
+    }
+  
+    #menu-toggle {
+      display: block;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding:0;
+      padding-right:.5rem;
+    }
+  }
+  
