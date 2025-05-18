@@ -13,8 +13,8 @@ body.leaderboard-open {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  overflow-y: auto;      /* ✅ Allows scrolling within overlay */
-  padding-top: 4rem;
+  overflow-y: auto;
+  padding-top: 2rem;
 }
 
 #Leaderboard.visible {
@@ -28,13 +28,13 @@ body.leaderboard-open {
   right: 1rem;
   background-color: rgba(255, 75, 75, 0.85);
   border-radius: 0.75rem;
-  font-size: 1.75rem;
   border: none;
   color: #fff;
   cursor: pointer;
   height: 3rem;
   width: 3rem;
-  z-index: 10000;
+  font-size: 2rem;
+  z-index: 10;
 }
 
 /* Scrollable Weld List */
@@ -70,12 +70,12 @@ body.leaderboard-open {
   justify-content: center;
   overflow: hidden;
   background-color: #f5f5f5;
-  min-height: 320px; /* ⬅️ Added for taller container */
+  min-height: 320px;
 }
 
 #Leaderboard .img-container img {
   width: 100%;
-  max-height: 550px; /* ⬅️ Increased from 250px */
+  max-height: 550px;
   object-fit: cover;
   display: block;
 }
@@ -92,8 +92,6 @@ body.leaderboard-open {
 
 #Leaderboard .data-container p {
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.4;
 }
 
 #Leaderboard .rank-label {
@@ -105,7 +103,6 @@ body.leaderboard-open {
   padding: 0.25rem 0.75rem;
   font-weight: bold;
   border-radius: 1rem;
-  font-size: 2rem;
 }
 
 /* Mobile Overrides */
@@ -134,11 +131,10 @@ body.leaderboard-open {
   #Leaderboard #close {
     height: 2.5rem;
     width: 2.5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   #Leaderboard .rank-label {
-    font-size: 1.25rem;
     padding: 0.25rem 0.5rem;
   }
 }

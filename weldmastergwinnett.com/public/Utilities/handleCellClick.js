@@ -1,13 +1,27 @@
 function handleCellClick(td) {
-    const metaScripts = td.querySelectorAll('.weld-meta');
+    const images = td.querySelectorAll('img');
 
-    if (!metaScripts.length) return;
+    if (!images.length) return;
 
     const cardList = document.getElementById("cardList");
     cardList.innerHTML = "";
 
-    metaScripts.forEach((script, index) => {
-        const datum = JSON.parse(script.textContent);
+    images.forEach((img, index) => {
+        const datum = {
+            img_src: img.dataset.imgSrc,
+            welder_name: img.dataset.welderName,
+            description: img.dataset.description,
+            amperage: img.dataset.amperage,
+            voltage: img.dataset.voltage,
+            frequency: img.dataset.frequency,
+            balance: img.dataset.balance,
+            duration: img.dataset.duration,
+            wire_feed_speed: img.dataset.wireFeedSpeed,
+            filler_diameter: img.dataset.fillerDiameter,
+            gas_type: img.dataset.gasType,
+            gas_flow_rate: img.dataset.gasFlowRate,
+            polarity: img.dataset.polarity
+        };
 
         const card = document.createElement("div");
         card.className = "weld-card";

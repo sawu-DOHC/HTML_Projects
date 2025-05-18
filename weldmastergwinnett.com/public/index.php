@@ -1,17 +1,16 @@
 <?php
 
-require_once __DIR__ . '/app/CRUD/Read/materials.php';
-require_once __DIR__ . '/app/CRUD/Read/joints.php';
-require_once __DIR__ . '/app/CRUD/Read/thicknesses.php';
-require_once __DIR__ . '/app/CRUD/Read/welders.php';
-require_once __DIR__ . '/app/CRUD/Read/samples.php';
-require_once __DIR__ . '/app/CRUD/Read/processes.php';
+require_once __DIR__ . '/../app/CRUD/Read/materials.php';
+require_once __DIR__ . '/../app/CRUD/Read/joints.php';
+require_once __DIR__ . '/../app/CRUD/Read/thicknesses.php';
+require_once __DIR__ . '/../app/CRUD/Read/welders.php';
+require_once __DIR__ . '/../app/CRUD/Read/samples.php';
+require_once __DIR__ . '/../app/CRUD/Read/processes.php';
 
-require_once __DIR__ . '/app/MVC/View/generateSections.php';
-require_once __DIR__ . '/app/MVC/View/generateNavigation.php';
+require_once __DIR__ . '/../app/MVC/View/generateSections.php';
+require_once __DIR__ . '/../app/MVC/View/generateNavigation.php';
 
 $arr_processes = processes();
-
 $welders = welders();
 
 $welderNames = [];
@@ -19,11 +18,10 @@ foreach ($welders as $welder) {
     $welderNames[] = $welder['welder_name'];
 }
 
-$welderKeywords = implode(', ', $welderNames);
-
-
+$welderKeywords = implode(', ', $welderNames); // turns an array of strings into comma separated values 
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,6 +63,7 @@ $welderKeywords = implode(', ', $welderNames);
   <script src="Utilities/handleCellClick.js" defer></script>
   <script src="Utilities/showSection.js" defer></script>
   <script src="Utilities/hideLeaderboard.js" defer></script>
+  <script src="Utilities/showLeaderboard.js" defer></script>
 </head>
 
 

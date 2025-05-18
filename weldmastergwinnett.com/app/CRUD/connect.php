@@ -2,7 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$host = 'mysql.freehostia.com'; //'mysql.freehostia.com';
+$host = 'localhost'; 
+//$host = 'mysql.freehostia.com';
 $db   = 'samwu1_weldmaster';
 $user = 'samwu1_weldmaster';
 $pass = '6Sr35NFbm^';
