@@ -1,45 +1,51 @@
 <?php
 
 class Cell {
-    
-    private string $joint;
-    private string $thickness;
 
-    private array $samples = [];
+    private string $x;      // joint
+    private string $y;      // thickness
+    private string $key;
+    private array $data = [];
 
-    public function __construct(string $joint, string $thickness) {
-        $this->joint = $joint;
-        $this->thickness = $thickness;
+    private string $cellId;
+    private int $index;
+    private string $html;
+
+    public function __construct(string $x, string $y) {
+        $this->x = $x;
+        $this->y = $y;
+        $this->key = "{$x}_{$y}";
     }
 
-    public function getJoint(): string {
-        return $this->joint;
+    public function getX(): string {
+        return $this->x;
     }
 
-    public function getThickness(): string {
-        return $this->thickness;
+    public function getY(): string {
+        return $this->y;
     }
 
     public function getKey(): string {
-        return "{$this->joint}_{$this->thickness}";
+        return $this->key;
     }
 
-    public function add(Data $data): void {
-        $this->samples[] = $data;
+    public function add(Data $datum): void {
+        $this->data[] = $datum;
     }
 
     public function isEmpty(): bool {
-        return empty($this->samples);
+        return empty($this->data);
     }
 
     public function render(string $cellId): string {
-        $html = "<td id=\"$cellId\" onclick=\"handleCellClick(this)\">";
+        $this->cellId = $cellId;
+        $this->html = "<td id=\"$this->cellId\" onclick=\"handleCellClick(this)\">";
 
-        foreach ($this->samples as $index => $sample) {
-            $html .= $sample->render($index);
+        foreach ($this->data as $this->index => $datum) {
+            $this->html .= $datum->render($this->index);
         }
 
-        $html .= "</td>";
-        return $html;
+        $this->html .= "</td>";
+        return $this->html;
     }
 }

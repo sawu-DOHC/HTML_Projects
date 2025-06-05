@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://expservicecenter.com/</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Main Sections -->
+  <url>
+    <loc>https://expservicecenter.com/#home</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#services</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#about</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#gallery</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#faq</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Service Articles -->
+  <url>
+    <loc>https://expservicecenter.com/#repair</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#towing</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#parking</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#roadside</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#docking</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#accomodations</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#rentals</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- FAQ Articles -->
+  <url>
+    <loc>https://expservicecenter.com/#faq1</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#faq2</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#faq3</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://expservicecenter.com/#faq4</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+</urlset>

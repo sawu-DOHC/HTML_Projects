@@ -1,22 +1,28 @@
+/* Base: all sections visible unless explicitly hidden */
 main > section {
+  display: block;
+}
+
+/* Hide sections using .hidden */
+main > section.hidden {
   display: none;
-
-  margin: 0 auto;
-  overflow-x: auto;
-  background-color: #e9e7df;
 }
 
-
-
-section {
-
-  margin: 0 auto;
-  overflow-x: auto;
-  background-color:#e9e7df;
-}
-
+/* Just in case something has both (you can prioritize visible if needed) */
 main > section.visible {
   display: block;
+}
+
+
+/* Optional legacy */
+.hidden {
+  display: none !important;
+}
+
+/* Layout */
+section {
+  margin: 0 auto;
+  overflow-x: auto;
 }
 
 article {
@@ -24,23 +30,28 @@ article {
   border-radius: 1rem;
   border: none;
   padding: 2rem;
-  margin-bottom: 2rem;
-  background-color:#e9e7df;
 }
 
-#Spray .Spray_Stainless-Steel {
-  display: none;
-}
-
+/* Manually hidden cells or rows */
+#Spray .Spray_Stainless-Steel,
 #Spray-Aluminium,
 #Spray-Stainless_Steel,
 #Stick-Aluminium,
 #Stick-Stainless_Steel,
 #MIG-Stainless_Steel,
-#MIG-Aluminium {
+#MIG-Aluminium,
+#row_TIG_Stainless_Steel_0\.3750,
+#row_TIG_Mild_Steel_0\.3750,
+#row_TIG_Aluminium_0\.3750,
+#row_Stick_Mild_Steel_0\.0625,
+#row_Stick_Mild_Steel_0\.1250,
+#row_Spray_Mild_Steel_0\.0625,
+#row_Spray_Mild_Steel_0\.1250,
+#row_MIG_Mild_Steel_0\.3750 {
   display: none;
 }
 
+/* Responsive */
 @media (max-width: 1200px) {
   main {
     padding: 0.25rem;
@@ -54,6 +65,5 @@ article {
   article {
     padding: 0rem;
     border-radius: 0.5rem;
-    margin-bottom: 1.5rem;
   }
 }

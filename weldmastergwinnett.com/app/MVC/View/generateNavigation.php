@@ -6,7 +6,7 @@ function generateNavigation(array $processes): string
 
     foreach ($processes as $process) {
         $name = $process['process_name'];
-        echo "<li><a  onclick=\"showSection('$name');\">$name</a></li>";
+        echo "<li><a href=\"#$name\" onclick=\"showSection('$name'); return false;\">$name</a></li>";
     }
 
     return ob_get_clean();

@@ -49,47 +49,52 @@ class Data {
 
     public function render(int $index = 0): string {
         $altText = "{$this->welder_name} welding on {$this->material_name}, joint: {$this->joint_name}, thickness: {$this->thickness_value}";
-    
-        $structuredData = json_encode([
-            "@context" => "https://schema.org",
-            "@type" => "ImageObject",
-            "name" => "Weld Sample {$this->sample_id}",
-            "description" => "Welding sample using {$this->process_name} on {$this->material_name}, joint type {$this->joint_name}, thickness {$this->thickness_value}, by welder {$this->welder_name}.",
-            "contentUrl" => "https://weldmastergwinnett.com/{$this->img_src}",
-            "thumbnailUrl" => "https://weldmastergwinnett.com/{$this->thumb_src}",
-            "creator" => [
-                "@type" => "Person",
-                "name" => $this->welder_name
-            ],
-            "keywords" => "{$this->process_name}, {$this->material_name}, welding sample, {$this->joint_name}, Gwinnett"
-        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-    
-        return <<<HTML
-            <img 
-                src="{$this->thumb_src}" 
-                class="stacked-thumb" 
-                data-index="{$index}" 
-                alt="{$altText}"
-                data-img-src="{$this->img_src}"
-                data-welder-name="{$this->welder_name}"
-                data-description="{$this->description}"
-                data-amperage="{$this->amperage}"
-                data-voltage="{$this->voltage}"
-                data-frequency="{$this->frequency}"
-                data-balance="{$this->balance}"
-                data-duration="{$this->duration}"
-                data-wire-feed-speed="{$this->wire_feed_speed}"
-                data-filler-diameter="{$this->filler_diameter}"
-                data-gas-type="{$this->gas_type}"
-                data-gas-flow-rate="{$this->gas_flow_rate}"
-                data-polarity="{$this->polarity}"
-            >
-            <div class="weld-info">
-                Welder: {$this->welder_name}<br>
-                Email: info@weldmaster.com
-            </div>
-            <script type="application/ld+json" class="weld-meta">{$structuredData}</script>
+
+    $structuredData = json_encode([
+        "@context" => "https://schema.org",
+        "@type" => "ImageObject",
+        "name" => "Weld Sample {$this->sample_id}",
+        "description" => "Welding sample using {$this->process_name} on {$this->material_name}, joint type {$this->joint_name}, thickness {$this->thickness_value}, by welder {$this->welder_name}.",
+        "contentUrl" => "https://weldmastergwinnett.com/{$this->img_src}",
+        "thumbnailUrl" => "https://weldmastergwinnett.com/{$this->thumb_src}",
+        "creator" => [
+            "@type" => "Person",
+            "name" => $this->welder_name
+        ],
+        "keywords" => "{$this->process_name}, {$this->material_name}, welding sample, {$this->joint_name}, Gwinnett",
+        "creditText" => $this->welder_name,
+        "copyrightNotice" => "© 2024 WeldMaster Gwinnett",
+        "license" => "https://weldmastergwinnett.com/license",
+        "acquireLicensePage" => "https://weldmastergwinnett.com/license"
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+
+    return <<<HTML
+        <img 
+            src="{$this->thumb_src}" 
+            class="stacked-thumb" 
+            data-index="{$index}" 
+            alt="{$altText}"
+            data-img-src="{$this->img_src}"
+            data-welder-name="{$this->welder_name}"
+            data-description="{$this->description}"
+            data-amperage="{$this->amperage}"
+            data-voltage="{$this->voltage}"
+            data-frequency="{$this->frequency}"
+            data-balance="{$this->balance}"
+            data-duration="{$this->duration}"
+            data-wire-feed-speed="{$this->wire_feed_speed}"
+            data-filler-diameter="{$this->filler_diameter}"
+            data-gas-type="{$this->gas_type}"
+            data-gas-flow-rate="{$this->gas_flow_rate}"
+            data-polarity="{$this->polarity}"
+        >
+        <div class="weld-info">
+            Welder: {$this->welder_name}<br>
+            Email: info@weldmaster.com
+        </div>
+        <script type="application/ld+json" class="weld-meta">{$structuredData}</script>
         HTML;
     }
+
 
 }

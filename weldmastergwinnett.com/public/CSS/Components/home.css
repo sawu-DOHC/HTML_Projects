@@ -2,22 +2,12 @@
   border-radius: 1rem;
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.7;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 #Home article {
   padding: 1rem;
 }
 
-#Home h2 {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-#Home h3 {
-  margin-top: 2rem;
-}
 
 #Home p {
   margin: 1rem 0;
@@ -26,17 +16,34 @@
 #Home ul {
   list-style-type: none;
   padding: 0;
+  margin:0;
 }
 
 #Home li {
-  margin-bottom: 1.5rem;
-  background-color: #fafafa;
+  margin: 1rem;
+  background-color: var(--card);
   padding: 1rem;
-  border-left: 5px solid #df8a63;
+  border-left: 5px solid var(--accent);
   border-radius: 0.5rem;
 }
 
-#Home a {
-  text-decoration: none;
-  font-weight: bold;
+
+#faq2 {
+  position: relative;
+  overflow: hidden;
+}
+
+#faq2 .faq-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3; /* adjust this for fade */
+
+}
+
+#faq3 {
+  
 }

@@ -427,8 +427,8 @@ VALUES
     34, -- id
     5, -- parent_id
     'link', -- type
-    'Keyboards!', -- name
-    'Website to showcase keyboards, very comfy.', -- description
+    'Keyboards! (UNDER CONSTRUCTION)', -- name
+    'Website to showcase keyboards, DO NOT CLICK.', -- description
     'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
     'https://sawusdomain.com/Sites/Keyboards/index.html', -- url
     NULL, -- css script
@@ -446,7 +446,78 @@ VALUES
     NULL, -- css script
     NULL, -- ui_script
     NULL -- controller_script
+),
+(
+    36, -- id
+    5, -- parent_id
+    'link', -- type
+    'EXP Service LLC', -- name
+    '2nd real customer of my life.', -- description
+    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
+    'https://expservicecenter.com', -- url
+    NULL, -- css script
+    NULL, -- ui_script
+    NULL -- controller_script
+),
+(
+    37, -- id
+    5, -- parent_id
+    'link', -- type
+    'Resume Website', -- name
+    'Trying to get a job so i bought Webmastergwinnett and Gwinnettwebmaster.', -- description
+    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
+    'https://webmastergwinnett.com', -- url
+    NULL, -- css script
+    NULL, -- ui_script
+    NULL -- controller_script
+),
+(
+    38, -- id
+    5, -- parent_id
+    'link', -- type
+    'Best Welds Shrine', -- name
+    'A digital shrine to the best welds ive come across, a lot of them are mine but theres other people too.', -- description
+    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
+    'https://weldmastergwinnett.com', -- url
+    NULL, -- css script
+    NULL, -- ui_script
+    NULL -- controller_script
+),
+(
+    39, -- id
+    6, -- parent_id
+    'link', -- type
+    'Image quality reducer', -- name
+    'I use this to reduce image quality in batches for light weight websites.', -- description
+    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
+    'https://github.com/sawu-DOHC/Python_Projects/blob/main/Image_quality_reducer.py', -- url
+    NULL, -- css script
+    NULL, -- ui_script
+    NULL -- controller_script
+),(
+    40, -- id
+    6, -- parent_id
+    'link', -- type
+    'Ideal web applicatoin structure generator', -- name
+    'This generates a file strucutre with blank files that would allow an app to sclae and be easy to navigate regardless of languages used. ', -- description
+    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
+    'https://github.com/sawu-DOHC/Python_Projects/blob/main/project_directory_structure_creator.py', -- url
+    NULL, -- css script
+    NULL, -- ui_script
+    NULL -- controller_script
+),(
+    41, -- id
+    6, -- parent_id
+    'link', -- type
+    'Thumbnail Generator', -- name
+    'Another tool to help create light weight websites, this one creates images and appends the word _thumb to them. Very useful :)', -- description
+    'https://sawusdomain.com/Home_Assets/InternetExplorerIcon.png', -- image_path
+    'https://github.com/sawu-DOHC/Python_Projects/blob/main/thumbnail_generator.py', -- url
+    NULL, -- css script
+    NULL, -- ui_script
+    NULL -- controller_script
 );
+
 
 
 

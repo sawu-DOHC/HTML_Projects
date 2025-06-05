@@ -5,7 +5,6 @@ nav ul {
   padding: 0;
   list-style: none;
   z-index: 2;
-  background-color: #e9e7df; /* soft cream background */
 }
 
 nav a {
@@ -13,19 +12,43 @@ nav a {
   padding: 1rem 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 2px solid #a5b89a00;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  color: var(--text);
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: #ecb960;
-  border-bottom: 2px solid #a5b89a;
+  color: var(--accent);
+}
+nav a.simulate-hover {
+  color: var(--accent);
+  transform: scale(1.1);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+nav a.active {
+  color: var(--highlight);
+  background-color: transparent;
+}
+
+@keyframes glow-text {
+  0%   { text-shadow: 0 0 0 var(--highlight); }
+  50%  { text-shadow: 0 0 8px var(--highlight); }
+  100% { text-shadow: 0 0 0 var(--highlight); }
 }
 
 nav li a:hover {
   cursor: pointer;
 }
 
+/* Removed box-shadow glow from container */
+nav.nav-flash {
+  animation: none;
+}
+
+
+/* === Mobile === */
 @media (max-width: 800px) {
   nav ul {
     flex-direction: column;
@@ -33,26 +56,23 @@ nav li a:hover {
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     width: 100%;
-    background-color: #e9e7df;
+    background-color: var(--bg);
   }
 
   nav ul.active {
     max-height: 500px;
   }
-  nav a:hover {
-    color: #ecb960;
-    background-color: #a5b89a;
-    border:none;
-  }
 
-  nav li a:hover {
-    cursor: pointer;
-  }
   nav a {
     text-align: center;
     padding: 0.75rem 1rem;
   }
-  
+
+  nav a:hover {
+    color: var(--bg);
+    background-color: var(--accent);
+    border: none;
+  }
 
   nav li ul {
     position: static;

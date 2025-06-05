@@ -27,35 +27,36 @@ class Table {
 
         $this->grid[$thickness][$joint]->add($data);
     }
-
     public function render(array $joints, array $thicknesses): string {
         ob_start();
-
+    
         echo "<table>";
         echo "<colgroup><col class=\"axis-col\">";
         foreach ($joints as $_) echo "<col>";
         echo "</colgroup>";
-
+    
         echo "<thead><tr><th></th>";
         foreach ($joints as $j) echo "<th>{$j['joint_name']}</th>";
         echo "</tr></thead>";
-
+    
         echo "<tbody>";
         foreach ($thicknesses as $t) {
             $thick = $t['thickness_value'];
-            echo "<tr><td>{$thick}</td>";
-
+            $rowId = "row_{$this->process}_{$this->material}_{$thick}";
+            echo "<tr id=\"$rowId\"><td><div class=\"rotated-label\">{$thick}</div></td>";
+        
             foreach ($joints as $j) {
                 $joint = $j['joint_name'];
                 $cellId = "{$this->process}_{$this->material}_{$joint}_{$thick}";
-
                 echo $this->grid[$thick][$joint]->render($cellId);
             }
-
+        
             echo "</tr>";
         }
         echo "</tbody></table>";
-
+    
         return ob_get_clean();
     }
+
+
 }

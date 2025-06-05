@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Site -->
+  <url>
+    <loc>https://webmastergwinnett.com/</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Internal Sections -->
+  <url>
+    <loc>https://webmastergwinnett.com/#intro</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://webmastergwinnett.com/#how-it-works</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://webmastergwinnett.com/#features</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://webmastergwinnett.com/#portfolio</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+
+  <!-- Portfolio Sites -->
+  <url>
+    <loc>https://expservicecenter.com/</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://sparkforgelabs.com/</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://weldmastergwinnett.com/</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://jlmetaldesigns.com/</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://sawusdomain.com/</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://sawusdomain.com/Sites/WildRescues/page1_index.html</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://sawusdomain.com/Sites/StrikeAChord/page1_index.html</loc>
+    <lastmod>2025-05-17</lastmod>
+  </url>
+
+</urlset>

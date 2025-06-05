@@ -3,13 +3,13 @@ body.leaderboard-open {
   overflow: hidden;
 }
 
-/* Leaderboard Overlay */
+/* Leaderboard hidden by default */
 #Leaderboard {
+  display: none;
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9); /* stays dark for modal overlay */
   z-index: 5;
-  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -17,6 +17,7 @@ body.leaderboard-open {
   padding-top: 2rem;
 }
 
+/* JS adds .visible to show it */
 #Leaderboard.visible {
   display: flex;
 }
@@ -48,11 +49,11 @@ body.leaderboard-open {
   box-sizing: border-box;
 }
 
-/* Scoped Weld Card Styles */
+/* Weld Card Styles */
 #Leaderboard .weld-card {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: var(--card);
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
@@ -69,7 +70,7 @@ body.leaderboard-open {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #f5f5f5;
+  background-color: var(--table-cell);
   min-height: 320px;
 }
 
@@ -87,11 +88,12 @@ body.leaderboard-open {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1rem;
   row-gap: 0.5rem;
-  background-color: #f5f5f5;
+  background-color: var(--table-cell);
 }
 
 #Leaderboard .data-container p {
   margin: 0;
+  color: var(--text);
 }
 
 #Leaderboard .rank-label {
@@ -99,13 +101,13 @@ body.leaderboard-open {
   top: 0.5rem;
   left: 0.5rem;
   background-color: rgba(0, 0, 0, 0.75);
-  color: white;
+  color: #fff;
   padding: 0.25rem 0.75rem;
   font-weight: bold;
   border-radius: 1rem;
 }
 
-/* Mobile Overrides */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   #Leaderboard {
     padding-top: 3rem;

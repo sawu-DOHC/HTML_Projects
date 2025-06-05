@@ -1,0 +1,81 @@
+#about {
+  padding: 2rem 1rem;
+  max-width: 75rem;
+}
+
+#about .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#about .a {
+  flex: 0 0 250px;
+  text-align: center;
+}
+
+#about .photo-wrapper {
+  width: 100%;
+  padding: 0.5rem;
+  background: #ffffff00;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#about .photo-wrapper:hover {
+  transform: scale(1.03);
+}
+
+#about .photo-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+#about .photo-caption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+#about .b {
+  flex: 1 1 400px;
+  max-width: 700px;
+  padding: 1rem;
+  background-color: #ffffff00;
+  border-left: 4px solid rgb(113, 144, 230);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+#about .b p {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #444;
+}
+
+/* Responsive Tweak */
+@media (max-width: 850px) {
+  #about {
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  #about .b {
+    border-left: none;
+    border-top: 4px solid rgb(113, 144, 230);
+  }
+
+  #about .b p {
+    font-size: 1rem;
+  }
+}

@@ -1,12 +1,24 @@
 function showSection(id) {
-    const sections = document.querySelectorAll('main > section');
-    sections.forEach(section => {
-      section.classList.remove('visible');
+  const allSections = document.querySelectorAll("main > section");
+  const target = document.getElementById(id);
+
+  if (!target) return;
+
+  if (id === "Home") {
+    allSections.forEach(section => {
+      if (section.id === "Leaderboard") return; // ❌ Don't touch Leaderboard
+      section.classList.add("visible");
+      section.classList.remove("hidden");
     });
-  
-    const target = document.getElementById(id);
-    if (target) {
-      target.classList.add('visible');
-    }
+    return;
   }
-  
+
+  allSections.forEach(section => {
+    if (section.id === "Leaderboard") return; // ❌ Don't touch Leaderboard
+    section.classList.remove("visible");
+    section.classList.add("hidden");
+  });
+
+  target.classList.remove("hidden");
+  target.classList.add("visible");
+}
