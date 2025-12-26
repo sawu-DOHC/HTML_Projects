@@ -1,0 +1,52 @@
+:root {
+  /* ========== Text Elements ========== */
+  --color-h1: rgba(30, 30, 30, 0.819);     
+  --color-h2: #fff;
+  --color-h3: rgba(30, 30, 30, 0.819); 
+  --color-p: rgba(30, 30, 30, 0.819); 
+  --color-a: rgba(30, 30, 30, 0.819); 
+  --color-a-hover:  #fff;
+  --color-span: #444;
+  --color-label: rgba(30, 30, 30, 0.819); 
+
+  /* ========== Backgrounds ========== */
+  --color-body: #ffffff1c;
+  --color-section: rgba(204, 204, 204, 0.474);
+  --color-modal: #fff;
+
+  /* ========== Tables ========== */
+  --color-tr-odd: #fafafa00;
+  --color-tr-even: transparent;
+
+  /* ========== Accents & Effects ========== */
+  --color-accent: #f75c2d;
+  --color-accent-alt: rgba(113, 144, 230, 0.642);
+  --color-accent-hover: #1e2d66;
+}
+
+body.night,
+[data-theme="night"] {
+  /* ========== Text Elements ========== */
+  --color-h1: rgba(235, 235, 235, 0.95);
+  --color-h2: rgba(235, 235, 235, 0.95);
+  --color-h3: #b0b0b0;
+  --color-p: #b0b0b0;
+  --color-a: #a0b6d9;      
+  --color-a-hover: #fff;   
+  --color-span: #aaa;
+  --color-label: #b0b0b0;
+
+  /* ========== Backgrounds ========== */
+  --color-body: #4c483fb8;
+  --color-section: rgba(35, 35, 40, 0.371);
+  --color-modal: #242424;
+
+  /* ========== Tables ========== */
+  --color-tr-odd: rgba(255, 255, 255, 0.02);
+  --color-tr-even: transparent;
+
+  /* ========== Accents & Effects ========== */
+  --color-accent: #d56b3b;         
+  --color-accent-alt: #6f8ac09b;     
+  --color-accent-hover: #395a99;   
+}

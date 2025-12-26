@@ -1,0 +1,64 @@
+header {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease-in-out;
+
+}
+
+header.shrunk {
+  justify-content: flex-start;  
+  height: auto;                 
+}
+
+#crest {
+  opacity: 0;        
+  max-height: 30vh;  
+  transition:
+    opacity 0.4s ease-in-out,
+    width 0.5s ease-in-out,
+    max-height 0.5s ease-in-out;
+
+}
+#kanji {
+  opacity: 0;       
+  max-height: 70vh; 
+  transition:
+    opacity 0.4s ease-in-out,
+    width 0.5s ease-in-out,
+    max-height 0.5s ease-in-out;
+  
+}
+
+#crest.visible {
+  opacity: 1;
+}
+
+#kanji.visible {
+  opacity: 1;
+}
+
+#crest.shrunk {
+  max-height: 12vh;   /* maintains the ratio: 12 / 26 ≈ 30 / 95 */
+  width: auto;
+}
+
+#kanji.shrunk {
+  max-height: 26vh;   /* same proportional scale */
+  width: auto;
+}
+
+
+@media (max-width: 750px) {
+  #crest,
+  #kanji {
+
+  }
+
+  #crest {
+  }
+
+  #crest.shrunk,
+  #kanji.shrunk {
+
+  }
+}

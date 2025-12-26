@@ -1,0 +1,95 @@
+/* Modal Background */
+#checkoutModal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Modal Inner Form Box */
+#register-form {
+  background: #fff;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Close Button */
+#close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+#close-button:hover {
+  color: #000;
+}
+
+/* Input Fields */
+#register-form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+/* Labels */
+#register-form label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Static service info */
+#service-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.form-static-display {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.25rem 0;
+}
+
+/* Payment section */
+#payment-options {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#paypal-button-container {
+  margin-top: 0.5rem;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #register-form {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  #close-button {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}

@@ -1,7 +1,15 @@
+# Enable rewrite engine
 RewriteEngine On
 
+# --- Force HTTPS (since Freehostia already supports it globally, optional)
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# --- Send everything to /public/ ---
 RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_URI} !^/sitemap\.xml$
+RewriteCond %{REQUEST_URI} !^/testing/
 RewriteRule ^(.*)$ public/$1 [L]
+
+# --- Default file ---
+DirectoryIndex index.php

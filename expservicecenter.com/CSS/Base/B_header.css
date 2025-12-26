@@ -1,26 +1,23 @@
 header {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-body);
 
-  }
-  
-  /* Logo */
-  .logo-wrapper {
-    flex: 0 0 7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .logo-wrapper img {
-    max-height: 5rem;
-    width: auto;
-    display: block;
-  }
+}
+
+.logo-wrapper img {
+  height: 3rem;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 3px #fff);
+  transition: filter 0.3s ease-in-out;
+}
+
+
   
   /* Call icon */
   .call-wrapper {
@@ -41,7 +38,10 @@ header {
     display: none; /* hidden by default */
 
   }
-  
+  .logo-wrapper {
+  color: var(--text-h1); /* or var(--text-h2) or whatever fits your theme */
+}
+
   /* === MOBILE HEADER === */
   @media (max-width: 800px) {
     header {

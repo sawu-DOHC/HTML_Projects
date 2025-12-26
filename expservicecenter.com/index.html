@@ -50,12 +50,15 @@
   <link rel="stylesheet" href="CSS/Components/about.css">
   <link rel="stylesheet" href="CSS/Components/gallery.css">
   <link rel="stylesheet" href="CSS/Components/faq.css">
+  <link rel="stylesheet" href="CSS/Components/themes.css">
 
   <!-- JS -->
   <script src="JS/main.js"></script>
   <script src="JS/Utilities/showArticle.js" defer></script>
   <script src="JS/Utilities/showSection.js" defer></script>
   <script src="JS/Utilities/toggleMenu.js" defer></script>
+  <script src="JS/Utilities/themeControl.js" defer></script>
+    
 </head>
 
 
@@ -69,6 +72,7 @@
           <img src="Assets/logoTransparent.png" alt="EXP Service Logo">
         </a>
       </div>
+
     
       <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
     
@@ -88,13 +92,13 @@
         <li>
           <a href="#services" onclick="showSection('services')">Services</a>
           <ul>
-            <li><a href="#truck-repair" onclick="showArticle('services', 'repair')">Truck & Trailer Repair</a></li>
-            <li><a href="#towing" onclick="showArticle('services', 'towing')">Towing</a></li>
-            <li><a href="#parking" onclick="showArticle('services', 'parking')">Parking</a></li>
-            <li><a href="#roadside" onclick="showArticle('services', 'roadside')">Mobile Roadside Service</a></li>
-            <li><a href="#docking" onclick="showArticle('services', 'docking')">Cross Docking</a></li>
-            <li><a href="#accomodations" onclick="showArticle('services', 'accomodations')">Accommodations</a></li>
-            <li><a href="#rentals" onclick="showArticle('services', 'rentals')">Rental Trailers</a></li>
+            <li><a href="#truck-repair"  onclick="showArticle('services', 'repair')"       >Truck & Trailer Repair</a>  </li>
+            <li><a href="#towing"        onclick="showArticle('services', 'towing')"       >Towing</a>                  </li>
+            <li><a href="#parking"       onclick="showArticle('services', 'parking')"      >Parking</a>                 </li>
+            <li><a href="#roadside"      onclick="showArticle('services', 'roadside')"     >Mobile Roadside Service</a> </li>
+            <li><a href="#docking"       onclick="showArticle('services', 'docking')"      >Cross Docking</a>           </li>
+            <li><a href="#accomodations" onclick="showArticle('services', 'accomodations')">Accommodations</a>          </li>
+            <li><a href="#rentals"       onclick="showArticle('services', 'rentals')"      >Rental Trailers</a>         </li>
           </ul>
         </li>
 
@@ -121,15 +125,7 @@
     </nav>
     
     
-    
-    
-    
-      
-    
     <main>
-
-
-      
 
       <section id="home">
         <h2>Home</h2>
@@ -145,9 +141,9 @@
         
           <p>
             At EXP Service LLC, keeping your truck running is our top priority.
-            Our skilled team has over 2 decades of experience. Whether you need fast repairs, routine maintenance, secure parking, or towing — we’ve got you covered.
-            With hands-on industry experience and top-tier facilities, we make sure your truck stays on the move and your business doesn’t miss a beat.
-            Count on EXP Service LLC to keep your trucking running.
+            Our skilled team has over 2 decades of experience. Whether you need fast repairs, routine maintenance, secure parking, or towing we’ve got you covered.
+            With hands on industry experience and top tier facilities, we make sure your truck stays on the move and your business doesn’t miss a beat.
+            Count on EXP Service LLC to keep your trucks running.
           </p>
 
 
@@ -186,21 +182,22 @@
           </ul>
 
           <div id="card-list">
+
             <div class="card">
               <div class="card-image">
                 <img src="Assets/facility4.jpg" alt="">
               </div>
               <div class="card-text">
-                <p>Check out our facility, its big enough to be roomy but small enough to be comfy.</p>
+                <p>Our facility is spacious and well-organized, providing a comfortable and efficient environment for both staff and clients.</p>
               </div>
-
             </div>
-              <div class="card">
+
+            <div class="card">
               <div class="card-image">
                 <img src="Assets/easy to pull in.jpg" alt="Easy and secure parking.">
               </div>
               <div class="card-text">
-                <p>Parking is easy and we have 24/7 lot surveillance. Monroe police station only 3.8 miles away so you can rest assured your truck is safe.</p>
+                <p>Our lot offers easy access and 24/7 surveillance. Located just 3.8 miles from the Monroe Police Department, your truck is well-protected.</p>
               </div>
             </div>
 
@@ -209,7 +206,7 @@
                 <img src="Assets/shop.jpg" alt="">
               </div>
               <div class="card-text">
-                <p>Our shop is always full, theres something always getting wrenched on.</p>
+                <p>We maintain a consistently active shop, with experienced technicians addressing a wide range of service needs daily.</p>
               </div>
             </div>
 
@@ -217,23 +214,22 @@
               <div class="card-image">
                 <img src="Assets/used parts 2.jpg" alt="">
               </div>
-                <div class="card-text">
-                  <p>
-                    We have amassed a huge assortment of quality used parts, so there is a good chance we can get you on the road sooner and cheaper. <br>
-                    Email <a href="mailto:info@expservicecenter.com"> info@expservicecenter.com</a> or <br>
-                    call us at <a href="tel:+14707913600"> (470) 791-3600</a> regarding used parts inventory.
-                  </p>
-                </div>
-
+              <div class="card-text">
+                <p>
+                  We maintain a large inventory of quality used parts to help reduce both costs and turnaround time. For availability and pricing, please get in touch with us.<br>
+                  Email: <a href="mailto:info@expservicecenter.com">info@expservicecenter.com</a><br>
+                  Call: <a href="tel:+14707913600">(470) 791-3600</a><br>
+                </p>
+              </div>
             </div>
 
-            
+
             <div class="card">
               <div class="card-image">
                 <img src="Assets/lube filters.jpg" alt="">
               </div>
               <div class="card-text">
-                <p>We have most basic maintenance items on the shelf and ready for most Freightliner, Kenworth, International, Volvo trucks.</p>
+                <p>We stock a broad range of essential maintenance items compatible with Freightliner, Kenworth, International, and Volvo trucks.</p>
               </div>
             </div>
 
@@ -242,7 +238,7 @@
                 <img src="Assets/tongue out.jpg" alt="">
               </div>
               <div class="card-text">
-                <p>Honest work done by local people, we do not cut corners, and we take pride in everything we do.</p>
+                <p>We deliver reliable service with integrity. Our team takes pride in workmanship and is committed to doing the job right the first time.</p>
               </div>
             </div>
 
@@ -251,7 +247,7 @@
                 <img src="Assets/dirty hands.jpg" alt="">
               </div>
               <div class="card-text">
-                <p>From tires and brakes to full engine rebuilds. </p>
+                <p>We handle all repair needs from basic maintenance to full engine rebuilds.</p>
               </div>
             </div>
 
@@ -260,20 +256,18 @@
                 <img src="Assets/wrenching.jpg" alt="">
               </div>
               <div class="card-text">
-                <p>No job is too big or too small for us at EXP Service.</p>
+                <p>At EXP Service, we are equipped to take on jobs of any size with professionalism and care.</p>
               </div>
             </div>
 
-          
-            <!-- Add more cards as needed -->
           </div>
+
 
 
 
 
         </article>
       </section>
-
 
       <section id="services">
         <h2>Services</h2>
@@ -554,54 +548,61 @@
         </article>
 
       </section>
+
+      <fieldset>
+            <legend>Mode</legend>
+            <label><input type="radio" name="mode" value="day"> Day</label>
+            <label><input type="radio" name="mode" value="night"> Night</label>
+      </fieldset>
+
+
       
 
     </main>
       
-    <footer>
-      <div>
-        <h3>Location</h3>
-        <p>
-          <a href="https://maps.google.com/?q=1991+Leroy+Anderson+Rd,+Monroe,+GA+30655" target="_blank" rel="noopener">
-            <img src="Assets/pointer.png" alt="Location icon">
-            1991 Leroy Anderson Rd
-            <br>
-            Monroe, GA 30655
-          </a>
-        </p>
-      </div>
-    
-      <div>
-        <h3>Hours</h3>
-        
-          <img src="Assets/time.png" alt="Clock icon">
-        <p> 
-          Mon – Fri: 8 AM – 5 PM
-          <br>
-          Sat – Sun: Closed
-        </p>
-      </div>
-    
-      <div>
-        <h3>Email</h3>
-        <p>
-          <a href="mailto:info@expservicecenter.com">
-            <img src="Assets/email3.png" alt="Email icon">
-            info@ExpServiceCenter.com
-          </a>
-        </p>
-      </div>
-    
-      <div>
-        <h3>Phone</h3>
-        <p>
-          <a href="tel:+14707913600">
-            <img src="Assets/phone.png" alt="Phone icon">
-            (470) 791-3600
-          </a>
-        </p>
-      </div>
-    </footer>
+<footer>
+  <div>
+    <h3>Location</h3>
+    <p>
+      <a href="https://maps.google.com/?q=1991+Leroy+Anderson+Rd,+Monroe,+GA+30655" target="_blank" rel="noopener">
+        <img src="Assets/pointer.png" alt="Location icon">
+        1991 Leroy Anderson Rd<br>
+        Monroe, GA 30655
+      </a>
+    </p>
+  </div>
+
+  <div>
+    <h3>Hours</h3>
+    <img src="Assets/time.png" alt="Clock icon">
+    <p>
+      Mon – Fri: 8 AM – 5 PM<br>
+      Sat – Sun: Closed
+    </p>
+  </div>
+
+  <div>
+    <h3>Email</h3>
+    <p>
+      <a href="mailto:info@sparkforgelabs.com">
+        <img src="Assets/email3.png" alt="Email icon">
+        info@SparkForgeLabs.com
+      </a>
+    </p>
+  </div>
+
+  <div>
+    <h3>Phone</h3>
+    <p>
+      <a href="tel:+14707913600">
+        <img src="Assets/phone.png" alt="Phone icon">
+        (470) 791-3600
+      </a>
+    </p>
+  </div>
+
+</footer>
+
     
     
     

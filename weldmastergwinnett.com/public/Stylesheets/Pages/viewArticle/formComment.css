@@ -1,0 +1,50 @@
+#FormComment {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: rgba(0,0,0,0.75);
+}
+
+#FormComment.visible {
+  display: flex;
+}
+
+#FormComment fieldset {
+  width: 95%;
+  max-width: 600px;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#FormComment .row1,
+#FormComment .row2,
+#FormComment .row4 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#FormComment .row4 {
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#FormComment label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+@media (max-width: 800px) {
+  #FormComment fieldset {
+    max-width: 95vw;
+    padding: 0.75rem;
+  }
+}

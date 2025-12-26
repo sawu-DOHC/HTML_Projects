@@ -1,19 +1,16 @@
-CREATE TABLE `Items Table` (
-
-    `id` INT AUTO_INCREMENT PRIMARY KEY,
-    `category` VARCHAR(100) NOT NULL,
-    `description` VARCHAR(255) NOT NULL,
-    `part_number` VARCHAR(100) NOT NULL,
-    `quantity_on_hand` INT DEFAULT 0,
-    `last_updated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-
+CREATE TABLE inventory (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  category VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  part_number VARCHAR(100) DEFAULT '',
+  quantity_on_hand INT DEFAULT 0,
+  last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                 ON UPDATE CURRENT_TIMESTAMP
 );
 
 
 
-
-
-INSERT INTO `Items Table` (`category`, `description`, `part_number`, `quantity_on_hand`) VALUES
+INSERT INTO `inventory` (`category`, `description`, `part_number`, `quantity_on_hand`) VALUES
 
 ('PPE'         , 'Gloves mig tillman SMALL'                                    , '1540S'               , 0),
 ('PPE'         , 'Gloves mig tillman MEDIUM'                                   , '1540M'               , 0),
@@ -99,45 +96,46 @@ INSERT INTO `Items Table` (`category`, `description`, `part_number`, `quantity_o
 ('Stick'       , 'Filler E7018 1/8"'                                           , 'E7018-18'            , 0),
 ('Stick'       , 'Filler E7018 3/32"'                                          , 'E7018-332'           , 0),
                             
-('Oxy-Fuel'    , 'Propane Nozzle 000'                                          , '1501200'             , 0),
-('Oxy-Fuel'    , 'Propane Nozzle 00'                                           , '1501210'             , 0),
-('Oxy-Fuel'    , 'Propane Nozzle 0'                                            , '1501220'             , 0),
-('Oxy-Fuel'    , 'Propane Nozzle 1'                                            , '1501230'             , 0),
-('Oxy-Fuel'    , 'Propane Nozzle 2'                                            , '1501240'             , 0),
-('Oxy-Fuel'    , 'Acetylene Nozzle 000'                                        , '000-1-101'           , 0),
-('Oxy-Fuel'    , 'Acetylene Nozzle 00'                                         , '00-1-101'            , 0),
-('Oxy-Fuel'    , 'Acetylene Nozzle 0'                                          , '0-1-101'             , 0),
-('Oxy-Fuel'    , 'Acetylene Nozzle 1'                                          , '1-1-101'             , 0),
-('Oxy-Fuel'    , 'Acetylene Nozzle 2'                                          , '2-1-101'             , 0),
-('Oxy-Fuel'    , 'Acetylene Track Torch 00'                                    , '6290-2/0'            , 0),
-('Oxy-Fuel'    , 'Acetylene Track Torch 0'                                     , '6290-1'              , 0),
-('Oxy-Fuel'    , 'Acetylene Track Torch 1'                                     , '6290-1'              , 0),
-('Oxy-Fuel'    , 'Acetylene Track Torch 2'                                     , '6290-2'              , 0),
-('Oxy-Fuel'    , 'Torch Assembly'                                              , '62-5F (1003451)'     , 0),
-('Oxy-Fuel'    , 'Spare Hoses'                                                 , '907-T254'            , 0),
-('Oxy-Fuel'    , 'Protective Sleeves Tillman'                                  , '582-025'             , 0),
-('Oxy-Fuel'    , 'Strikers (Lincoln)'                                          , 'KH572'               , 0),
-('Oxy-Fuel'    , 'Flint Replacements'                                          , ''                    , 0),
-('Oxy-Fuel'    , 'Torch Tip Cleaners'                                          , ''                    , 0),
-('Oxy-Fuel'    , 'Regulator Oxygen'                                            , ''                    , 0),
-('Oxy-Fuel'    , 'Regulator Fuel'                                              , ''                    , 0),
-('Oxy-Fuel'    , 'Quick Connect Oxygen'                                        , ''                    , 0),
-('Oxy-Fuel'    , 'Quick Connect Fuel'                                          , ''                    , 0),
-('Oxy-Fuel'    , 'Flashback Arrestor (Oxygen) Fuel Safe Western Enterprises'   , 'FA-30'               , 0),
-('Oxy-Fuel'    , 'Flashback Arrestor (Fuel) Fuel Safe Western Enterprises'     , ''                    , 0),
-('Oxy-Fuel'    , '2pc Acetylene torches Harris lower'                          , '315FC+'              , 0),
-('Oxy-Fuel'    , '2pc Acetylene torches Harris upper'                          , 'CA2460+'             , 0),
-('Oxy-Fuel'    , 'Propane Nozzle 000'                                          , '1501200'             , 0),
-('Oxy-Fuel'    , 'Filler Bronze 3/32'                                          , '015FC50'             , 0),
-('Oxy-Fuel'    , 'Filler Bronze Fluxed 3/32'                                   , 'RBCuZn-C'            , 0),
+('Cutting'    , 'Propane cutting nozzle 000'                                          , '1501200'             , 0),
+('Cutting'    , 'Propane cutting nozzle 00'                                           , '1501210'             , 0),
+('Cutting'    , 'Propane cutting nozzle 0'                                            , '1501220'             , 0),
+('Cutting'    , 'Propane cutting nozzle 1'                                            , '1501230'             , 0),
+('Cutting'    , 'Propane cutting nozzle 2'                                            , '1501240'             , 0),
+('Cutting'    , 'Acetylene cutting nozzle 000'                                        , '000-1-101'           , 0),
+('Cutting'    , 'Acetylene cutting nozzle 00'                                         , '00-1-101'            , 0),
+('Cutting'    , 'Acetylene cutting nozzle 0'                                          , '0-1-101'             , 0),
+('Cutting'    , 'Acetylene cutting nozzle 1'                                          , '1-1-101'             , 0),
+('Cutting'    , 'Acetylene cutting nozzle 2'                                          , '2-1-101'             , 0),
+('Cutting'    , 'Track torch nozzle 00'                                    , '6290-2/0'            , 0),
+('Cutting'    , 'Track torch nozzle 0'                                     , '6290-1'              , 0),
+('Cutting'    , 'Track torch nozzle 1'                                     , '6290-1'              , 0),
+('Cutting'    , 'Track torch nozzle 2'                                     , '6290-2'              , 0),
+('Cutting, Brazing'    , 'Torch Assembly'                                              , '62-5F (1003451)'     , 0),
+('Cutting, Brazing'    , 'Spare Hoses'                                                 , '907-T254'            , 0),
+('Cutting, Brazing'    , 'Strikers (Lincoln)'                                          , 'KH572'               , 0),
+('Cutting, Brazing'    , 'Flint Replacements'                                          , ''                    , 0),
+('Cutting, Brazing'    , 'Torch Tip Cleaners'                                          , ''                    , 0),
+('Cutting, Brazing'    , 'Regulator Oxygen'                                            , ''                    , 0),
+('Cutting, Brazing'    , 'Regulator Fuel'                                              , ''                    , 0),
+('Cutting, Brazing'    , 'Quick Connect Oxygen'                                        , ''                    , 0),
+('Cutting, Brazing'    , 'Quick Connect Fuel'                                          , ''                    , 0),
+('Cutting, Brazing'    , 'Flashback Arrestor (Oxygen) Fuel Safe Western Enterprises'   , 'FA-30'               , 0),
+('Cutting, Brazing'    , 'Flashback Arrestor (Fuel) Fuel Safe Western Enterprises'     , ''                    , 0),
+('Cutting, Brazing'    , '2pc Acetylene torches Harris lower'                          , '315FC+'              , 0),
+('Cutting, Brazing'    , '2pc Acetylene torches Harris upper'                          , 'CA2460+'             , 0),
 
-('Plasma'      , 'Gouge Shield'                                                , 'HT220798'            , 0),
-('Plasma'      , 'Gouge Nozzle'                                                , 'HT220797'            , 0),
-('Plasma'      , 'Cut Shield'                                                  , 'HT220818'            , 0),
-('Plasma'      , 'Cut Nozzle 65A'                                              , 'HT220819'            , 0),
-('Plasma'      , 'Retaining Cap'                                               , 'HT220854'            , 0),
-('Plasma'      , 'Swirl Ring'                                                  , 'HT220857'            , 0),
-('Plasma'      , 'Electrode'                                                   , 'HT220842'            , 0),
+
+('Brazing'    , 'Filler Bronze 3/32'                                          , '015FC50'             , 0),
+('Brazing'    , 'Filler Bronze Fluxed 3/32'                                   , 'RBCuZn-C'            , 0),
+
+('Gouging'      , 'Hypertherm Gouge Shield'                                                , 'HT220798'            , 0),
+('Gouging'      , 'Hypertherm Gouge Nozzle'                                                , 'HT220797'            , 0),
+('Cutting'      , 'Hypertherm Cutting Shield'                                                  , 'HT220818'            , 0),
+('Cutting'      , 'Hypertherm Cutting Nozzle'                                              , 'HT220819'            , 0),
+
+('Cutting, Gouging'      , 'Hypertherm Retaining Cap'                                               , 'HT220854'            , 0),
+('Cutting, Gouging'      , 'Hypertherm Swirl Ring'                                                  , 'HT220857'            , 0),
+('Cutting, Gouging'      , 'Hypertherm Electrode'                                                   , 'HT220842'            , 0),
      
 ('Gouging'     , 'Electrode Carbon Arc Round 1/4"'                             , '22043003'            , 0),
 ('Gouging'     , 'Electrode Carbon Arc Round 3/16"'                            , '2203-3003'           , 0),

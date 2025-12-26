@@ -1,0 +1,89 @@
+main {
+  text-align: center;
+}
+/* ======================= THREAD (Expanded) ======================= */
+.thread.expanded {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Header */
+.thread .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.thread .author {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.thread .id {}
+
+/* Title */
+.thread .title {
+  font-weight: bold;
+  margin: 0.5rem 0 1rem;
+  color: var(--text);
+}
+
+/* Body */
+.thread .body {
+  margin: 0.5rem 0 1rem;
+}
+
+.thread .body img.articleMedia {
+  max-width: 40%;
+  max-height: 40rem;
+  float: left;
+  margin: 0 1rem 0.5rem 0;
+  border-radius: var(--radius);
+  box-sizing: border-box;
+}
+
+/* Text */
+.thread .text {
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  color: var(--text);
+  text-align: left;
+}
+
+/* Footer */
+.thread .footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: var(--border) solid var(--accent);
+  padding-top: 0.5rem;
+  margin-top: auto;
+  color: var(--text-muted);
+}
+
+.thread .actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.thread .replyLinks {
+    text-align: left;
+    
+}
+.thread .replyLinks a {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+/* ======================= MOBILE (≤800px) ======================= */
+@media (max-width: 800px) {
+  .thread .body img.articleMedia {
+    max-width: 60%;
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+}

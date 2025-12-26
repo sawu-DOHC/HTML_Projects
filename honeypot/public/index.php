@@ -3,19 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <title>PotOfHoney</title>
-  <link rel="stylesheet" href="Assets/style.css">
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
-  <h1>🍯 PotOfHoney</h1>
-  <p>Select a test module:</p>
+  <header>
+    <h1>🍯 PotOfHoney</h1>
+    <p>A small collection of web modules. Some are secure, some... not so much. Feel free to look around—what’s the worst that could happen?</p>
+  </header>
 
-  <ul>
-    <li><a href="login.php">Login</a></li>
+  <main>
+    <h2>Modules</h2>
+    <ul>
+      <a href="Endpoints/login.php">🔐 Login Authentication</a>
 
-  </ul>
 
 
+    </ul>
+
+    <section>
+
+    </section>
+  </main>
 
 </body>
 </html>

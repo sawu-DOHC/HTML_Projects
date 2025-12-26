@@ -1,0 +1,75 @@
+#home {
+  padding: 1rem 0 0 0;
+}
+
+#home .hero-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+#home #card-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+#home #card-list .card {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0;
+}
+
+#home #card-list .card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+#home #card-list .card-image {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+#home #card-list .card-text {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+#home #card-list .card-text p {
+  padding: 1rem;
+  margin: 0;
+}
+
+#home #card-list .card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* Prevent column collapse on mobile */
+@media (max-width: 800px) {
+  #home #card-list .card {
+    flex-direction: row;
+  }
+
+  #home #card-list .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  #home #card-list .card-image {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  #home #card-list .card-text {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  #home #card-list .card-text p {
+    padding: 0.75rem;
+  }
+}

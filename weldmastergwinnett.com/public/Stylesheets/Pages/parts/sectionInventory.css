@@ -1,0 +1,44 @@
+
+
+#InventorySection details {
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 60rem;
+    background: var(--background);
+    border-left: var(--border-thickness) solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    color: var(--text);
+    box-sizing: border-box;
+    transition: background 0.25s ease;
+    text-align:left;
+}
+
+#InventorySection details:hover {
+    background: var(--background-hover);
+}
+
+#InventorySection summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 800px) {
+    #InventorySection select {
+        min-width: 8rem;
+        font-size: 0.75rem;
+    }
+
+    #InventoryTable th:nth-child(1),
+    #InventoryTable td:nth-child(1),
+    #InventoryTable th:nth-child(4),
+    #InventoryTable td:nth-child(4),
+    #InventoryTable th:nth-child(6),
+    #InventoryTable td:nth-child(6) {
+        display: none;
+    }
+}

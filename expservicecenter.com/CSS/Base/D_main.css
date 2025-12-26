@@ -5,7 +5,8 @@ main {
   padding: 2rem;
   overflow: visible;
 }
-.icon{
+
+.icon {
   height: 1.75rem;
   width: 1.75rem;
   vertical-align: middle;
@@ -14,8 +15,8 @@ main {
 }
 
 article {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-section);
+  box-shadow: 0 0 1rem var(--shadow-color);
   padding: 2rem;
   margin: 0.5rem 0;
 }
@@ -38,8 +39,8 @@ article.blink {
     color: inherit;
   }
   50% {
-    background-color: rgb(61, 145, 30); /* green blink */
-    color: white;
+    background-color: var(--color-tertiary);
+    color: #fff;
   }
   100% {
     background-color: transparent;
@@ -48,14 +49,12 @@ article.blink {
 }
 
 
-
-
 @media (max-width: 800px) {
-  main{
-    padding: .25rem;
+  main {
+    padding: 0.25rem;
   }
 
-  article{
-    padding:.75rem;  
+  article {
+    padding: 0.75rem;
   }
 }

@@ -1,0 +1,95 @@
+
+#SampleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 1rem;
+  box-sizing: border-box;
+}
+
+#ThreadGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#IndexNavigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;          
+  margin: 1rem 0;
+  width: 100%;
+}
+
+
+#IndexNavigation .navigationButton {
+  background: var(--background);
+  border: var(--border-thickness) solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#IndexNavigation .navigationButton .icon {
+  font-size: 3rem;
+}
+
+#IndexNavigation .navigationButton .label {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+#IndexNavigation .navigationButton:hover,
+#IndexNavigation .navigationButton.active {
+  transform: scale(1.05);
+  background: var(--background-hover);
+  box-shadow: var(--glow);
+}
+
+.youtubePreview {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0.25rem auto;
+}
+.youtubeThumb {
+  width: 100%;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.cardMedia {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+@media (max-width: 800px) {
+
+  #SampleGrid {
+    grid-template-columns: 1fr 1fr;
+    margin: 0rem auto 1rem;
+    gap: 0.5rem;
+  }
+
+  #ThreadGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}

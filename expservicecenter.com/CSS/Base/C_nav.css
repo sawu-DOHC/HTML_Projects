@@ -1,73 +1,64 @@
-/* =============== */
-/* BASE NAV STYLES */
-/* =============== */
 nav ul {
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
-  
   z-index: 2;
 }
+
 nav ul li {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.887);
-  margin:0;
+  background-color: transparent;
+  margin: 0;
 }
+
 nav a {
   display: block;
   padding: 1rem;
   font-size: 1.25rem;
   font-weight: bold;
-  color: #000;
+  color: var(--text-a);
   text-decoration: none;
-}
-nav a:hover{
-  color: #ff6600;
+  transition: color 0.2s ease-in-out;
 }
 
-/* ================ */
-/* DROPDOWN STYLES  */
-/* ================ */
+nav a:hover {
+  color: var(--text-a-hover);
+}
+
 nav li ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-
+  min-width: 300px;
   margin: 0;
   padding: 0;
   list-style: none;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.24);
+  background: var(--bg-section);
+  box-shadow: 0 0 1rem var(--shadow-color);
 }
+
 @media (hover: hover) {
   nav li:hover ul {
     display: block;
   }
-
-  /* make dropdown at least 300px wide */
-  nav li ul {
-    min-width: 300px;
-  }
 }
+
 nav li ul li a {
   padding: 0.75rem 1rem;
   font-weight: normal;
-  color: #000;
-}
-nav li ul li a:hover {
-  background: #f9f9f971;
-  color: #ff6600;
+  color: var(--text-a);
+
 }
 
-/* ================= */
-/* MOBILE RESPONSIVE */
-/* ================= */
+nav li ul li a:hover {
+  color: var(--text-a-hover);
+}
+
 @media (max-width: 800px) {
-  /* always flex, but start closed */
   nav ul {
-    display: flex;
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
@@ -75,13 +66,12 @@ nav li ul li a:hover {
     width: 100%;
   }
 
-  /* when you toggle .active, it animates open */
   nav ul.active {
-    max-height: 500px; /* big enough for all your items */
+    max-height: 500px;
   }
 
   nav ul li {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
   }
 
   nav a {
@@ -89,18 +79,20 @@ nav li ul li a:hover {
     font-size: 1.1rem;
   }
 
-  /* dropdown‐style submenu toggles still work */
   nav li ul {
     position: static;
     border: none;
-    display: none; /* still JS‐driven */
+    display: none;
+    box-shadow: none;
+    background: none;
   }
+
   nav li.show-submenu ul {
     display: flex;
     flex-direction: column;
   }
+
   nav li ul li a {
     padding-left: 2rem;
   }
 }
-

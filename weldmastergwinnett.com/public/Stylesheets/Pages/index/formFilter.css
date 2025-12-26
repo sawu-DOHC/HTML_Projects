@@ -1,0 +1,68 @@
+#FormFilterSamples {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+#FormFilterSamples fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: row;   
+  flex-wrap: wrap;
+  gap: 0.75rem;          
+  box-sizing: border-box;
+}
+
+#FormFilterSamples legend {
+  font-weight: bold;
+  color: var(--text);
+  text-align: left;
+}
+
+#FormFilterSamples label {
+  flex: 1 1 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+#FormFilterSamples select {
+  width: 100%;
+  margin: 0;
+}
+#Gallery details {
+    margin: 1rem auto;
+    padding: 1rem;
+    background: var(--background);
+    border-left: var(--border-thickness) solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    color: var(--text);
+    box-sizing: border-box;
+    transition: background 0.25s ease;
+    text-align: left;
+}
+
+#Gallery details:hover {
+    background: var(--background-hover);
+}
+
+#Gallery details summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  #FormFilterSamples fieldset {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  #FormFilterSamples label {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+}

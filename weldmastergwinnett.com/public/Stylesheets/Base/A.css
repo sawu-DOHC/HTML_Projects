@@ -1,0 +1,316 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+html {
+  box-sizing: border-box;
+  margin: 0.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  box-sizing: border-box;
+   background-color: var(--background);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden { display: none; }
+.visible { display: block; }
+
+/* Background image */
+#Background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+/* =========================================================
+   HEADER + NAVIGATION
+========================================================= */
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--text);
+  font-size: 2rem;
+}
+
+h1 {
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 2;
+}
+
+nav a {
+  font-size: 2.25rem;
+  padding: 0 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--text-hover);
+  text-shadow: var(--glow);
+}
+
+/* =========================================================
+   MAIN + SECTION
+========================================================= */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+section {
+  text-align: center;
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========================================================
+   ARTICLE CARDS
+========================================================= */
+
+article {
+  border: var(--border-thickness) solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--background);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+article:hover {
+  background: var(--background-hover);
+  box-shadow: var(--glow);
+  color: var(--text-hover);
+}
+
+article.flagged-blur {
+  position: relative;
+}
+
+article.flagged-blur::after {
+  content: "⚠️ VERY LOW QUALITY POST";
+  position: absolute;
+  inset: 0;
+  background: rgba(220,20,60,0.7);
+  color: var(--text-inverse);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+}
+
+iframe.youtubeVideo {
+  width: 100%;
+  max-width: 35rem;
+  max-height: 20rem;
+  border: none;
+  border-radius: var(--border-radius);
+  aspect-ratio: 16 / 9;
+}
+
+/* =========================================================
+   FORMS + INPUTS
+========================================================= */
+
+input[type="text"],
+input[type="file"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.4rem;
+  border: var(--border-thickness) solid var(--primary);
+  border-radius: var(--border-radius);
+  background: var(--background);
+  color: var(--text);
+  font-size: 1rem;
+  font-family: var(--font-body);
+  box-sizing: border-box;
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+option {
+  background: var(--background);
+  color: var(--text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--background-hover);
+  color: var(--text-hover);
+}
+
+/* =========================================================
+   UNIVERSAL TABLE STYLING
+========================================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: var(--background);
+  border: var(--border-thickness) solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 0.45rem;
+  border-bottom: 1px solid var(--border-color);
+  word-break: break-word;
+}
+
+th {
+  background: var(--secondary);
+  color: var(--text-inverse);
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+tbody tr:hover {
+  background: var(--background-hover);
+  color: var(--text-hover);
+}
+
+/* =========================================================
+   LOADING SCREEN
+========================================================= */
+
+#LoadingScreen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 3;
+}
+
+#LoadingScreen.hidden {
+  display: none;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: var(--border-thickness) solid var(--text-muted);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: var(--text);
+  margin: 1rem auto;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  header {
+    font-size: 0.8rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  nav ul {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  table {
+    font-size: 0.75rem;
+  }
+
+  th,
+  td {
+    padding: 0.25rem;
+  }
+
+
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

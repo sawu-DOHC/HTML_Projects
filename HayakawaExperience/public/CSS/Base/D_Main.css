@@ -1,0 +1,28 @@
+main > section {
+  display: none;
+
+}
+
+main > section.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main > section img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+
+
+@media (max-width: 600px) {
+  main > section img {
+    max-width: 80vw;
+    margin-top: 0.5rem;
+  }
+}

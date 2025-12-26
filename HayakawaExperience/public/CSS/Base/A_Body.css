@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'CormorantGaramond';
+  src: url('../../Assets/CormorantGaramond-Variable.ttf') format('truetype');
+  font-style: normal;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+overflow-y: hidden;
+
+  background-image:
+    linear-gradient(to bottom, rgb(255, 245, 233), rgba(255, 255, 255, 0)), 
+    url('../../Assets/bar.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  z-index: -1;
+}
+body.bg-visible::before {
+  opacity: 1;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 0.45em;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+  transition: opacity 2s ease;
+  color: #555;
+  text-transform: lowercase;
+    font-family: 'CormorantGaramond', serif;
+
+}
+
+h1.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.label {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  display: inline-block;
+  letter-spacing: 0.2em;
+  font-family: 'CormorantGaramond', serif;
+  transition: opacity 2s ease;
+  letter-spacing: .5em;
+}
+
+.fade-out .label {
+  opacity: 0;
+}
+
+a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #454545;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #555;
+  cursor: pointer;
+}
+
+ul {
+}
+
+li {
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 600px) {
+  body {
+  }
+
+  h1 {
+
+  }
+
+  h1.fade-out {
+  }
+
+  .label {
+  }
+
+  .fade-out .label {
+  }
+
+  a {
+
+  }
+
+  ul {
+  }
+
+  li {
+
+  }
+
+  a:hover {
+  }
+}

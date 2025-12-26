@@ -1,0 +1,66 @@
+form {
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  margin:.5rem;
+}
+
+form fieldset {
+  border: var(--border-thickness) solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--background);
+  box-shadow: var(--shadow);
+
+  padding: 1rem;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+input[type="text"],
+input[type="file"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.4rem;
+
+  border: var(--border-thickness) solid var(--primary);
+  border-radius: var(--border-radius);
+
+  background: var(--background);
+  color: var(--text);
+
+  font-size: 1rem;
+  font-family: var(--font-body);
+
+  box-sizing: border-box;
+
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+option {
+  background: var(--background);
+  color: var(--text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--background-hover);
+  color: var(--text-hover);
+}

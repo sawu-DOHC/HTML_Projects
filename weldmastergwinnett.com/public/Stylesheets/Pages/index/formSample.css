@@ -1,0 +1,59 @@
+#FormSample {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: rgba(0,0,0,0.75);
+}
+
+#FormSample.visible {
+  display: flex;
+}
+
+#FormSample fieldset {
+  width: 95%;
+  max-width: 800px;
+  background: var(--background);
+  border: var(--border-thickness) solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#FormSample .row1,
+#FormSample .row2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+#FormSample .row3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+#FormSample .row4 {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#FormSample label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+@media (max-width: 800px) {
+  #FormSample .row1,
+  #FormSample .row2 {
+    grid-template-columns: 1fr;
+  }
+}

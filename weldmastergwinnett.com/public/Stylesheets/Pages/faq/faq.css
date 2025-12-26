@@ -1,0 +1,73 @@
+.faq {
+  position: relative;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 40rem;
+  background: var(--background);
+  border-left: var(--border-thickness) solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  color: var(--text);
+  box-sizing: border-box;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq:hover {
+  background: var(--background-hover);
+  box-shadow: var(--glow);
+}
+
+.faq summary {
+  text-align: left;
+}
+
+#Faq2 {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+#Faq2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/Assets/Uploads/itDontMatta.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  filter: brightness(0.6) contrast(1.2);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: var(--border-radius);
+}
+
+#Faq2 img {
+  display: none;
+}
+
+#Faq2 .faq-content {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: var(--text-inverse);
+}
+
+@media (max-width: 800px) {
+  .faq {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  #Faq2 .faq-content {
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.35);
+  }
+}

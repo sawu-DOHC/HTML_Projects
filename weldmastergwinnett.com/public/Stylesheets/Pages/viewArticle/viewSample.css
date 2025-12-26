@@ -1,0 +1,154 @@
+.sample {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.sample .header {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.sample .author {
+  color: var(--text);
+}
+
+.sample .body {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.sample .body .articleMedia {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.sample .body .flagOverlay {
+  position: absolute;
+  top: 0.5rem;
+  right: .5rem;
+  width: 4rem;
+  height: auto;
+}
+
+.sample .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.75rem;
+  margin: 0.75rem 0;
+  padding: 0.5rem;
+  border-bottom: var(--border) solid var(--accent);
+  color: var(--text);
+}
+
+.sample .attributes {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 4rem;
+  row-gap: 0.75rem;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin: 1.25rem auto;
+}
+
+.sample .text {
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  white-space: pre-wrap;
+  margin: 0.5rem 0;
+  color: var(--text);
+}
+
+.sample .footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+  margin: 1rem;
+  color: var(--text-muted);
+}
+@media (max-width: 800px) {
+
+  /* ============================
+     SAMPLE — MOBILE LAYOUT
+     ============================ */
+
+  .sample {
+    max-width: 100%;
+    padding: 0.75rem 0.5rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Header */
+  .sample .header {
+    margin-bottom: 0;
+  }
+
+  .sample .author {
+    font-size: 1.05rem;
+    font-weight: 500;
+    opacity: 0.85;
+  }
+
+  /* Body */
+  .sample .body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .sample .body .articleMedia {
+    max-height: 60vh;
+    object-fit: contain;
+  }
+
+  .sample .body .flagOverlay {
+    width: 2.75rem;
+    top: 0.25rem;
+    right: 0.25rem;
+  }
+
+  /* Title */
+  .sample .title {
+    font-size: 1.2rem;
+    margin: 0.25rem 0;
+    padding: 0.25rem 0;
+  }
+
+  /* Attributes */
+  .sample .attributes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 0.75rem;
+
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+  }
+
+  /* Text */
+  .sample .text {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin: 0.25rem 0;
+  }
+
+  /* Footer */
+  .sample .footer {
+    margin-top: 0.25rem;
+    padding-top: 0.4rem;
+  }
+
+}

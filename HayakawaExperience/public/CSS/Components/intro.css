@@ -1,0 +1,54 @@
+#startButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vh;
+  height: 30vh;
+  border: none;
+  border-radius: 50%;
+  background-color: #bc002d;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  transition:
+    background-color 6s ease,
+    opacity 5s ease;
+}
+
+label {
+  display: inline-block;
+  letter-spacing: 0.2em;
+  transition: opacity 1s ease;
+}
+
+#startButton:hover {
+  background-color: #a60026;
+}
+
+#startButton.fade-out {
+  background-color: rgba(255, 255, 255, 0);
+  pointer-events: none;
+}
+
+label {
+  opacity: 0;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+  button {
+
+  }
+
+  span {
+    letter-spacing: 0.1em;
+    
+  }
+}

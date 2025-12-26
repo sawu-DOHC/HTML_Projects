@@ -20,7 +20,7 @@ INSERT INTO users (username, password, email, role, notes) VALUES
 ('cfo', 'money$$$', 'finance@corp.local', 'staff', 'Simulated executive account'),
 ('webmaster', 'rootaccess', 'webmaster@corp.local', 'admin', 'Highly privileged trap account');
 
-CREATE TABLE attackers (
+CREATE TABLE clients (
     id INT AUTO_INCREMENT PRIMARY KEY,
     ip_address VARCHAR(45) NOT NULL,
     user_agent TEXT,
@@ -38,24 +38,24 @@ CREATE TABLE endpoints (
 
 CREATE TABLE attack_logs (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    attacker_id INT,
+    client_id INT,
     endpoint_id INT,
     method VARCHAR(8),
     status_code INT,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
     raw_request TEXT,
-    FOREIGN KEY (attacker_id) REFERENCES attackers(id),
+    FOREIGN KEY (client_id) REFERENCES clients(id),
     FOREIGN KEY (endpoint_id) REFERENCES endpoints(id)
 );
 
 CREATE TABLE login_attempts (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    attacker_id INT,
+    client_id INT,
     user_id INT NULL,
     username_attempted VARCHAR(64),
     password_attempted VARCHAR(128),
     success BOOLEAN DEFAULT FALSE,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (attacker_id) REFERENCES attackers(id),
+    FOREIGN KEY (client_id) REFERENCES clients(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );

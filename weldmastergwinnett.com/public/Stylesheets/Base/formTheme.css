@@ -1,0 +1,11 @@
+#FormTheme {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+#FormTheme label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

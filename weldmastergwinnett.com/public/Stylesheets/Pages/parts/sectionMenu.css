@@ -1,0 +1,26 @@
+#MenuSection details {
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 60rem;
+    background: var(--background);
+    border-left: var(--border-thickness) solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    color: var(--text);
+    box-sizing: border-box;
+    transition: background 0.25s ease;
+    text-align: left;
+}
+
+#MenuSection details:hover {
+    background: var(--background-hover);
+}
+
+#MenuSection summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+

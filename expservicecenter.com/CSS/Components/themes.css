@@ -1,0 +1,50 @@
+:root {
+  /* === Brand Colors === */
+  --color-primary: rgb(113, 144, 230); /* blue */
+  --color-secondary: #ff6600;         /* orange */
+  --color-tertiary: #4cbb17;          /* green or extra */
+
+  /* === Text Colors === */
+  --text-h1: #000;
+  --text-h2: #000;
+  --text-h3: #222;
+  --text-p: #333;
+  --text-a: var(--color-primary);
+  --text-a-hover: var(--color-secondary);
+  --text-span: #444;
+  --text-label: #222;
+
+  /* === Backgrounds === */
+  --bg-body: #fff;
+  --bg-section: #ffffff;
+  --bg-modal: #fff;
+
+  /* === UI & Utility === */
+  --border-color: #ccc;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+body.night {
+  /* === Brand Colors === */
+  --color-primary: #6f8ac0;
+  --color-secondary: #d56b3b;
+  --color-tertiary: #76c669;
+
+  /* === Text Colors === */
+  --text-h1:  #bbb;
+  --text-h2:  #bbb;
+  --text-h3:  #bbb;
+  --text-p: #bbb;
+  --text-a: var(--color-primary);
+  --text-a-hover: #fff;
+  --text-span: #aaa;
+  --text-label: #ccc;
+
+  /* === Backgrounds === */
+  --bg-body: #242424;
+  --bg-section: #3c3c3ced;
+  --bg-modal: #333;
+
+  /* === UI & Utility === */
+  --border-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}

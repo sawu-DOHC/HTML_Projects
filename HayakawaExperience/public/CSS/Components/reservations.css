@@ -1,0 +1,56 @@
+.blur-box {
+  max-width: 42rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid var(--color-border-accent);
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  font-family: 'CormorantGaramond', serif;
+  letter-spacing: 0.08em;
+}
+
+.blur-box h2 {
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  color: var(--color-heading);
+  letter-spacing: 0.15em;
+}
+
+.blur-box p {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--color-text);
+  opacity: 0.85;
+  max-width: 90%;
+  margin: 0 auto 1.5rem;
+}
+
+.blur-box input,
+.blur-box textarea {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  color: inherit;
+}
+
+.blur-box button {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--color-border-accent);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.blur-box button:hover {
+  background-color: #889ce0;
+}

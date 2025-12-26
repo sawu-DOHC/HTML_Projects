@@ -1,0 +1,69 @@
+.threadCard {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  max-width: 100%;
+  align-items: normal;
+}
+
+.threadCard .author {
+  color: var(--text-muted);
+  display: block;
+  text-align: left;
+}
+
+.threadCard .title {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-align: center;
+}
+
+.threadCard .body {
+  margin: 1rem 0;
+}
+
+.threadCard .body img.threadMedia {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.threadCard .text {
+  margin: 0;
+  text-align: left;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.threadCard .footer {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: var(--border-thickness) solid var(--secondary);
+  margin-top: auto;
+  padding:.5rem;
+  color: var(--text-muted);
+}
+
+
+
+@media (max-width: 800px) {
+  .threadCard {
+    padding: 0.75rem;
+  }
+
+  .threadCard .author {
+    font-size: 0.9rem;
+  }
+
+  .threadCard .title {
+    font-size: 1rem;
+  }
+
+  
+}

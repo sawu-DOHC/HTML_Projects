@@ -1,286 +1,338 @@
 <?php
+require_once __DIR__ . '/../private/Database/Connect.php';
 
-require_once __DIR__ . '/../app/CRUD/Read/welders.php';
-require_once __DIR__ . '/../app/CRUD/Read/processes.php';
-require_once __DIR__ . '/../app/CRUD/Read/materials.php';
-require_once __DIR__ . '/../app/CRUD/Read/joints.php';
-require_once __DIR__ . '/../app/CRUD/Read/thicknesses.php';
-require_once __DIR__ . '/../app/CRUD/Read/samples.php';
+require_once __DIR__ . '/../private/Database/DBO_article.php';
+require_once __DIR__ . '/../private/Database/DBO_flags.php';
+require_once __DIR__ . '/../private/Database/DBO_samples.php';
 
-require_once __DIR__ . '/../app/MVC/View/generateSections.php';
-require_once __DIR__ . '/../app/MVC/View/generateNavigation.php';
+require_once __DIR__ . '/../private/Models/Article.php';
+require_once __DIR__ . '/../private/Models/Sample.php';
+require_once __DIR__ . '/../private/Models/Thread.php';
 
-$arr_processes     = processes();
-$arr_materials     = materials();
-$arr_joints        = joints();
-$arr_thicknesses   = thicknesses();
-$welders           = welders();
+require_once __DIR__ . '/../private/Library/Loader.php';
 
-$welderNames = [];
-foreach ($welders as $welder) {
-    $welderNames[] = $welder['welder_name'];
+$dboArticle = new DBO_article($pdo);
+$dboSamples = new DBO_samples($pdo);
+$dboFlags   = new DBO_flags($pdo);
+
+$sampleRows = $dboArticle->readArticlesByType('sample');
+$threadRows = $dboArticle->readArticlesByType('thread');
+
+$samples = [];
+foreach ($sampleRows as $row) {
+    $samples[] = new Sample($row);
 }
 
-$welderKeywords = implode(', ', $welderNames);
+$threads = [];
+foreach ($threadRows as $row) {
+    $threads[] = new Thread($row);
+}
 
+$flags       = $dboFlags->readFlags();
+$processes   = $dboSamples->readEnumValues('process');
+$materials   = $dboSamples->readEnumValues('material');
+$thicknesses = $dboSamples->readEnumValues('thickness');
+$joints      = $dboSamples->readEnumValues('joint');
+$welders     = $dboArticle->readDistinctWelders();
 ?>
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">           
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="Assets/reliefSmall.png">
-
-  <title>WeldMaster Gwinnett – Top Welding Samples in Georgia</title>
-
-
-
-  <meta name="description" content="WeldMaster Gwinnett showcases the best TIG, MIG, Stick, and Spray welding samples from top welders in Georgia.">
-
-  <meta name="keywords" content="welding, Gwinnett, Georgia, <?= htmlspecialchars($welderKeywords) ?>, MIG, TIG, Stick, Spray-Trasnfer">
+  <link rel="icon" type="image/png" href="Assets/Uploads/reliefSmall.png">
+  <title>WeldMaster Gwinnett - Gallery</title>
+  <meta name="description" content="WeldMaster Gwinnett showcases the best welding samples and discussion threads.">
+  <meta name="keywords" content="welding, TIG, MIG, Stick, Spray">
   <meta name="author" content="WeldMaster Gwinnett">
-
-  <meta property="og:title" content="WeldMaster Gwinnett - Legendary Welders of GA">
-  <meta property="og:description" content="WeldMaster Gwinnett highlights legendary welders from Georgia.">
-  <meta property="og:image" content="Assets/preview.jpg">
-  <meta property="og:url" content="https://weldmastergwinnett.com">
-  <meta property="og:type" content="website">
-
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="WeldMaster Gwinnett - Legendary Welders of GA">
-  <meta name="twitter:description" content="WeldMaster Gwinnett showcases legendary welders from Georgia.">
-  <meta name="twitter:image" content="Assets/preview.jpg">
-
-
-  <link rel="stylesheet" href="CSS/Base/A_body.css">
-  <link rel="stylesheet" href="CSS/Base/B_header.css">
-  <link rel="stylesheet" href="CSS/Base/C_nav.css">
-  <link rel="stylesheet" href="CSS/Base/D_main.css">
-  <link rel="stylesheet" href="CSS/Base/E_footer.css">
-
-  <link rel="stylesheet" href="CSS/Components/home.css">
-  <link rel="stylesheet" href="CSS/Components/leaderboard.css">
-  <link rel="stylesheet" href="CSS/Components/table.css">
-  <link rel="stylesheet" href="CSS/Components/submit.css">
-  <link rel="stylesheet" href="CSS/Components/themeForm.css">
-  <link rel="stylesheet" href="CSS/Components/themes.css">
-
   <link rel="canonical" href="https://weldmastergwinnett.com/" />
 
-  <script src="Utilities/toggleMenu.js" defer></script>
-  <script src="Utilities/handleCellClick.js" defer></script>
-  <script src="Utilities/showSection.js" defer></script>
-  <script src="Utilities/hideLeaderboard.js" defer></script>
-  <script src="Utilities/showLeaderboard.js" defer></script>
-  <script src="Utilities/themeControl.js" defer></script>
-  <script src="Utilities/onContentLoaded.js" defer></script>
-</head>
+  <?php loadAssets("index"); ?>
 
+</head>
 
 <body>
 
-    <header>
+  <div id="Background"></div>
+  <div id="LoadingScreen" class="hidden">
+    <div class="spinner"></div>
+    <p>Uploading, dont click on anything just wait!</p>
+  </div>
+  
+
+
+
+  <header>
+    <h1>WELDMASTER GWNNETT</h1>
+  </header>
 
 
 
 
 
+  <nav>
+    <ul>
+      <li><a href="index.php" class="active">home</a></li>
+      <li><a href="parts.php">parts</a></li>
+      <li><a href="data.php">data</a></li>
+      <li><a href="shop.php">shop</a></li>
+      <li><a href="faq.php">faq</a></li>
+    </ul>
+  </nav>
 
+  <main>
 
-      <h1>WELDMASTER GWINNETT</h1>
-      <button id="menuButton" aria-label="Toggle Menu">☰</button>
+    <div id="IndexNavigation">
 
+      <button class="navigationButton active"
+              data-target="Gallery"
+              onclick="showSection('Gallery')">
+        <span class="icon">📷</span>
+        <span class="label">gallery</span>
+      </button>
 
+      <button class="navigationButton"
+              data-target="Forum"
+              onclick="showSection('Forum')">
+        <span class="icon">📰</span>
+        <span class="label">forum</span>
+      </button>
 
-    </header>
-
-    <nav>
-      <ul>
-
-          <li class="Home"><a onclick="showSection('Home')">Home</a></li>
-
-          
-          <?= generateNavigation($arr_processes);?>
-
-          <li class="Submit" style="opacity: 0.25;"><a onclick="showSection('Submit')">Submit</a></li>
-
-      </ul>
-    </nav>
-
-    <main>
-
-
-
-      <section id="Leaderboard" class="hidden">
-        <button id="close" onclick="hideLeaderboard()">×</button>
-        <div id="cardList"></div>
-      </section>
-
-      <section id="Home" class="visible">
-        <article>
-            <h2>Welcome to Gwinnett Weldmaster</h2>
-
-            <p>
-              What is this site? A portfolio? A resume?<br>
-              <strong>Not quite.</strong><br>
-              It's a digital shrine dedicated to showcasing the most impressive welds coming out of Georgia. 
-            </p>
-
-            <h3>FAQs</h3>
-
-            <ul>
-              <li id="faq1">
-                <strong>Why don’t you show the back of the thin stuff?</strong>  
-                <br><br>You can't make it to the table if you have bleed through.
-              </li>
-              <li id="faq2">
-                <img src="Assets/itDontMatta.png" alt="" class="faq-bg">
-                <div class="faq-content">
-                  <strong>What position are the welds done in?</strong>
-                  <blockquote>
-                    "It don't matta', nonna dis mattas."
-                    <cite>~ Carl</cite>
-                  </blockquote>
-                </div>
-              </li>
-
-
-              <li id="faq3">
-                <strong>How do I make it on the table?</strong>  
-                <br><br>If you think you qualify, E-mail your boogers to <a href="mailto:info@weldmastergwinnett.com">info@weldmastergwinnett.com</a>.
-              </li>
-            </ul>
-
-        </article>
-      </section>
-
-      <?php foreach ($arr_processes as $process): ?>
-        <?= generateSections($process); ?>
-      <?php endforeach; ?>
-
-
-
-        
-      <section id="Submit" class="hidden">
-        <h2>Submit a Weld Sample</h2>
-        <h3>Form</h3>
-        <form id="form" method="POST" action="submitSample.php" enctype="multipart/form-data">
-
-        <label for="welder_name">Welder Name:</label>
-        <input type="text" name="welder_name" id="welder_name">
-
-        <label for="contact">Contact:</label>
-        <input type="text" name="contact" id="contact">
-
-
-
-        <label for="process_id">Weld Process:</label>
-        <select name="process_id" id="process_id" required>
-          <option value="" disabled selected>Select Process</option>
-          <?php foreach ($arr_processes as $process): ?>
-            <option value="<?= $process['process_id'] ?>"><?= $process['process_name'] ?></option>
-          <?php endforeach; ?>
-        </select>
-          
-        <label for="material_id">Material:</label>
-        <select name="material_id" id="material_id" required>
-          <option value="" disabled selected>Select Material</option>
-          <?php foreach ($arr_materials as $material): ?>
-            <option value="<?= $material['material_id'] ?>"><?= $material['material_name'] ?></option>
-          <?php endforeach; ?>
-        </select>
-          
-        <label for="thickness_id">Thickness:</label>
-        <select name="thickness_id" id="thickness_id" required>
-          <option value="" disabled selected>Select Thickness</option>
-          <?php foreach ($arr_thicknesses as $thickness): ?>
-            <option value="<?= $thickness['thickness_id'] ?>"><?= $thickness['thickness_value'] ?></option>
-          <?php endforeach; ?>
-        </select>
-          
-        <label for="joint_id">Joint Type:</label>
-        <select name="joint_id" id="joint_id" required>
-          <option value="" disabled selected>Select Joint Type</option>
-          <?php foreach ($arr_joints as $joint): ?>
-            <option value="<?= $joint['joint_id'] ?>"><?= $joint['joint_name'] ?></option>
-          <?php endforeach; ?>
-        </select>
-
-
-
-        <label for="description">Description:</label>
-        <textarea name="description" id="description"></textarea>
-
-        <label for="img_src">Full-size Image:</label>
-        <input type="file" name="img_src" id="img_src" accept="image/*">
-
-        <label for="amperage">Amperage:</label>
-        <input type="text" name="amperage" id="amperage">
-
-        <label for="voltage">Voltage:</label>
-        <input type="text" name="voltage" id="voltage">
-
-        <label for="frequency">Frequency:</label>
-        <input type="text" name="frequency" id="frequency">
-
-        <label for="balance">Balance:</label>
-        <input type="text" name="balance" id="balance">
-
-        <label for="duration">Duration:</label>
-        <input type="text" name="duration" id="duration">
-
-        <label for="wire_feed_speed">Wire Feed Speed:</label>
-        <input type="text" name="wire_feed_speed" id="wire_feed_speed">
-
-        <label for="filler_diameter">Filler Diameter:</label>
-        <input type="text" name="filler_diameter" id="filler_diameter">
-
-        <label for="gas_type">Gas Type:</label>
-        <input type="text" name="gas_type" id="gas_type">
-
-        <label for="gas_flow_rate">Gas Flow Rate:</label>
-        <input type="text" name="gas_flow_rate" id="gas_flow_rate">
-
-        <label for="polarity">Polarity:</label>
-        <input type="text" name="polarity" id="polarity">
-
-        <button type="submit">Upload Sample</button>
-        </form>
-
-      </section>
-
-
-
-
-    </main>
-
-<footer>
-
-    <div id="themeToggle">
-      <fieldset>
-        <legend>Mode</legend>
-        <label><input type="radio" name="mode" value="day"> Day</label>
-        <label><input type="radio" name="mode" value="night"> Night</label>
-      </fieldset>
-      <fieldset>
-        <legend>Season</legend>
-        <label><input type="radio" name="season" value="spring"> Spring</label>
-        <label><input type="radio" name="season" value="summer"> Summer</label>
-        <label><input type="radio" name="season" value="fall"> Fall</label>
-        <label><input type="radio" name="season" value="winter"> Winter</label>
-      </fieldset>
     </div>
 
-  <p>&copy; WeldMaster Gwinnett. All rights reserved.</p>
-  <p>Curated by Samuel Wubishet – <a href="mailto:sam@webdmastergwinnett.com">sam@webmastergwinnett.com</a></p>
-  <p>
-    <a href="/license.html">License</a> |
-    Built for Georgia’s welding elite
-  </p>
-</footer>
+    <section id="Gallery">
+      <h4>Gallery</h4>
+
+      <details id="FilterSamples">
+
+        <summary>Filter Samples</summary>
+
+        <form id="FormFilterSamples">
+          <fieldset>
+
+            <label>
+              Welder
+              <select name="welder">
+                <option value="All">All</option>
+                <?php foreach ($welders as $w): ?>
+                  <option value="<?= htmlspecialchars($w) ?>"><?= htmlspecialchars($w) ?></option>
+                <?php endforeach; ?>
+              </select>
+            </label>
+
+            <label>
+              Process
+              <select name="process">
+                <option value="All">All</option>
+                <?php foreach ($processes as $p): ?>
+                  <option value="<?= htmlspecialchars($p) ?>"><?= htmlspecialchars($p) ?></option>
+                <?php endforeach; ?>
+              </select>
+            </label>
+
+            <label>
+              Material
+              <select name="material">
+                <option value="All">All</option>
+                <?php foreach ($materials as $m): ?>
+                  <option value="<?= htmlspecialchars($m) ?>"><?= htmlspecialchars($m) ?></option>
+                <?php endforeach; ?>
+              </select>
+            </label>
+
+            <label>
+              Thickness
+              <select name="thickness">
+                <option value="All">All</option>
+                <?php foreach ($thicknesses as $t): ?>
+                  <option value="<?= htmlspecialchars($t) ?>"><?= htmlspecialchars($t) ?></option>
+                <?php endforeach; ?>
+              </select>
+            </label>
+
+            <label>
+              Joint
+              <select name="joint">
+                <option value="All">All</option>
+                <?php foreach ($joints as $j): ?>
+                  <option value="<?= htmlspecialchars($j) ?>"><?= htmlspecialchars($j) ?></option>
+                <?php endforeach; ?>
+              </select>
+            </label>
+
+          </fieldset>
+        </form>
+
+      </details>
+
+      <div id="SampleGrid">
+        <?php foreach ($samples as $sample): ?>
+          <?= $sample->renderArticleCard(); ?>
+        <?php endforeach; ?>
+      </div>
+
+      <button onclick="showForm('FormSample')">submit sample</button>
+
+    </section>
+
+    <section id="Forum">
+      <h4>Forum</h4>
+
+      <button id="StartThreadButton" onclick="showForm('FormThread')">
+        + [start thread]
+      </button>
+
+      <div id="ThreadGrid">
+        <?php foreach ($threads as $thread): ?>
+          <?= $thread->renderArticleCard(); ?>
+        <?php endforeach; ?>
+      </div>
+
+    </section>
+
+<form id="FormThread" class="hidden"
+      enctype="multipart/form-data"
+      onsubmit="event.preventDefault(); submitArticle(this);">
+
+  <fieldset>
+
+    <div class="row1">
+      <label>display name
+        <input type="text" name="displayName" maxlength="100" placeholder="anonymous">
+      </label>
+    </div>
+
+    <div class="row2">
+      <label>title (required)
+        <input type="text" name="title" maxlength="200" required placeholder="thread or battle title">
+      </label>
+    </div>
+
+    <div class="row3">
+      <label>body
+        <textarea name="body" rows="6" maxlength="2000"
+                  placeholder="what do you think?"></textarea>
+      </label>
+    </div>
+
+    <div class="row4">
+      <label>image (optional)
+        <input type="file" name="media" accept=".jpg,.jpeg,.gif,.webm,.png">
+      </label>
+    </div>
+
+    <div class="row5">
+      <button type="submit">post</button>
+      <button type="button" class="cancel" onclick="hideForm('FormThread')">cancel</button>
+    </div>
+
+  </fieldset>
+
+</form>
+
+<form id="FormSample" class="hidden"
+      enctype="multipart/form-data"
+      onsubmit="event.preventDefault(); submitArticle(this);">
+
+  <fieldset>
+
+    <div class="row1">
+
+      <label>display name
+        <input type="text" name="displayName" maxlength="100" placeholder="anonymous">
+      </label>
+
+      <label>title (required)
+        <input type="text" name="title" maxlength="255" required>
+      </label>
+
+      <label>flag (required)
+        <select name="countryId" required>
+          <?php foreach ($flags as $f): ?>
+            <option value="<?= htmlspecialchars($f['countryId']) ?>"
+              <?= $f['countryId'] === 'US' ? 'selected' : '' ?>>
+              <?= strtolower(htmlspecialchars($f['countryName'])) ?>
+            </option>
+          <?php endforeach; ?>
+        </select>
+      </label>
+
+      <label>image (required)
+        <input type="file" name="media" accept=".jpg,.jpeg,.png" required>
+      </label>
+
+    </div>
+
+    <div class="row2">
+
+      <label>process (required)
+        <select name="process" required>
+          <option value="" disabled selected>select process</option>
+          <?php foreach ($processes as $p): ?>
+            <option value="<?= htmlspecialchars($p) ?>">
+              <?= strtolower(htmlspecialchars($p)) ?>
+            </option>
+          <?php endforeach; ?>
+        </select>
+      </label>
+
+      <label>material (required)
+        <select name="material" required>
+          <option value="" disabled selected>select material</option>
+          <?php foreach ($materials as $m): ?>
+            <option value="<?= htmlspecialchars($m) ?>">
+              <?= strtolower(htmlspecialchars($m)) ?>
+            </option>
+          <?php endforeach; ?>
+        </select>
+      </label>
+
+      <label>thickness (required)
+        <select name="thickness" required>
+          <option value="" disabled selected>select thickness</option>
+          <?php foreach ($thicknesses as $t): ?>
+            <option value="<?= htmlspecialchars($t) ?>">
+              <?= strtolower(htmlspecialchars($t)) ?>
+            </option>
+          <?php endforeach; ?>
+        </select>
+      </label>
+
+      <label>joint (required)
+        <select name="joint" required>
+          <option value="" disabled selected>select joint</option>
+          <?php foreach ($joints as $j): ?>
+            <option value="<?= htmlspecialchars($j) ?>">
+              <?= strtolower(htmlspecialchars($j)) ?>
+            </option>
+          <?php endforeach; ?>
+        </select>
+      </label>
+
+    </div>
+
+    <div class="row3">
+      <label>settings / notes
+        <textarea name="body" rows="3" maxlength="250"
+                  placeholder="describe machine settings, filler, technique, etc."></textarea>
+      </label>
+    </div>
+
+    <div class="row4">
+      <button type="submit">submit sample</button>
+      <button type="button" class="cancel"
+              onclick="hideForm('FormSample')">cancel</button>
+    </div>
+
+  </fieldset>
+
+</form>
+
+  </main>
+
+  <footer>
+
+  </footer>
 
 
 </body>

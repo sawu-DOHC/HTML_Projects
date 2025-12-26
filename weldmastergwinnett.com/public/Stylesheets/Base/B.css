@@ -1,0 +1,368 @@
+body.jail-day {
+  --text: #000000;
+  --text-muted: #808080;
+  --text-inverse: #ffffff;
+  --text-hover: #4564ff;
+
+  --background: #ffffff;
+  --background-hover: #ffffff;
+  --opacity: 1;
+  --blur: blur(0px);
+
+  --primary: #b6b6b6;
+  --secondary: #b6b6b6;
+  --tertiary: #b6b6b6;
+
+  --border-thickness: 1px;
+  --border-color: #000000;
+  --border-radius: 0rem;
+
+  --shadow: none;
+  --glow: none;
+
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+body.jail-night {
+  --text: #e6e6e6;
+  --text-muted: #a0a0a0;
+  --text-inverse: #000000;
+  --text-hover: #6f9dff;
+
+  --background: #0e0e0e;
+  --background-hover: #1a1a1a;
+  --opacity: 0.95;
+  --blur: blur(2px);
+
+  --primary: #5f5f5f;
+  --secondary: #777777;
+  --tertiary: #a0a0a0;
+
+  --border-thickness: 1px;
+  --border-color: #333333;
+  --border-radius: 0rem;
+
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  --glow: 0 0 0.7rem rgba(255, 255, 255, 0.1);
+
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+
+/* SPRING DAY */
+body.spring-day {
+  --text: #775c5c;
+  --text-muted: #b88c8c;
+  --text-inverse: #ffffff;
+  --text-hover: #915d3b;
+  --background: #fffaf27f;
+  --background-hover: #fffbe5c1;
+  --opacity: 0.95;
+  --blur: blur(6px);
+  --primary: #ffcf6e;
+  --secondary: #ffd983;
+  --tertiary: #ffeaa3;
+  --border-thickness: 4px;
+  --border-color: #f3cb52;
+  --border-radius: 0.5rem;
+  --shadow: 0 0.25rem 0.75rem rgba(89, 81, 61, 0.5);
+  --glow: 0 0 1rem rgba(255, 241, 137, 0.661);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* SPRING NIGHT */
+body.spring-night {
+  --text: #eaf8ef;
+  --text-muted: #b4d4c3;
+  --text-inverse: #101b14;
+  --text-hover: #89ffc4;
+  --background: #231f36cc;
+  --background-hover: #2f2949cc;
+  --opacity: 0.95;
+  --blur: blur(8px);
+  --primary: #75f7b1;
+  --secondary: #9afcc9;
+  --tertiary: #c6ffe0;
+  --border-thickness: 2px;
+  --border-color: #75f7b1;
+  --border-radius: 0.5rem;
+  --shadow: 0 0.25rem 0.75rem rgba(90, 255, 170, 0.25);
+  --glow: 0 0 1rem rgba(120, 255, 190, 0.35);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* SUMMER DAY */
+body.summer-day {
+  --text: #ffffff;
+  --text-muted: #ffebb3;
+  --text-inverse: #000000;
+  --text-hover: #ffd100;
+  --background: #4241582d;
+  --background-hover: #ffffff5e;
+  --opacity: 0.95;
+  --blur: blur(10px);
+  --primary: #ffd100;
+  --secondary: #ffd100;
+  --tertiary: #ffd100;
+  --border-thickness: 0px;
+  --border-color: #ffe8825a;
+  --border-radius: 0.5rem;
+  --shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.228);
+  --glow: 0 0 1rem rgba(255, 255, 255, 0.35);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* SUMMER NIGHT */
+body.summer-night {
+  --text: #f5ede0;
+  --text-muted: #bca98a;
+  --text-inverse: #0f0d08;
+  --text-hover: #ffd87f;
+  --background: #1a2235c2;
+  --background-hover: #243045d4;
+  --opacity: 0.95;
+  --blur: blur(8px);
+  --primary: #f5c973;
+  --secondary: #ffe6a3;
+  --tertiary: #fff8c9;
+  --border-thickness: 1px;
+  --border-color: #f5c973;
+  --border-radius: 0.5rem;
+  --shadow: 0 0.25rem 0.75rem rgba(255, 220, 120, 0.25);
+  --glow: 0 0 1rem rgba(255, 230, 170, 0.3);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* FALL DAY */
+body.fall-day {
+  --text: #4f3c2f;
+  --text-muted: #4d3b2f;
+  --text-inverse: #ffffff;
+  --text-hover: #0c404173;
+  --background: #f4e0c58c;
+  --background-hover: #ffefd8c7;
+  --opacity: 0.95;
+  --blur: blur(10px);
+  --primary: #c4843b;
+  --secondary: #c4843b;
+  --tertiary: #c4843b;
+  --border-thickness: 2px;
+  --border-color: #c4843b;
+  --border-radius: 0.5rem;
+  --shadow: 0 0.25rem 0.75rem rgba(76, 154, 145, 0.35);
+  --glow: 0 0 1rem rgba(255, 210, 160, 0.4);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* FALL NIGHT */
+body.fall-night {
+  --text: #fdf9f2;
+  --text-muted: #d0a97b;
+  --text-inverse: #0f0a06;
+  --text-hover: #ffb860;
+  --background: #33283642;
+  --background-hover: #3e3642cc;
+  --opacity: 0.95;
+  --blur: blur(10px);
+  --primary: #ffae42;
+  --secondary: #ff7b54;
+  --tertiary: #b57aff;
+  --border-thickness: 2px;
+  --border-color: #ffae42;
+  --border-radius: 0.5rem;
+  --shadow: 0 0.25rem 1rem rgba(255, 190, 110, 0.3);
+  --glow: 0 0 1.5rem rgba(255, 160, 80, 0.35);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* WINTER DAY */
+body.winter-day {
+  --text: #1e2a33;
+  --text-muted: #5b7a88;
+  --text-inverse: #ffffff;
+  --text-hover: #009fbf;
+  --background: #eaf7ffa7;
+  --background-hover: #ffffffee;
+  --opacity: 0.95;
+  --blur: blur(4px);
+  --primary: #a5dfff;
+  --secondary: #d7f6ff;
+  --tertiary: #ffffff;
+  --border-thickness: 2px;
+  --border-color: #ffffff;
+  --border-radius: 0.5rem;
+  --shadow: 0 0.25rem 0.75rem rgba(120, 180, 220, 0.25);
+  --glow: 0 0 1rem rgba(160, 220, 255, 0.35);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* WINTER NIGHT */
+body.winter-night {
+  --text: #e8f7ff;
+  --text-muted: #9fb7c7;
+  --text-inverse: #0e1820;
+  --text-hover: #b5e9ff;
+  --background: #1a2638cc;
+  --background-hover: #24344ccc;
+  --opacity: 0.95;
+  --blur: blur(5px);
+  --primary: #b8f1ff;
+  --secondary: #d1faff;
+  --tertiary: #e6ffff;
+  --border-thickness: 1px;
+  --border-color: #b8f1ff;
+  --border-radius: 0.5rem;
+  --shadow: 0 0.25rem 0.75rem rgba(100, 180, 255, 0.25);
+  --glow: 0 0 1rem rgba(160, 230, 255, 0.35);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+
+
+/* CHRISTMAS */
+body.christmas {
+  --text: #ffffff;
+  --text-muted: #d8e6e0;
+  --text-inverse: #0f1f18;
+  --text-hover: #ffcc00;
+  --background: #6dc5f84a;
+  --background-hover: #6dc5f86f;
+  --opacity: 0.95;
+  --blur: blur(9px);
+  --primary: #c3a314;
+  --secondary: #ffcc00;
+  --tertiary: #d8e6e0;
+  --border-thickness: 2px;
+  --border-color: #9ab7c6;
+  --border-radius: 0.5rem;
+  --shadow: 0 0.25rem 0.75rem rgb(0 0 0);
+  --glow: 0 0 1rem rgba(255, 255, 255, 0.575);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* WIN95 */
+body.Win95 {
+  --text: #00ff95;
+  --text-muted: #bfb22d;
+  --text-inverse: #0a0016;
+  --text-hover: #00c8ff;
+  --background: #1b0535df;
+  --background-hover: #120530;
+  --opacity: 0.95;
+  --blur: blur(3px);
+  --primary: #00c8ff;
+  --secondary: #f3e00b;
+  --tertiary: #bfb22d;
+  --border-thickness: 2px;
+  --border-color: #00c8ff;
+  --border-radius: .75rem;
+  --shadow: 0 0.25rem 0.75rem rgba(0, 200, 255, 0.4);
+  --glow: 0 0 1rem rgba(243, 224, 11, 0.8);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HONDA */
+body.honda {
+  --text: #ffffff;
+  --text-muted: #b3b3b3;
+  --text-inverse: #000000;
+  --text-hover: #ff4d4d;
+  --background: #df2828;
+  --background-hover: #1a1a1a;
+  --opacity: 0.95;
+  --blur: blur(2px);
+  --primary: #ff0000;
+  --secondary: #ff4d4d;
+  --tertiary: #b3b3b3;
+  --border-thickness: 2px;
+  --border-color: #ff0000;
+  --border-radius: 0.35rem;
+  --shadow: 0 0.25rem 0.75rem rgba(255, 0, 0, 0.3);
+  --glow: 0 0 1rem rgba(255, 0, 0, 0.6);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* YAMAHA */
+body.yamaha {
+  --text: #e6e9ff;
+  --text-muted: #9fa8c2;
+  --text-inverse: #0a0a1a;
+  --text-hover: #4da6ff;
+  --background: #0a0a1a;
+  --background-hover: #111433;
+  --opacity: 0.95;
+  --blur: blur(2px);
+  --primary: #0033cc;
+  --secondary: #4da6ff;
+  --tertiary: #9fa8c2;
+  --border-thickness: 2px;
+  --border-color: #0033cc;
+  --border-radius: 0.35rem;
+  --shadow: 0 0.25rem 0.75rem rgba(0, 51, 204, 0.35);
+  --glow: 0 0 1rem rgba(77, 166, 255, 0.65);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* SUZUKI */
+body.suzuki {
+  --text: #ffffff;
+  --text-muted: #c9d3e2;
+  --text-inverse: #0b0d20;
+  --text-hover: #ffeb3b;
+  --background: #003399;
+  --background-hover: #0044cc;
+  --opacity: 0.95;
+  --blur: blur(2px);
+  --primary: #ffcc00;
+  --secondary: #ffeb3b;
+  --tertiary: #c9d3e2;
+  --border-thickness: 2px;
+  --border-color: #ffcc00;
+  --border-radius: 0.35rem;
+  --shadow: 0 0.25rem 0.75rem rgba(255, 235, 59, 0.25);
+  --glow: 0 0 1rem rgba(255, 235, 59, 0.65);
+  --font-body: Consolas, 'Courier New', monospace;
+}
+
+/* KAWASAKI */
+body.kawasaki {
+  --text: #ffffff;
+  --text-muted: #6fa86f;
+  --text-inverse: #000000;
+  --text-hover: #00ff66;
+  --background: #0b0f0b;
+  --background-hover: #121a12;
+  --opacity: 0.95;
+  --blur: blur(2px);
+  --primary: #8c8a15;
+  --secondary: #00ff66;
+  --tertiary: #6fa86f;
+  --border-thickness: 2px;
+  --border-color: #8c8a15;
+  --border-radius: 0.35rem;
+  --shadow: 0 0.25rem 0.75rem rgba(0, 255, 102, 0.35);
+  --glow: 0 0 1.25rem rgba(255, 255, 255, 0.935);
+  --font-body: Consolas, 'Courier New', monospace;
+}

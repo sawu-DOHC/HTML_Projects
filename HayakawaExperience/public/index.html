@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hayakawa Experience</title>
+
+  <link rel="stylesheet" href="CSS/Base/A_Body.css">
+  <link rel="stylesheet" href="CSS/Base/B_Header.css">
+  <link rel="stylesheet" href="CSS/Base/C_Nav.css">
+  <link rel="stylesheet" href="CSS/Base/D_Main.css">
+  <link rel="stylesheet" href="CSS/Base/E_Footer.css">
+
+  <link rel="stylesheet" href="CSS/Components/intro.css">
+  <link rel="stylesheet" href="CSS/Components/experience.css">
+  <link rel="stylesheet" href="CSS/Components/reservations.css">
+  <link rel="stylesheet" href="CSS/Components/information.css">
+
+
+
+
+  <script src="Utilities/showSection.js" defer></script>
+  <script src="Utilities/startExperience.js" defer></script>
+</head>
+<body>
+
+  <h1>早川体験</h1>
+  <button id="startButton" onclick="startExperience()">
+    <span class="label">スタート</span>
+  </button>
+
+
+  <header>
+    <img id="crest" src="Assets/HayakawaCrest.svg" alt="Crest">
+    <img id="kanji" src="Assets/HayakawaKanji.svg" alt="Kanji">
+  </header>
+
+
+  <nav>
+    <ul>
+      <li><a onclick="showSection('experience')">体験</a></li>
+      <li><a onclick="showSection('reservations')">予約</a></li>
+      <li><a onclick="showSection('information')">案内</a></li>
+    </ul>
+  </nav>
+
+
+  <main>
+
+    <section id="experience">
+    
+      <div class="event">
+        <h2>Omakase — 12:00 PM</h2>
+        <p>Grilled course. Ingredients vary by season.</p>
+      </div>
+    
+      <div class="event">
+        <h2>Fugu Omakase — 8:00 PM</h2>
+        <p>Sliced raw, simmered, and finished with rice.</p>
+      </div>
+    
+    </section>
+
+
+<section id="reservations">
+  <h2>Make a Reservation</h2>
+  <p>Visit our Resy page to book a table.</p>
+  <a href="https://resy.com/cities/atlanta-ga/venues/hayakawa?date=2025-05-30&seats=2" target="_blank" rel="noopener noreferrer">
+    <button onclick="openResyPopup()">Book on Resy</button>
+
+  </a>
+</section>
+
+
+
+    <section id="information">
+      Information
+        <ul>
+          <li>Policies</li>
+          <li>Location</li>
+          <li>Contact</li>
+        </ul>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11273.895695717738!2d-84.39255899999999!3d33.75094060000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5038397985adb%3A0xd79dae870b6c6a48!2s141%20Pryor%20St%20SW%2C%20Atlanta%2C%20GA%2030303!5e1!3m2!1sen!2sus!4v1748501739531!5m2!1sen!2sus"></iframe>
+    </section>
+
+  </main>
+
+  <footer>
+
+  </footer>
+</body>
+</html>

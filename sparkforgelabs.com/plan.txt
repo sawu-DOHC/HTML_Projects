@@ -1,8 +1,0 @@
-Service Name                    Duration (hrs)	Style               	Price ($)	$/hr 
----------------------------------------------------------------------------------------------------------
-One-Time Welding Workshop      	2             	1 day                  	80       	40.0 
-MIG Welding Basics             	4             	2 day (2hrs each)      	150      	37.5 
-TIG Welding Basics             	4             	2 day (2hrs each)      	180      	45.0 
-STICK Welding Basics           	4             	2 day (2hrs each)      	140      	35.0 
-Welding Skills Course Bundle   	8             	4 day (2hrs each)      	320      	40.0 
-Open Studio Time               	1             	1 day               	50       	50.0 

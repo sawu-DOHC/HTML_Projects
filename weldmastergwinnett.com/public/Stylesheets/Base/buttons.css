@@ -1,0 +1,149 @@
+button {
+    margin: .5rem;
+    padding: 0.6rem 1rem;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text-inverse);
+    background: var(--primary);
+    transition: background 0.2s ease, transform 0.2s ease;
+    width: fit-content;
+    height: fit-content;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.buttonRed {
+    background: #b00020;
+}
+.buttonRed:hover {
+    background: #d32f2f;
+}
+
+.buttonBlue {
+    background: #0b57d0;
+}
+.buttonBlue:hover {
+    background: #1c6ee8;
+}
+
+.buttonGreen {
+    background: #0a9c36;
+}
+.buttonGreen:hover {
+    background: #28c750;
+}
+
+.buttonYellow {
+    background: #d9a700;
+    color: black;
+}
+.buttonYellow:hover {
+    background: #f5c400;
+    color: black;
+}
+
+.actionIcon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    padding: 0;
+    margin: .5rem;
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.actionIcon:hover {
+    transform: scale(1.1);
+    color: var(--accent);
+}
+
+#StartThreadButton {
+    font-size: 2.5rem;
+    color: var(--text);
+    display: flex;
+    margin: 1rem auto;
+    padding-top: 0;
+    background: transparent;
+    animation:
+        softGlow 0.2s ease-in-out infinite,
+        jitter 0.2s linear infinite,
+        flicker 3s infinite;
+    text-shadow: 0 0 0.25rem var(--text);
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+#StartThreadButton:hover {
+    animation: none;
+    background: transparent;
+    color: var(--text-hover);
+    text-shadow: 0 0 1rem var(--text-hover), 0 0 2rem var(--glow);
+}
+
+#StartSampleButton {
+    font-size: 2rem;
+    color: var(--text);
+    display: flex;
+    margin: 1rem auto;
+    padding-top: 0;
+    background: transparent;
+    animation:
+        softGlow 0.25s ease-in-out infinite,
+        jitter 0.2s linear infinite,
+        flicker 3.5s infinite;
+    text-shadow: 0 0 0.25rem var(--text);
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+#StartSampleButton:hover {
+    animation: none;
+    background: transparent;
+    color: var(--text-hover);
+    text-shadow: 0 0 1rem var(--text-hover), 0 0 2rem var(--glow);
+}
+
+@keyframes softGlow {
+    0%, 100% {
+        color: var(--text);
+        text-shadow: 0 0 0.25rem var(--text);
+    }
+    50% {
+        color: var(--text-hover);
+        text-shadow: 0 0 1rem var(--text-hover), 0 0 2rem var(--text-hover);
+    }
+}
+
+@keyframes jitter {
+    0%   { transform: translateX(0)       rotate(0deg)  scale(1); }
+    25%  { transform: translateX(0.15rem) rotate(1deg)  scale(1.05); }
+    50%  { transform: translateX(-.25rem) rotate(0deg)  scale(1.1); }
+    75%  { transform: translateX(0.15rem) rotate(1deg)  scale(1.05); }
+    100% { transform: translateX(0)       rotate(0deg)  scale(1); }
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+    20%, 24%, 55% { opacity: 0.7; }
+}
+
+@media (max-width: 800px) {
+    button {
+        margin: .25rem;
+        padding: 0.45rem .75rem;
+        font-size: 0.9rem;
+    }
+
+    .actionIcon {
+        font-size: 0.8rem;
+    }
+
+    #StartThreadButton,
+    #StartSampleButton {
+        font-size: 1.8rem;
+        margin: .5rem auto;
+    }
+}

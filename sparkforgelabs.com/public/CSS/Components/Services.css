@@ -1,0 +1,104 @@
+#services {
+}
+
+#services p {
+
+  
+}
+
+#services .services-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: transparent;
+  color: var(--color-p);
+}
+
+#services .services-table th {
+  padding: 1rem;
+  border: 2px solid var(--color-accent-alt);
+  text-align: center;
+  color: var(--color-h3);
+  background-color: var(--color-accent-alt);
+  font-weight: bold;
+}
+
+#services .services-table td {
+  padding: 1rem;
+  border: 2px solid var(--color-accent-alt);
+  text-align: center;
+  color: var(--color-p);
+}
+
+#services .services-table tbody tr:nth-child(odd) {
+  background-color: var(--color-tr-odd);
+}
+
+#services .services-table tbody tr:nth-child(even) {
+  background-color: var(--color-tr-even);
+}
+
+#services .services-table tbody tr:hover {
+  background-color: var(--color-accent-alt);
+  transition: background-color 0.2s ease;
+}
+
+#services .register-btn {
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+#services .register-btn:hover {
+  background-color: var(--color-accent-hover);
+}
+
+/* Responsive styles */
+@media (max-width: 850px) {
+  #services .services-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+  }
+
+  #services .services-table thead {
+    display: none;
+  }
+
+  #services .services-table tbody tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    background-color: var(--color-accent-alt);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+    padding: 1rem 1.25rem;
+  }
+
+  #services .services-table td {
+    display: block;
+    padding: 0.5rem 0;
+    border: none;
+    text-align: left;
+    color: var(--color-p);
+  }
+
+  #services .services-table td::before {
+    content: attr(data-label);
+    display: block;
+    color: var(--color-span);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+
+  #services .register-btn {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
